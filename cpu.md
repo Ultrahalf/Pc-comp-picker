@@ -1,0 +1,137 @@
+# Amd
+
+- APU A6-Series
+	- APU A6-9550 2c/2t 3.8GHz	4GHz Jul-2020
+- Athlon
+	- Athlon 200GE 2c/4t 3.2GHz	Sep-2018
+	- Athlon 220GE 2c/4t 3.4GHz	Dec-2018
+	- Athlon 240GE 2c/4t 3.5GHz	Dec-2018
+	- Athlon 3000G 2c/4t 3.5GHz	Nov-2019
+	- Athlon 300GE 2c/4t 3.4GHz	Jul-2019
+- Ryzen 3 2nd Gen
+	- Ryzen 3 2200G 4c/4t 3.2GHz	3.7Ghz Feb-2018
+	- Ryzen 3 2200GE 4c/4t 3.2GHz	3.6Ghz Apr-2018
+	- Ryzen 3 2300X 4c/4t 3.5GHz	4Ghz Sep-2018
+- Ryzen 3 3rd Gen
+	- Ryzen 3 3100 4c/4t 3.6GHz	3.9Ghz May-2020
+	- Ryzen 3 3200G 4c/4t 3.6GHz	4Ghz Jul-2019
+	- Ryzen 3 3300X 4c/8t 3.8GHz	4.3Ghz May-2020
+- Ryzen 5 1st Gen
+	- Ryzen R5 1400 4c/8t 3.5GHz	Apr-2017
+	- Ryzen R5 1500X 4c/8t 3.5GHz	3.7Ghz Apr-2017
+	- Ryzen R5 1600	6c/12t	3.2Ghz	3.6Ghz Apr-2017
+	- Ryzen R5 1600 AF 6c/12t 3.2Ghz 3.7Ghz Dec-2019
+	- Ryzen R5 1600X 6c/12t 3.6Ghz	4Ghz Apr-2017
+
+
+- Ryzen 5 2nd Gen
+	- Ryzen 5 2400G 4c/8t 3.6Ghz	3.9Ghz Feb-2018
+	- Ryzen 5 2400GE 4c/8t 3.2GHz	3.8Ghz Apr-2018
+	- Ryzen 5 2500X 4c/8t 3.6GHz	4Ghz Sep-2018
+	- Ryzen 5 2600	6c/12t 3.4Ghz	3.8Ghz Apr-2018
+	- Ryzen 5 2600E 6c/12t 3.1GHz	4Ghz Sep-2018
+	- Ryzen 5 2600X 6c/12t 3.6GHz	4.2Ghz Apr-2018
+- Ryzen 5 3rd Gen
+	- Ryzen 5 3400G 4c/8t 3.7GHz	4.2 GHz Jul-2019
+	- Ryzen 5 3500 6c/6t 3.6GHz	4.1 GHz Oct-2019
+	- Ryzen 5 3500X 6c/6t 3.6GHz	4.1 GHz Oct-2019
+	- Ryzen 5 3600 6c/12t 3.6GHz	4.2 GHz Jul-2019
+	- Ryzen 5 3600X 6c/12t 3.8GHz	4.4 GHz Jul-2019
+	- Ryzen 5 3600XT 6c/12t 3.8GHz	4.5Ghz Jul-2020
+	- Ryzen 5 PRO 3600 6c/12t 3.6GHz 4.2 GHz Sep-2019
+- Ryzen 5 5th Gen
+	- Ryzen 5 5600 6c/12t 3.5GHz 4.4Ghz Mar-2021
+	- Ryzen 5 5600X 6c/12t 3.8GHz 4.6Ghz Oct-2020
+- Ryzen 7 2nd Gen
+	- Ryzen 7 2700 8c/16t 3.2GHz	4.1Ghz Apr-2018
+	- Ryzen 7 2700E 8c/16t 2.8GHz	4Ghz Sep-2018
+	- Ryzen 7 2700X	8c/16t 3.7Ghz	4.3Ghz Apr-2018
+- Ryzen 7 3rd Gen
+	- Ryzen 7 3700X 8c/16t 3.6GHz 4.4Ghz Jul-2019
+	- Ryzen 7 3800X 8c/16t 3.9GHz 4.5Ghz Jul-2019
+	- Ryzen 7 3800XT 8c/16t 3.9GHz 4.7Ghz Jul-2020
+- Ryzen 7 5th Gen
+	- Ryzen 7 5800X 8c/16t 3.8GHz 4.9Ghz	Nov-2020
+- Ryzen 9 3rd Gen
+	- Ryzen 9 3900 12c/24t 3.1GHz	4.3Ghz Oct-2019
+	- Ryzen 9 3900X 12c/24t 3.8GHz	4.6Ghz Jul-2019
+	- Ryzen 9 3900XT 12c/24t 3.8GHz	4.7Ghz Jul-2020
+	- Ryzen 9 3950X 16c/32t 3.5GHz	4.7Ghz Jul-2019
+	- Ryzen 9 PRO 3900 12c/24t 3.1GHz 4.3GHz Oct-2019
+- Ryzen 9 5th Gen
+	- Ryzen 9 5900X 12c/24t 3.7GHz 4.8Ghz Oct-2020
+	- Ryzen 9 5950X 16c/32t 3.4GHz 4.9Ghz Nov-2020
+- Threadripper 2nd Gen
+	- Threadripper 2920X 12c/24t 3.5GHz 4.3GHz Oct-2018
+	- Threadripper 2950X 16c/32t 3.5GHz 4.3GHz Aug-2018
+	- Threadripper 2970WX 24c/48t 3.0GHz 4.2GHz Oct-2018
+	- Threadripper 2990WX 32c/64t 3.0GHz 4.2GHz Oct-2018
+- Threadripper 3rd Gen
+	- Threadripper 3960X 24c/48t 3.8GHz 4.5GHz Nov-2019
+	- Threadripper 3970X 32c/64t 3.7GHz 4.5GHz Nov-2019
+	- Threadripper 3990X 64c/127t 3.0GHz 4.5GHz Jan-2020
+
+# Intel
+
+- Atom
+- Celeron
+- Celeron D
+- Celeron Dual-Core
+- Celeron G
+- Celeron J
+- Core 2 Duo
+- Core 2 Extreme
+- Core 2 Quad
+- Core i3 10th Gen
+- Core i3 11th Gen
+- Core i3 1st Gen
+- Core i3 2nd Gen
+- Core i3 3rd Gen
+- Core i3 4th Gen
+- Core i3 6th Gen
+- Core i3 7th Gen
+- Core i3 8th Gen
+- Core i3 9th Gen
+- Core i5 10th Gen
+- Core i5 11th Gen
+- Core i5 1st Gen
+- Core i5 2nd Gen
+- Core i5 3rd Gen
+- Core i5 4th Gen
+- Core i5 5th Gen
+- Core i5 6th Gen
+- Core i5 7th Gen
+- Core i5 8th Gen
+- Core i5 9th Gen
+- Core i7 10th Gen
+- Core i7 11th Gen
+- Core i7 1st Gen
+- Core i7 2nd Gen
+- Core i7 3rd Gen
+- Core i7 4th Gen
+- Core i7 5th Gen
+- Core i7 6th Gen
+- Core i7 7th Gen
+- Core i7 8th Gen
+- Core i7 9th Gen
+- Core i9 10th Gen
+- Core i9 11th Gen
+- Core i9 7th Gen
+- Core i9 9th Gen
+- Pentium
+- Pentium 4
+- Pentium D
+- Pentium Dual Core
+- Pentium Extreme Series
+- Pentium G
+- Pentium Gold
+- Pentium II
+- Pentium III
+- Pentium J
+- Xeon
+- Xeon E3 Series
+- Xeon E5 Series
+- Xeon E5 v2 Series
+- Xeon E5 v3 Series
+- Xeon E5 v4 Series
+- Xeon E7 Series
