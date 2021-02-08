@@ -1,0 +1,751 @@
+[
+    {
+	    "brand": "AMD",
+	    "name": "APU A10-Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "APU A12 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "APU A4-Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "APU A6-Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "APU A8-Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "APU E-Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon 64",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon 64 X2",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon Dual Core",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon II",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon X2 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon X4 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Athlon XP",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Duron",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "FX",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "K6",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 100 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 1000 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 200 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 2000 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 3000 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 4000 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 6000 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron 8000 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Opteron Multi CPU",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Phenom",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Phenom II",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 3 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 3 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 3 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 5 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 5 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 5 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 5 5th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 7 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 7 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 7 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 7 5th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 9 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Ryzen 9 5th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Sempron",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Threadripper 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Threadripper 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "AMD",
+	    "name": "Threadripper 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Atom",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Celeron",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Celeron D",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Celeron Dual-Core",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Celeron G",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Celeron J",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core 2 Duo",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core 2 Extreme",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core 2 Quad",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 10th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 11th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 4th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 6th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 7th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 8th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i3 9th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 10th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 11th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 4th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 5th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 6th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 7th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 8th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i5 9th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 10th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 11th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 1st Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 2nd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 3rd Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 4th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 5th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 6th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 7th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 8th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i7 9th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i9 10th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i9 11th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i9 7th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Core i9 9th Gen",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium 4",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium D",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium Dual Core",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium Extreme Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium G",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium Gold",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium II",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium III",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Pentium J",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon E3 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon E5 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon E5 v2 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon E5 v3 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon E5 v4 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    },
+    {
+	    "brand": "Intel",
+	    "name": "Xeon E7 Series",
+	    "clockSpeed": "",
+	    "cores": "",
+	    "threads": ""
+    }
+]
