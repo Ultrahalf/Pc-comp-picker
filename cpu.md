@@ -84,6 +84,9 @@
 	- Celeron G4900T 2.9GHz / 2MB L3 / 2 cores april-2018
 	- Celeron G4900 3.1GHz / 2MB L3 / 2 cores april-2018
 	- Celeron G4920 3.2GHz / 2MB L3 / 2 cores april-2018
+	- Celeron G4930T (2nd quarter) 3GHz / 2MB L3 / 2 cores june-2019
+	- Celeron G4930 (2nd quarter) 3.2GHz / 2MB L3 / 2 cores june-2019
+	- Celeron G4950 (2nd quarter) 3.3GHz / 2MB L3 / 2 cores june-2019
 - Celeron J
 	- Celeron J3060 1.6GHz / 2MB L2 / 2 cores Jan-2016
 	- Celeron J3160 1.6GHz / 2MB L2 / 4 cores jan-2016
@@ -91,6 +94,8 @@
 	- Celeron J3455 1.5GHz / 2MB L2 / 4 cores aug-2016
 	- Celeron J4005 2GHz / 4MB L2 / 2 cores dec-2017
 	- Celeron J4105 1.5GHz / 4MB L2 / 4 cores dec-2017
+	- Celeron J4025 2GHz / 4MB L2 / 2 cores nov-2019
+	- Celeron J4125 2GHz / 4MB L2 / 4 cores nov-2019
 - Core 2 Duo
 - Core 2 Extreme
 - Core 2 Quad
@@ -114,7 +119,16 @@
 	- Core i3-8100T 3.1GHz / 6MB L3 / 4 cores april-2018
 	- Core i3-8300T 3.2GHz / 8MB L3 / 4 cores april-2018
 	- Core i3-8300 3.7GHz / 8MB L3 / 4 cores april-2018
+	- Core i3-8100F 3.6GHz / 6MB L3 / 4 cores jan-2019
 - Core i3 9th Gen
+	- Core i3-9350KF 4GHz / 8MB L3 / 4 cores jan-2019
+	- Core i3-9100F (2nd quarter) 3.6GHz / 6MB L3 / 4 cores june-2019
+	- Core i3-9100T (2nd quarter) 3.1GHz / 6MB L3 / 4 cores june-2019
+	- Core i3-9100 (2nd quarter) 3.6GHz / 6MB L3 / 4 cores june-2019
+	- Core i3-9300T (2nd quarter) 3.2GHz / 8MB L3 / 4 cores june-2019
+	- Core i3-9300 (2nd quarter) 3.7GHz / 8MB L3 / 4 cores june-2019
+	- Core i3-9320 (2nd quarter) 3.7GHz / 8MB L3 / 4 cores june-2019
+	- Core i3-9350K (2nd quarter) 4GHz / 8MB L3 / 4 cores june-2019
 - Core i5 10th Gen
 - Core i5 11th Gen
 - Core i5 1st Gen
@@ -144,6 +158,15 @@
 	- Core i5-8600 3.1GHz / 9MB L3 / 6 cores april-2018
 - Core i5 9th Gen
 	- Core i5-9600K 3.7GHz / 9MB L3 / 6 cores oct-2018
+	- Core i5-9400F 2.9GHz / 9MB L3 / 6 cores jan-2019
+	- Core i5-9600KF 3.7GHz / 9MB L3 / 6 cores jan-2019
+	- Core i5-9400 2.9GHz / 9MB L3 / 6 cores jan-2019
+	- Core i5-9400T (2nd quarter) 1.8GHz / 9MB L3 / 6 cores june-2019
+	- Core i5-9500F (2nd quarter) 3GHz / 9MB L3 / 6 cores june-2019
+	- Core i5-9500T (2nd quarter) 2.2GHz / 9MB L3 / 6 cores june-2019
+	- Core i5-9500 (2nd quarter) 3GHz / 9MB L3 / 6 cores june-2019
+	- Core i5-9600T (2nd quarter) 2.3GHz / 9MB L3 / 6 cores june-2019
+	- Core i5-9600 (2nd quarter) 3.1GHz / 9MB L3 / 6 cores june-2019
 - Core i7 10th Gen
 - Core i7 11th Gen
 - Core i7 1st Gen
@@ -172,7 +195,15 @@
 - Core i7 9th Gen
 	- Core i7-9700K 3.6GHz / 12MB L3 / 8 cores oct-2018
 	- Core i7-9800X 3.8GHz / 16.5MB L3 / 8 cores oct-2018
+	- Core i7-9700KF 3.6GHz / 12MB L3 / 8 cores jan-2019
+	- Core i7-9700F (2nd quarter) 3GHz / 12MB L3 / 8 cores june-2019
+	- Core i7-9700T (2nd quarter) 2GHz / 12MB L3 / 8 cores june-2019
+	- Core i7-9700 (2nd quarter) 3GHz / 12MB L3 / 8 cores june-2019
 - Core i9 10th Gen
+	- Core i9-10900X 3.7GHz / 19.2MB L3 / 10 cores nov-2019
+	- Core i9-10920X 3.5GHz / 19.2MB L3 / 12 cores nov-2019
+	- Core i9-10940X 3.3GHz / 19.2MB L3 / 14 cores nov-2019
+	- Core i9-10980XE 3GHz / 24.7MB L3 / 18 cores nov-2019
 - Core i9 11th Gen
 - Core i9 7th Gen
 	- Core i9-7900X 3.3GHz / 13.7MB L3 / 10 cores june-2017
@@ -188,6 +219,10 @@
 	- Core i9-9940X 3.3GHz / 19.2MB L3 / 14 cores oct-2018
 	- Core i9-9960X 3.1GHz / 22MB L3 / 16 cores oct-2018
 	- Core i9-9980XE 3GHz / 24.7MB L3 / 18 cores oct-2018
+	- Core i9-9900KF 3.6GHz / 16MB L3 / 8 cores jan-2019
+	- Core i9-9900T (2nd quarter) 2.1GHz / 16MB L3 / 8 cores june-2019
+	- Core i9-9900 (2nd quarter) 3.1GHz / 16MB L3 / 8 cores june-2019
+	- Core i9-9900KS 4GHz / 16MB L3 / 8 cores oct-2019
 - Pentium
 - Pentium 4
 - Pentium D
@@ -204,6 +239,10 @@
 	- Pentium G5500T 3.2GHz / 4MB L3 / 2 cores april-2018
 	- Pentium G5500 3.8GHz / 4MB L3 / 2 cores april-2018
 	- Pentium G5600 3.9GHz / 4MB L3 / 2 cores april-2018
+	- Pentium G5420T (2nd quarter) 3.2GHz / 4MB L3 / 2 cores june-2019
+	- Pentium G5420 (2nd quarter) 3.8GHz / 4MB L3 / 2 cores june-2019
+	- Pentium G5600T (2nd quarter) 3.3GHz / 4MB L3 / 2 cores june-2019
+	- Pentium G5620 (2nd quarter) 4GHz / 4MB L3 / 2 cores june-2019
 - Pentium Gold
 - Pentium II
 - Pentium III
@@ -211,6 +250,7 @@
 	- Pentium J4205 1.5GHz / 2MB L2 / 4 cores aug-2016
 	- Pentium J3710 1.6GHz / 2MB L2 / 4 cores jan-2016
 	- Pentium J5005 1.5GHz / 4MB L2 / 4 cores dec-2017
+	- Pentium J5040 2GHz / 4MB L2 / 4 cores nov-2019
 - Xeon
 - Xeon E3 Series
 - Xeon E5 Series
