@@ -12,9 +12,13 @@ from selenium.webdriver.support import expected_conditions as EC
 SEARCH_TERM = 'Ryzen 5 3600X'
 URL = 'https://mdcomputers.in'
 
+# Disable image loading
+profile = webdriver.FirefoxProfile()
+profile.set_preference('permissions.default.image', 2)
+
 options = Options()
 # options.headless = True
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Firefox(options=options, firefox_profile=profile)
 
 
 def get_product_url(product) -> str:
