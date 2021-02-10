@@ -14,19 +14,16 @@ URL = 'https://mdcomputers.in'
 
 options = Options()
 # options.headless = True
-
 driver = webdriver.Firefox(options=options)
 
 
-def get_product_url(product):
+def get_product_url(product) -> str:
         driver.get(URL)
-
         search_elem = driver.find_element_by_name('search')
         search_elem.send_keys(product)
-
         try:
-                # waits 5 seconds for dropdown
-                dropdown_elem = WebDriverWait(driver, 5).until(
+                # waits 7 seconds for dropdown
+                dropdown5elem = WebDriverWait(driver, 7).until(
                         EC.presence_of_element_located((By.CLASS_NAME, 'media'))
                 )
                 anchor = dropdown_elem.find_element_by_tag_name('a')
@@ -37,4 +34,14 @@ def get_product_url(product):
                 driver.close()
 
 
-print(get_product_url(SEARCH_TERM))
+def get_product_price(product_url) -> int:
+        pass
+
+
+def get_product_rating(product_url) -> str:
+        pass
+
+
+if __name__ == '__main__':
+        print(get_product_url(SEARCH_TERM))
+
