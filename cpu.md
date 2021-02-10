@@ -106,12 +106,12 @@
 - Core 2 Extreme
 - Core 2 Quad
 - Core i3 10th Gen
-	- Core i3-10100T 3GHz / 6MB L3 / 4 cores april-2020
-	- Core i3-10100 3.6GHz / 6MB L3 / 4 cores april-2020
-	- Core i3-10300T 3GHz / 8MB L3 / 4 cores april-2020
-	- Core i3-10300 3.7GHz / 8MB L3 / 4 cores april-2020
-	- Core i3-10320 3.8GHz / 8MB L3 / 4 cores april-2020
-	- Core i3-10100F (4th quarter) 3.6GHz / 6MB L3 / 4 cores dec-2020
+	- Core i3-10100T 3GHz 3.8GHz / 6MB L3 / 4 cores april-2020
+	- Core i3-10100 3.6GHz 4.3GHz / 6MB L3 / 4 cores april-2020
+	- Core i3-10300T 3GHz 3.9GHz / 8MB L3 / 4 cores april-2020
+	- Core i3-10300 3.7GHz 4.4GHz / 8MB L3 / 4 cores april-2020
+	- Core i3-10320 3.8GHz 4.6GHz / 8MB L3 / 4 cores april-2020
+	- Core i3-10100F 3.6GHz 4.30GHz / 6MB L3 / 4 cores dec-2020
 - Core i3 11th Gen
 - Core i3 1st Gen
 - Core i3 2nd Gen
@@ -119,28 +119,28 @@
 - Core i3 4th Gen
 - Core i3 6th Gen
 - Core i3 7th Gen
-	- Core i3-7100T 3.4GHz / 3MB L3 / 2 cores jan-2017
-	- Core i3-7100 3.9GHz / 3MB L3 / 2 cores jan-2017
-	- Core i3-7300T 3.5GHz / 4MB L3 / 2 cores jan-2017
-	- Core i3-7300 4GHz / 4MB L3 / 2 cores jan-2017
-	- Core i3-7320 4.1GHz / 4MB L3 / 2 cores jan-2017
-	- Core i3-7350K 4.2GHz / 4MB L3 / 2 cores jan-2017
+	- Core i3-7100T 3.4GHz N/A / 3MB L3 / 2 cores jan-2017
+	- Core i3-7100 3.9GHz N/A / 3MB L3 / 2 cores jan-2017
+	- Core i3-7300T 3.5GHz N/A / 4MB L3 / 2 cores jan-2017
+	- Core i3-7300 4GHz N/A / 4MB L3 / 2 cores jan-2017
+	- Core i3-7320 4.1GHz N/A / 4MB L3 / 2 cores jan-2017
+	- Core i3-7350K 4.2GHz N/A / 4MB L3 / 2 cores jan-2017
 - Core i3 8th Gen
-	- Core i3-8100 3.6GHz / 6MB L3 / 4 cores oct-2017
-	- Core i3-8350K 4GHz / 8MB L3 / 4 cores oct-2017
-	- Core i3-8100T 3.1GHz / 6MB L3 / 4 cores april-2018
-	- Core i3-8300T 3.2GHz / 8MB L3 / 4 cores april-2018
+	- Core i3-8100 3.6GHz 3.6GHz / 6MB L3 / 4 cores oct-2017
+	- Core i3-8350K 4GHz 5.1GHz / 8MB L3 / 4 cores oct-2017
+	- Core i3-8100T 3.1GHz 3.1GHz/ 6MB L3 / 4 cores april-2018
+	- Core i3-8300T 3.2GHz 3.2GHz / 8MB L3 / 4 cores april-2018
 	- Core i3-8300 3.7GHz / 8MB L3 / 4 cores april-2018
 	- Core i3-8100F 3.6GHz / 6MB L3 / 4 cores jan-2019
 - Core i3 9th Gen
-	- Core i3-9350KF 4GHz / 8MB L3 / 4 cores jan-2019
-	- Core i3-9100F (2nd quarter) 3.6GHz / 6MB L3 / 4 cores june-2019
-	- Core i3-9100T (2nd quarter) 3.1GHz / 6MB L3 / 4 cores june-2019
-	- Core i3-9100 (2nd quarter) 3.6GHz / 6MB L3 / 4 cores june-2019
-	- Core i3-9300T (2nd quarter) 3.2GHz / 8MB L3 / 4 cores june-2019
-	- Core i3-9300 (2nd quarter) 3.7GHz / 8MB L3 / 4 cores june-2019
-	- Core i3-9320 (2nd quarter) 3.7GHz / 8MB L3 / 4 cores june-2019
-	- Core i3-9350K (2nd quarter) 4GHz / 8MB L3 / 4 cores june-2019
+	- Core i3-9350KF 4GHz 4.6GHz/ 8MB L3 / 4 cores jan-2019
+	- Core i3-9100F (2nd quarter) 3.6GHz 4.2GHz / 6MB L3 / 4 cores june-2019
+	- Core i3-9100T (2nd quarter) 3.1GHz 3.7GHz / 6MB L3 / 4 cores june-2019
+	- Core i3-9100 (2nd quarter) 3.6GHz 4.2GHz / 6MB L3 / 4 cores june-2019
+	- Core i3-9300T (2nd quarter) 3.2GHz 3.8GHz / 8MB L3 / 4 cores june-2019
+	- Core i3-9300 (2nd quarter) 3.7GHz 4.3GHz / 8MB L3 / 4 cores june-2019
+	- Core i3-9320 (2nd quarter) 3.7GHz 4.40GHz/ 8MB L3 / 4 cores june-2019
+	- Core i3-9350K (2nd quarter) 4GHz 4.6GHz/ 8MB L3 / 4 cores june-2019
 - Core i5 10th Gen
 	- Core i5-10400F 2.9GHz / 12MB L3 / 6 cores april-2020
 	- Core i5-10400T 2GHz / 12MB L3 / 6 cores april-2020
