@@ -23,7 +23,7 @@ def get_product_url(product) -> str:
         search_elem.send_keys(product)
         try:
                 # waits 7 seconds for dropdown
-                dropdown5elem = WebDriverWait(driver, 7).until(
+                dropdown_elem = WebDriverWait(driver, 7).until(
                         EC.presence_of_element_located((By.CLASS_NAME, 'media'))
                 )
                 anchor = dropdown_elem.find_element_by_tag_name('a')
