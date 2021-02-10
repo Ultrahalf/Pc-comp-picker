@@ -1,30 +1,40 @@
-from time import sleep
+import time
+import sys
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.options import Options
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
+SEARCH_TERM = 'Ryzen 5 3600X'
 URL = 'https://mdcomputers.in'
-SEARCH_TERM = 'Ryzen 3 2200G'
 
-driver = webdriver.Firefox()
-driver.get(URL)
+options = Options()
+# options.headless = True
 
-search_elem = driver.find_element_by_name('search')
-search_elem.clear()
-search_elem.send_keys(SEARCH_TERM)
-search_elem.send_keys(Keys.RETURN)
+driver = webdriver.Firefox(options=options)
 
-# required as we have to wait for the search results to load
-sleep(5)
 
-product = driver.find_element_by_class_name('product-image-container')
-product.click()
+def get_product_url(product):
+        driver.get(URL)
 
-# wait for the product page to load
-sleep(5)
+        search_elem = driver.find_element_by_name('search')
+        search_elem.send_keys(product)
 
-price = driver.find_element_by_id('price-old')
+        try:
+                # waits 5 seconds for dropdown
+                dropdown_elem = WebDriverWait(driver, 5).until(
+                        EC.presence_of_element_located((By.CLASS_NAME, 'media'))
+                )
+                anchor = dropdown_elem.find_element_by_tag_name('a')
+                return anchor.get_attribute('href')
+        except:
+                return "Product doesn't exist on mdcomputers.in"
+        finally:
+                driver.close()
 
-print(f"Price: {price.get_attribute('content')}")
-print(f"Url: {driver.current_url}")
-driver.close()
+
+print(get_product_url(SEARCH_TERM))
