@@ -7,9 +7,9 @@ URL = 'https://mdcomputers.in'
 SEARCH_TERM = 'Ryzen 3 2200G'
 
 driver = webdriver.Firefox()
-driver.get('URL')
+driver.get(URL)
 
-search_elem = driver.find_search_element_by_name('search')
+search_elem = driver.find_element_by_name('search')
 search_elem.clear()
 search_elem.send_keys(SEARCH_TERM)
 search_elem.send_keys(Keys.RETURN)
