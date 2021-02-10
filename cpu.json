@@ -1,751 +1,478 @@
 [
-    {
-	    "brand": "AMD",
-	    "name": "APU A10-Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "APU A12 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "APU A4-Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "APU A6-Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "APU A8-Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "APU E-Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon 64",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon 64 X2",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon Dual Core",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon II",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon X2 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon X4 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Athlon XP",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Duron",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "FX",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "K6",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 100 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 1000 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 200 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 2000 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 3000 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 4000 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 6000 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron 8000 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Opteron Multi CPU",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Phenom",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Phenom II",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 3 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 3 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 3 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 5 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 5 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 5 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 5 5th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 7 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 7 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 7 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 7 5th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 9 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Ryzen 9 5th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Sempron",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Threadripper 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Threadripper 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "AMD",
-	    "name": "Threadripper 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Atom",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Celeron",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Celeron D",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Celeron Dual-Core",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Celeron G",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Celeron J",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core 2 Duo",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core 2 Extreme",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core 2 Quad",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 10th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 11th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 4th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 6th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 7th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 8th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i3 9th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 10th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 11th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 4th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 5th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 6th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 7th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 8th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i5 9th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 10th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 11th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 1st Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 2nd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 3rd Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 4th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 5th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 6th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 7th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 8th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i7 9th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i9 10th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i9 11th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i9 7th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Core i9 9th Gen",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium 4",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium D",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium Dual Core",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium Extreme Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium G",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium Gold",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium II",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium III",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Pentium J",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon E3 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon E5 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon E5 v2 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon E5 v3 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon E5 v4 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    },
-    {
-	    "brand": "Intel",
-	    "name": "Xeon E7 Series",
-	    "clockSpeed": "",
-	    "cores": "",
-	    "threads": ""
-    }
+        {
+                "brand": "AMD",
+                "name": "APU A6-9550",
+                "cores": 2,
+                "threads": 2,
+                "baseClock": "3.8GHz",
+                "boostClock": "4GHz",
+                "release": "Jul-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Athlon 200GE",
+                "cores":2,
+                "threads":4,
+                "baseClock":"3.2GHz",
+                "boostClock":"",
+                "release":"Sep-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Athlon 220GE",
+                "cores":2,
+                "threads":4,
+                "baseClock":"3.4GHz",
+                "boostClock":"",
+                "release":"Dec-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Athlon 240GE",
+                "cores":2,
+                "threads":4,
+                "baseClock":"3.5GHz",
+                "baseClock":"",
+                "release":"Dec-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Athlon 3000G",
+                "cores":2,
+                "threads":4,
+                "baseClock":"3.5GHz",
+                "boostClock":"",
+                "release":"Nov-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Athlon 300GE",
+                "cores":2,
+                "threads":4,
+                "baseClock":"3.4GHz",
+                "boostClock":"",
+                "release":"Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 3 2200G",
+                "cores": 4,
+                "threads": 4,
+                "baseClock": "3.2GHz",
+                "boostClock": "3.7Ghz",
+                "release": "Feb-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 3 2200GE",
+                "cores": 4,
+                "threads": 4,
+                "baseClock": "3.2GHz",
+                "boostClock": "3.6Ghz",
+                "release": "Apr-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 3 2300X",
+                "cores": 4,
+                "threads": 4,
+                "baseClock": "3.5GHz",
+                "boostClock": "4Ghz",
+                "release": "Sep-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 3 3100",
+                "cores": 4,
+                "threads": 4,
+                "baseClock": "3.6GHz",
+                "boostClock": "3.9Ghz",
+                "release": "May-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 3 3200G",
+                "cores": 4,
+                "threads": 4,
+                "baseClock": "3.6GHz",
+                "boostClock": "4Ghz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 3 3300X",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.3Ghz",
+                "release": "May-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen R5 1500X",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.5GHz",
+                "boostClock": "3.7Ghz",
+                "release": "Apr-2017"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen R5 1600",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.2Ghz",
+                "boostClock": "3.6Ghz",
+                "release": "Apr-2017"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen R5 1600 AF",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.2Ghz",
+                "boostClock": "3.7Ghz",
+                "release": "Dec-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen R5 1600X",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.6Ghz",
+                "boostClock": "4Ghz",
+                "release": "Apr-2017"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 2400G",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.6Ghz",
+                "boostClock": "3.9Ghz",
+                "release": "Feb-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 2400GE",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.2GHz",
+                "boostClock": "3.8Ghz",
+                "release": "Apr-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 2500X",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.6GHz",
+                "boostClock": "4Ghz",
+                "release": "Sep-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 2600",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.4Ghz",
+                "boostClock": "3.8Ghz",
+                "release": "Apr-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 2600E",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.1GHz",
+                "boostClock": "4Ghz",
+                "release": "Sep-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 2600X",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.6GHz",
+                "boostClock": "4.2Ghz",
+                "release": "Apr-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 3400G",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.7GHz",
+                "boostClock": "4.2GHz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 3500",
+                "cores": 6,
+                "threads": 6,
+                "baseClock": "3.6GHz",
+                "boostClock": "4.1GHz",
+                "release": "Oct-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 3500X",
+                "cores": 6,
+                "threads": 6,
+                "baseClock": "3.6GHz",
+                "boostClock": "4.1GHz",
+                "release": "Oct-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 3600",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.6GHz",
+                "boostClock": "4.2GHz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 3600X",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.4GHz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 3600XT",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.5Ghz",
+                "release": "Jul-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 PRO 3600",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.6GHz",
+                "boostClock": "4.2GHz",
+                "release": "Sep-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 5600",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.5GHz",
+                "boostClock": "4.4Ghz",
+                "release": "Mar-2021"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen R5 1400",
+                "cores": 4,
+                "threads": 8,
+                "baseClock": "3.5GHz",
+                "release": "Apr-2017",
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 5 5600X",
+                "cores": 6,
+                "threads": 12,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.6Ghz",
+                "release": "Oct-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 2700",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.2GHz",
+                "boostClock": "4.1Ghz",
+                "release": "Apr-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 2700E",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "2.8GHz",
+                "boostClock": "4Ghz",
+                "release": "Sep-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 2700X",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.7Ghz",
+                "boostClock": "4.3Ghz",
+                "release": "Apr-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 3700X",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.6GHz",
+                "boostClock": "4.4Ghz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 3800X",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.9GHz",
+                "boostClock": "4.5Ghz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 3800XT",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.9GHz",
+                "boostClock": "4.7Ghz",
+                "release": "Jul-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 7 5800X",
+                "cores": 8,
+                "threads": 16,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.9Ghz",
+                "release": "Nov-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 3900",
+                "cores": 12,
+                "threads": 24,
+                "baseClock": "3.1GHz",
+                "boostClock": "4.3Ghz",
+                "release": "Oct-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 3900X",
+                "cores": 12,
+                "threads": 24,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.6Ghz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 3900XT",
+                "cores": 12,
+                "threads": 24,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.7Ghz",
+                "release": "Jul-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 3950X",
+                "cores": 16,
+                "threads": 32,
+                "baseClock": "3.5GHz",
+                "boostClock": "4.7Ghz",
+                "release": "Jul-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 PRO 3900",
+                "cores": 12,
+                "threads": 24,
+                "baseClock": "3.1GHz",
+                "boostClock": "4.3GHz",
+                "release": "Oct-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 5900X",
+                "cores": 12,
+                "threads": 24,
+                "baseClock": "3.7GHz",
+                "boostClock": "4.8Ghz",
+                "release": "Oct-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Ryzen 9 5950X",
+                "cores": 16,
+                "threads": 32,
+                "baseClock": "3.4GHz",
+                "boostClock": "4.9Ghz",
+                "release": "Nov-2020"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 2920X",
+                "cores": 12,
+                "threads": 24,
+                "baseClock": "3.5GHz",
+                "boostClock": "4.3GHz",
+                "release": "Oct-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 2950X",
+                "cores": 16,
+                "threads": 32,
+                "baseClock": "3.5GHz",
+                "boostClock": "4.3GHz",
+                "release": "Aug-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 2970WX",
+                "cores": 24,
+                "threads": 48,
+                "baseClock": "3.0GHz",
+                "boostClock": "4.2GHz",
+                "release": "Oct-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 2990WX",
+                "cores": 32,
+                "threads": 64,
+                "baseClock": "3.0GHz",
+                "boostClock": "4.2GHz",
+                "release": "Oct-2018"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 3960X",
+                "cores": 24,
+                "threads": 48,
+                "baseClock": "3.8GHz",
+                "boostClock": "4.5GHz",
+                "release": "Nov-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 3970X",
+                "cores": 32,
+                "threads": 64,
+                "baseClock": "3.7GHz",
+                "boostClock": "4.5GHz",
+                "release": "Nov-2019"
+        },
+        {
+                "brand": "AMD",
+                "name": "Threadripper 3990X",
+                "cores": 64,
+                "threads": 128,
+                "baseClock": "3.0GHz",
+                "boostClock": "4.5GHz",
+                "release": "Jan-2020"
+        }
 ]
