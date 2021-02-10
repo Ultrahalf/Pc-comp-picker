@@ -87,6 +87,12 @@
 	- Celeron G4930T (2nd quarter) 3GHz / 2MB L3 / 2 cores june-2019
 	- Celeron G4930 (2nd quarter) 3.2GHz / 2MB L3 / 2 cores june-2019
 	- Celeron G4950 (2nd quarter) 3.3GHz / 2MB L3 / 2 cores june-2019
+	- Celeron G5900T 3.2GHz / 2MB L3 / 2 cores april-2020
+	- Celeron G5900 3.4GHz / 2MB L3 / 2 cores april-2020
+	- Celeron G5920 3.5GHz / 2MB L3 / 2 cores april-2020
+	- Celeron G5905T 3.3GHz / 4MB L3 / 2 cores july-2020
+	- Celeron G5905 3.5GHz / 4MB L3 / 2 cores july-2020
+	- Celeron G5925 3.6GHz / 4MB L3 / 2 cores july-2020
 - Celeron J
 	- Celeron J3060 1.6GHz / 2MB L2 / 2 cores Jan-2016
 	- Celeron J3160 1.6GHz / 2MB L2 / 4 cores jan-2016
@@ -100,6 +106,12 @@
 - Core 2 Extreme
 - Core 2 Quad
 - Core i3 10th Gen
+	- Core i3-10100T 3GHz / 6MB L3 / 4 cores april-2020
+	- Core i3-10100 3.6GHz / 6MB L3 / 4 cores april-2020
+	- Core i3-10300T 3GHz / 8MB L3 / 4 cores april-2020
+	- Core i3-10300 3.7GHz / 8MB L3 / 4 cores april-2020
+	- Core i3-10320 3.8GHz / 8MB L3 / 4 cores april-2020
+	- Core i3-10100F (4th quarter) 3.6GHz / 6MB L3 / 4 cores dec-2020
 - Core i3 11th Gen
 - Core i3 1st Gen
 - Core i3 2nd Gen
@@ -130,6 +142,15 @@
 	- Core i3-9320 (2nd quarter) 3.7GHz / 8MB L3 / 4 cores june-2019
 	- Core i3-9350K (2nd quarter) 4GHz / 8MB L3 / 4 cores june-2019
 - Core i5 10th Gen
+	- Core i5-10400F 2.9GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10400T 2GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10400 2.9GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10500T 2.3GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10500 3.1GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10600KF 4.1GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10600K 4.1GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10600T 2.4GHz / 12MB L3 / 6 cores april-2020
+	- Core i5-10600 3.3GHz / 12MB L3 / 6 cores april-2020
 - Core i5 11th Gen
 - Core i5 1st Gen
 - Core i5 2nd Gen
@@ -168,6 +189,11 @@
 	- Core i5-9600T (2nd quarter) 2.3GHz / 9MB L3 / 6 cores june-2019
 	- Core i5-9600 (2nd quarter) 3.1GHz / 9MB L3 / 6 cores june-2019
 - Core i7 10th Gen
+	- Core i7-10700F 2.9GHz / 16MB L3 / 8 cores april-2020
+	- Core i7-10700KF 3.8GHz / 16MB L3 / 8 cores april-2020
+	- Core i7-10700K 3.8GHz / 16MB L3 / 8 cores april-2020
+	- Core i7-10700T 2GHz / 16MB L3 / 8 cores april-2020
+	- Core i7-10700 2.9GHz / 16MB L3 / 8 cores april-2020
 - Core i7 11th Gen
 - Core i7 1st Gen
 - Core i7 2nd Gen
@@ -204,6 +230,12 @@
 	- Core i9-10920X 3.5GHz / 19.2MB L3 / 12 cores nov-2019
 	- Core i9-10940X 3.3GHz / 19.2MB L3 / 14 cores nov-2019
 	- Core i9-10980XE 3GHz / 24.7MB L3 / 18 cores nov-2019
+	- Core i9-10900F 2.8GHz / 20MB L3 / 10 cores april-2020
+	- Core i9-10900KF 3.7GHz / 20MB L3 / 10 cores april-2020
+	- Core i9-10900K 3.7GHz / 20MB L3 / 10 cores april-2020
+	- Core i9-10900T 1.9GHz / 20MB L3 / 10 cores april-2020
+	- Core i9-10900 2.8GHz / 20MB L3 / 10 cores april-2020
+	- Core i9-10850K 3.6GHz / 20MB L3 / 10 cores july-2020
 - Core i9 11th Gen
 - Core i9 7th Gen
 	- Core i9-7900X 3.3GHz / 13.7MB L3 / 10 cores june-2017
@@ -243,6 +275,11 @@
 	- Pentium G5420 (2nd quarter) 3.8GHz / 4MB L3 / 2 cores june-2019
 	- Pentium G5600T (2nd quarter) 3.3GHz / 4MB L3 / 2 cores june-2019
 	- Pentium G5620 (2nd quarter) 4GHz / 4MB L3 / 2 cores june-2019
+	- Pentium G6400T 3.4GHz / 4MB L3 / 2 cores april-2020
+	- Pentium G6400 4GHz / 4MB L3 / 2 cores april-2020
+	- Pentium G6500T 3.5GHz / 4MB L3 / 2 cores april-2020
+	- Pentium G6500 4.1GHz / 4MB L3 / 2 cores april-2020
+	- Pentium G6600 4.2GHz / 4MB L3 / 2 cores april-2020
 - Pentium Gold
 - Pentium II
 - Pentium III
