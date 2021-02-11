@@ -154,7 +154,7 @@
 	- Core i5-10600 3.3GHz / 12MB L3 / 6 cores april-2020
 	
 - Core i5 11th Gen
-	- PROCESSOR  CORES / CLOCK SPEED / CACHE / RELEASE DATE
+	- ProcessorName  CORES / CLOCK SPEED / CACHE / RELEASE DATE
 	----------------------------------------------------------------------------------------------
 	- Intel® Core™ i5-1135G7  4 cores / 4.20 GHz / 8 MB Intel® Smart Cache / 3Q'2020
 	- Intel® Core™ i5-1135G7  4 cores / 4.20 GHz / 8 MB Intel® Smart Cache / 3Q'2020
@@ -208,7 +208,7 @@
 	- Core i7-10700 2.9GHz / 16MB L3 / 8 cores april-2020
 	
 - Core i7 11th Gen
-	- PROCESSOR	 DATE / CORES / CLOCK SPEED / CACHE
+	- ProcessorName DATE / CORES / CLOCK SPEED / CACHE
 	----------------------------------------------------------------------------------------
 	- Intel® Core™ i7-1185G7  Q3'20 / 4 cores	/ 4.80 GHz	/ 12 MB Intel® Smart Cache	
 	- Intel® Core™ i7-1165G7  Q3'20 / 4 cores	/ 4.70 GHz	/ 12 MB Intel® Smart Cache		
