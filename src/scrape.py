@@ -46,9 +46,13 @@ def get_product_price(product_url) -> str:
 
 
 def get_product_rating(product_url) -> str:
-        pass
+        driver.get(product_url)
+        rating_elem = driver.find_element_by_class_name('rating-box')
+        stars = rating_elem.find_elements_by_tag_name('span')
+        return len(stars)
 
 
 if __name__ == '__main__':
         # print(get_product_url(SEARCH_TERM))
-        print(get_product_price('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
+        # print(get_product_price('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
+        print(get_product_rating('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
