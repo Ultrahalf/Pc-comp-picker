@@ -73,10 +73,6 @@
 
 # Intel
 
-- Atom
-- Celeron
-- Celeron D
-- Celeron Dual-Core
 - Celeron G
 	- Celeron G3930T 2.7GHz / 2MB L3 / 2 cores jan-2017
 	- Celeron G3930 2.9GHz / 2MB L3 / 2 cores jan-2017
@@ -102,9 +98,7 @@
 	- Celeron J4105 1.5GHz / 4MB L2 / 4 cores dec-2017
 	- Celeron J4025 2GHz / 4MB L2 / 2 cores nov-2019
 	- Celeron J4125 2GHz / 4MB L2 / 4 cores nov-2019
-- Core 2 Duo
-- Core 2 Extreme
-- Core 2 Quad
+
 - Core i3 10th Gen
 	- Core i3-10100T 3GHz 3.8GHz / 6MB L3 / 4 cores april-2020
 	- Core i3-10100 3.6GHz 4.3GHz / 6MB L3 / 4 cores april-2020
@@ -119,11 +113,7 @@
 	- Intel® Core™ i3-1115GRE 2.20 GHz 3.90 GHz / 6 MB Intel® Smart Cache	/ 2 cores 3Q'2020
 	- Intel® Core™ i3-1120G4 3.50 GHz 8 MB Intel® Smart Cache	/ 4 cores 1Q'2021
 	- Intel® Core™ i3-1125G4 3.70 GHz / 8 MB Intel® Smart Cache	/ 4 cores 1Q'2021	
-- Core i3 1st Gen
-- Core i3 2nd Gen
-- Core i3 3rd Gen
-- Core i3 4th Gen
-- Core i3 6th Gen
+
 - Core i3 7th Gen
 	- Core i3-7100T 3.4GHz N/A / 3MB L3 / 2 cores jan-2017
 	- Core i3-7100 3.9GHz N/A / 3MB L3 / 2 cores jan-2017
@@ -168,11 +158,7 @@
 	- Intel® Core™ i5-1145G7	4 cores		4.40 GHz		8 MB Intel® Smart Cache		1Q'2021
 	- Intel® Core™ i5-1140G7	4 cores		4.20 GHz		8 MB Intel® Smart Cache		1Q'2021
 	- Intel® Core™ i5-11300H	4 cores		4.40 GHz		8 MB Intel® Smart Cache		1Q'2021
-- Core i5 1st Gen
-- Core i5 2nd Gen
-- Core i5 3rd Gen
-- Core i5 4th Gen
-- Core i5 5th Gen
+
 - Core i5 6th Gen
 	- Core i5-6585R 2.8GHz / 6MB L3 / 128MB L4 / 4 cores april-2016
 	- Core i5-6685R 3.2GHz / 6MB L3 / 128MB L4 / 4 cores april-2016
@@ -221,11 +207,7 @@
 	- Intel® Core™ i7-1180G7	Q1'21	4 cores		4.60 GHz		12 MB Intel® Smart Cache	
 	- Intel® Core™ i7-11375H	Q1'21	4 cores		5.00 GHz		12 MB Intel® Smart Cache	
 	- Intel® Core™ i7-11370H	Q1'21	4 cores		4.80 GHz		12 MB Intel® Smart Cache
-- Core i7 1st Gen
-- Core i7 2nd Gen
-- Core i7 3rd Gen
-- Core i7 4th Gen
-- Core i7 5th Gen
+
 - Core i7 6th Gen
 	- Core i7-6785R 3.3GHz / 8MB L3 / 128MB L4 / 4 cores april-2016
 	- Core i7-6800K 3.4GHz / 15MB L3 / 6 cores may-2016
@@ -284,11 +266,7 @@
 	- Core i9-9900T 2.1GHz / 16MB L3 / 8 cores june-2019
 	- Core i9-9900 3.1GHz / 16MB L3 / 8 cores june-2019
 	- Core i9-9900KS 4GHz / 16MB L3 / 8 cores oct-2019
-- Pentium
-- Pentium 4
-- Pentium D
-- Pentium Dual Core
-- Pentium Extreme Series
+
 - Pentium G
 	- Pentium G4560T 2.9GHz / 3MB L3 / 2 cores jan-2017
 	- Pentium G4560 3.5GHz / 3MB L3 / 2 cores jan-2017
@@ -309,9 +287,7 @@
 	- Pentium G6500T 3.5GHz / 4MB L3 / 2 cores april-2020
 	- Pentium G6500 4.1GHz / 4MB L3 / 2 cores april-2020
 	- Pentium G6600 4.2GHz / 4MB L3 / 2 cores april-2020
-- Pentium Gold
-- Pentium II
-- Pentium III
+
 - Pentium J
 	- Pentium J4205 1.5GHz / 2MB L2 / 4 cores aug-2016
 	- Pentium J3710 1.6GHz / 2MB L2 / 4 cores jan-2016
