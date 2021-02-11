@@ -49,12 +49,8 @@ def get_product_rating(product_url) -> str:
         driver.get(product_url)
         rating_elem = driver.find_element_by_class_name('rating-box')
         stars = rating_elem.find_elements_by_tag_name('span')
-        rating = 0
-        for star in stars:
-                if star.find_element_by_tag_name('i').get_attribute('class') == 'fa fa-star fa-stack-1x':
-                        # star is filled
-                        rating = rating + 1
-        return rating
+        filled_stars = [star for star in stars if star.find_element_by_tag_name('i').get_attribute('class') == 'fa fa-star fa-stack-1x']
+        return len(filled_stars)
 
 
 if __name__ == '__main__':
