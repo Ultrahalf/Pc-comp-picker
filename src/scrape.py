@@ -24,6 +24,7 @@ driver = webdriver.Firefox(options=options, firefox_profile=profile)
 def get_product_url(product) -> str:
         driver.get(URL)
         search_elem = driver.find_element_by_name('search')
+        search_elem.clear()
         search_elem.send_keys(product)
         try:
                 # waits 7 seconds for dropdown
