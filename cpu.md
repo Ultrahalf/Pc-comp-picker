@@ -89,6 +89,7 @@
 	- Celeron G5905T 3.3GHz / 4MB L3 / 2 cores july-2020
 	- Celeron G5905 3.5GHz / 4MB L3 / 2 cores july-2020
 	- Celeron G5925 3.6GHz / 4MB L3 / 2 cores july-2020
+	
 - Celeron J
 	- Celeron J3060 1.6GHz / 2MB L2 / 2 cores Jan-2016
 	- Celeron J3160 1.6GHz / 2MB L2 / 4 cores jan-2016
@@ -106,6 +107,7 @@
 	- Core i3-10300 3.7GHz 4.4GHz / 8MB L3 / 4 cores april-2020
 	- Core i3-10320 3.8GHz 4.6GHz / 8MB L3 / 4 cores april-2020
 	- Core i3-10100F 3.6GHz 4.30GHz / 6MB L3 / 4 cores dec-2020
+	
 - Core i3 11th Gen
 	- Intel® Core™ i3-1110G4 3.90 GHz / 6 MB Intel® Smart Cache / 2 cores 3Q'2020
 	- Intel® Core™ i3-1115G4 4.10 GHz / 6 MB Intel® Smart Cache	/ 2 cores 3Q'2020
@@ -121,6 +123,7 @@
 	- Core i3-7300 4GHz N/A / 4MB L3 / 2 cores jan-2017
 	- Core i3-7320 4.1GHz N/A / 4MB L3 / 2 cores jan-2017
 	- Core i3-7350K 4.2GHz N/A / 4MB L3 / 2 cores jan-2017
+	
 - Core i3 8th Gen
 	- Core i3-8100 3.6GHz 3.6GHz / 6MB L3 / 4 cores oct-2017
 	- Core i3-8350K 4GHz 5.1GHz / 8MB L3 / 4 cores oct-2017
@@ -128,6 +131,7 @@
 	- Core i3-8300T 3.2GHz 3.2GHz / 8MB L3 / 4 cores april-2018
 	- Core i3-8300 3.7GHz / 8MB L3 / 4 cores april-2018
 	- Core i3-8100F 3.6GHz / 6MB L3 / 4 cores jan-2019
+	
 - Core i3 9th Gen
 	- Core i3-9350KF 4GHz 4.6GHz/ 8MB L3 / 4 cores jan-2019
 	- Core i3-9100F 3.6GHz 4.2GHz / 6MB L3 / 4 cores june-2019
@@ -137,6 +141,7 @@
 	- Core i3-9300 3.7GHz 4.3GHz / 8MB L3 / 4 cores june-2019
 	- Core i3-9320 3.7GHz 4.40GHz/ 8MB L3 / 4 cores june-2019
 	- Core i3-9350K 4GHz 4.6GHz/ 8MB L3 / 4 cores june-2019
+	
 - Core i5 10th Gen
 	- Core i5-10400F 2.9GHz / 12MB L3 / 6 cores april-2020
 	- Core i5-10400T 2GHz / 12MB L3 / 6 cores april-2020
@@ -147,21 +152,23 @@
 	- Core i5-10600K 4.1GHz / 12MB L3 / 6 cores april-2020
 	- Core i5-10600T 2.4GHz / 12MB L3 / 6 cores april-2020
 	- Core i5-10600 3.3GHz / 12MB L3 / 6 cores april-2020
+	
 - Core i5 11th Gen
-	- PROCESSOR					CORES		CLOCK SPEED			CACHE					RELEASE DATE
+	- PROCESSOR  CORES / CLOCK SPEED / CACHE / RELEASE DATE
 	----------------------------------------------------------------------------------------------
-	- Intel® Core™ i5-1135G7	4 cores		4.20 GHz		8 MB Intel® Smart Cache		3Q'2020
-	- Intel® Core™ i5-1135G7	4 cores		4.20 GHz		8 MB Intel® Smart Cache		3Q'2020
-	- Intel® Core™ i5-1130G7	4 cores		4.00 GHz		8 MB Intel® Smart Cache		3Q'2020
-	- Intel® Core™ i5-1145GRE	4 cores		1.50 GHz	4.10 GHz	8 MB Intel® Smart Cache		3Q'2020
-	- Intel® Core™ i5-1145G7E	4 cores		1.50 GHz	4.10 GHz	8 MB Intel® Smart Cache		3Q'2020
-	- Intel® Core™ i5-1145G7	4 cores		4.40 GHz		8 MB Intel® Smart Cache		1Q'2021
-	- Intel® Core™ i5-1140G7	4 cores		4.20 GHz		8 MB Intel® Smart Cache		1Q'2021
-	- Intel® Core™ i5-11300H	4 cores		4.40 GHz		8 MB Intel® Smart Cache		1Q'2021
+	- Intel® Core™ i5-1135G7  4 cores / 4.20 GHz / 8 MB Intel® Smart Cache / 3Q'2020
+	- Intel® Core™ i5-1135G7  4 cores / 4.20 GHz / 8 MB Intel® Smart Cache / 3Q'2020
+	- Intel® Core™ i5-1130G7  4 cores / 4.00 GHz / 8 MB Intel® Smart Cache / 3Q'2020
+	- Intel® Core™ i5-1145GRE  4 cores / 1.50 GHz	4.10 GHz / 8 MB Intel® Smart Cache / 3Q'2020
+	- Intel® Core™ i5-1145G7E  4 cores / 1.50 GHz	4.10 GHz / 8 MB Intel® Smart Cache / 3Q'2020
+	- Intel® Core™ i5-1145G7  4 cores / 4.40 GHz / 8 MB Intel® Smart Cache / 1Q'2021
+	- Intel® Core™ i5-1140G7  4 cores / 4.20 GHz / 8 MB Intel® Smart Cache / 1Q'2021
+	- Intel® Core™ i5-11300H  4 cores / 4.40 GHz / 8 MB Intel® Smart Cache / 1Q'2021
 
 - Core i5 6th Gen
 	- Core i5-6585R 2.8GHz / 6MB L3 / 128MB L4 / 4 cores april-2016
 	- Core i5-6685R 3.2GHz / 6MB L3 / 128MB L4 / 4 cores april-2016
+	
 - Core i5 7th Gen
 	- Core i5-7400T 2.4GHz / 6MB L3 / 4 cores jan-2017
 	- Core i5-7400 3GHz / 6MB L3 / 4 cores jan-2017
@@ -171,6 +178,7 @@
 	- Core i5-7600T 2.8GHz / 6MB L3 / 4 cores jan-2017
 	- Core i5-7600 3.5GHz / 6MB L3 / 4 cores jan-2017
 	- Core i5-7640X 4GHz / 6MB L3 / 4 cores  june-2017
+	
 - Core i5 8th Gen
 	- Core i5-8400 2.8GHz / 9MB L3 / 6 cores oct-2017
 	- Core i5-8600K 3.6GHz / 9MB L3 / 6 cores oct-2017
@@ -179,6 +187,7 @@
 	- Core i5-8500 3GHz / 9MB L3 / 6 cores april-2018
 	- Core i5-8600T 2.3GHz / 9MB L3 / 6 cores april-2018
 	- Core i5-8600 3.1GHz / 9MB L3 / 6 cores april-2018
+	
 - Core i5 9th Gen
 	- Core i5-9600K 3.7GHz / 9MB L3 / 6 cores oct-2018
 	- Core i5-9400F 2.9GHz / 9MB L3 / 6 cores jan-2019
@@ -190,23 +199,25 @@
 	- Core i5-9500 (2nd quarter) 3GHz / 9MB L3 / 6 cores june-2019
 	- Core i5-9600T (2nd quarter) 2.3GHz / 9MB L3 / 6 cores june-2019
 	- Core i5-9600 (2nd quarter) 3.1GHz / 9MB L3 / 6 cores june-2019
+	
 - Core i7 10th Gen
 	- Core i7-10700F 2.9GHz / 16MB L3 / 8 cores april-2020
 	- Core i7-10700KF 3.8GHz / 16MB L3 / 8 cores april-2020
 	- Core i7-10700K 3.8GHz / 16MB L3 / 8 cores april-2020
 	- Core i7-10700T 2GHz / 16MB L3 / 8 cores april-2020
 	- Core i7-10700 2.9GHz / 16MB L3 / 8 cores april-2020
+	
 - Core i7 11th Gen
-	- PROCESSOR					DATE	CORES		CLOCK SPEED		CACHE
+	- PROCESSOR	 DATE / CORES / CLOCK SPEED / CACHE
 	----------------------------------------------------------------------------------------
-	- Intel® Core™ i7-1185G7	Q3'20	4 cores		4.80 GHz		12 MB Intel® Smart Cache	
-	- Intel® Core™ i7-1165G7	Q3'20	4 cores		4.70 GHz		12 MB Intel® Smart Cache		
-	- Intel® Core™ i7-1160G7	Q3'20	4 cores		4.40 GHz		12 MB Intel® Smart Cache	
-	- Intel® Core™ i7-1185GRE	Q3'20	4 cores		1.80 GHz	4.40 GHz	12 MB Intel® Smart Cache	
-	- Intel® Core™ i7-1185G7E	Q3'20	4 cores		1.80 GHz	4.40 GHz	12 MB Intel® Smart Cache	
-	- Intel® Core™ i7-1180G7	Q1'21	4 cores		4.60 GHz		12 MB Intel® Smart Cache	
-	- Intel® Core™ i7-11375H	Q1'21	4 cores		5.00 GHz		12 MB Intel® Smart Cache	
-	- Intel® Core™ i7-11370H	Q1'21	4 cores		4.80 GHz		12 MB Intel® Smart Cache
+	- Intel® Core™ i7-1185G7  Q3'20 / 4 cores	/ 4.80 GHz	/ 12 MB Intel® Smart Cache	
+	- Intel® Core™ i7-1165G7  Q3'20 / 4 cores	/ 4.70 GHz	/ 12 MB Intel® Smart Cache		
+	- Intel® Core™ i7-1160G7  Q3'20 / 4 cores	/ 4.40 GHz	/ 12 MB Intel® Smart Cache	
+	- Intel® Core™ i7-1185GRE  Q3'20 / 4 cores	/ 1.80 GHz	4.40 GHz / 12 MB Intel® Smart Cache	
+	- Intel® Core™ i7-1185G7E  Q3'20 / 4 cores	/ 1.80 GHz	4.40 GHz / 12 MB Intel® Smart Cache	
+	- Intel® Core™ i7-1180G7  Q1'21 / 4 cores	/ 4.60 GHz	/ 12 MB Intel® Smart Cache	
+	- Intel® Core™ i7-11375H  Q1'21 / 4 cores	/ 5.00 GHz	/ 12 MB Intel® Smart Cache	
+	- Intel® Core™ i7-11370H  Q1'21 / 4 cores	/ 4.80 GHz	/ 12 MB Intel® Smart Cache
 
 - Core i7 6th Gen
 	- Core i7-6785R 3.3GHz / 8MB L3 / 128MB L4 / 4 cores april-2016
@@ -214,6 +225,7 @@
 	- Core i7-6850K 3.6GHz / 15MB L3 / 6 cores may-2016
 	- Core i7-6900K 3.2GHz / 20MB L3 / 8 cores may-2016
 	- Core i7-6950X 3GHz / 25MB L3 / 10 cores may-2016
+	
 - Core i7 7th Gen
 	- Core i7-7700K 4.2GHz / 8MB L3 / 4 cores jan-2017
 	- Core i7-7700T 2.9GHz / 8MB L3 / 4 cores jan-2017
@@ -221,11 +233,13 @@
 	- Core i7-7740X 4.3GHz / 8MB L3 / 4 cores june-2017
 	- Core i7-7800X 3.5GHz / 8.2MB L3 / 6 cores june-2017
 	- Core i7-7820X 3.6GHz / 11MB L3 / 8 cores june-2017
+	
 - Core i7 8th Gen
 	- Core i7-8700K 3.7GHz / 12MB L3 / 6 cores oct-2017
 	- Core i7-8700 3.2GHz / 12MB L3 / 6 cores oct-2017
 	- Core i7-8700T 2.4GHz / 12MB L3 / 6 cores april-2018
 	- Core i7-8086K 4GHz / 12MB L3 / 6 cores june-2018
+	
 - Core i7 9th Gen
 	- Core i7-9700K 3.6GHz / 12MB L3 / 8 cores oct-2018
 	- Core i7-9800X 3.8GHz / 16.5MB L3 / 8 cores oct-2018
@@ -233,6 +247,7 @@
 	- Core i7-9700F (2nd quarter) 3GHz / 12MB L3 / 8 cores june-2019
 	- Core i7-9700T (2nd quarter) 2GHz / 12MB L3 / 8 cores june-2019
 	- Core i7-9700 (2nd quarter) 3GHz / 12MB L3 / 8 cores june-2019
+	
 - Core i9 10th Gen
 	- Core i9-10900X 3.7GHz / 19.2MB L3 / 10 cores nov-2019
 	- Core i9-10920X 3.5GHz / 19.2MB L3 / 12 cores nov-2019
@@ -244,16 +259,19 @@
 	- Core i9-10900T 1.9GHz / 20MB L3 / 10 cores april-2020
 	- Core i9-10900 2.8GHz / 20MB L3 / 10 cores april-2020
 	- Core i9-10850K 3.6GHz / 20MB L3 / 10 cores july-2020
+	
 - Core i9 11th Gen
-	- Core i9-11900K 3.50 GHz	5.30 GHz / 16 MB / 8 cores Q1'2021
-	- Core i9-11900	 1.80 GHz	4.50 GHz / 16 MB / 8 cores Q1'2021
-	- Core i9-11900T N/A	N/A	/ 16 MB / 8 cores Q1'2021
+	- Core i9-11900K 3.50 GHz 5.30 GHz / 16 MB / 8 cores Q1'2021
+	- Core i9-11900	 1.80 GHz 4.50 GHz / 16 MB / 8 cores Q1'2021
+	- Core i9-11900T N/A N/A	/ 16 MB / 8 cores Q1'2021
+	
 - Core i9 7th Gen
 	- Core i9-7900X 3.3GHz / 13.7MB L3 / 10 cores june-2017
 	- Core i9-7920X 2.9GHz / 16.5MB L3 / 12 cores aug-2017
 	- Core i9-7940 3.1GHz / 19.2MB L3 / 14 cores sept-2017
 	- Core i9-7960X 2.8GHz / 22MB L3 / 16 cores sept-2017
 	- Core i9-7980XE 2.6GHz / 24.7MB L3 / 18 cores sept-2017
+	
 - Core i9 9th Gen
 	- Core i9-9900K 3.6GHz / 16MB L3 / 8 cores oct-2018
 	- Core i9-9820X 3.3GHz / 16.5MB L3 / 10 cores oct-2018
@@ -293,6 +311,7 @@
 	- Pentium J3710 1.6GHz / 2MB L2 / 4 cores jan-2016
 	- Pentium J5005 1.5GHz / 4MB L2 / 4 cores dec-2017
 	- Pentium J5040 2GHz / 4MB L2 / 4 cores nov-2019
+	
 - Xeon
 - Xeon E3 Series
 - Xeon E5 Series
