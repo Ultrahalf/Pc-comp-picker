@@ -22,8 +22,9 @@ driver = webdriver.Firefox(options=options, firefox_profile=profile)
 
 
 class MdComputers:
-        def __init__():
+        def __init__(self, driver):
                 self.STORE_URL = 'https://mdcomputers.in'
+                self.driver = driver
 
         def get_product_url(self, product) -> str:
                 driver.get(self.STORE_URL)
@@ -57,6 +58,15 @@ class MdComputers:
 
 
 if __name__ == '__main__':
-        # print(get_product_url(SEARCH_TERM))
-        # print(get_product_price('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
-        print(get_product_rating('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
+        # Disable image loading
+        SEARCH_TERM = 'Ryzen 7 5800X'
+        profile = webdriver.FirefoxProfile()
+        profile.set_preference('permissions.default.image', 2)
+        options = Options()
+        # options.headless = True
+        driver = webdriver.Firefox(options=options, firefox_profile=profile)
+
+        mdcomp = MdComputers(driver)
+        # print(mdcomp.get_product_url(SEARCH_TERM))
+        # print(mdcomp.get_product_price('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
+        # print(mdcomp.get_product_rating('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
