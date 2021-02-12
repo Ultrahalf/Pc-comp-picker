@@ -57,6 +57,76 @@ class MdComputers:
                 return len(filled_stars)
 
 
+class VedantComputers:
+        def __init__():
+                self.STORE_URL = 'https://vedantcomputers.com'
+
+        def get_product_url(self, product_name):
+                pass
+
+        def get_product_price(self, product_name):
+                pass
+
+        def get_product_rating(self, product_name):
+                pass
+
+
+class TheITDepot:
+        def __init__():
+                self.STORE_URL = 'https://vedantcomputers.com'
+
+        def get_product_url(self, product_name):
+                pass
+
+        def get_product_price(self, product_name):
+                pass
+
+        def get_product_rating(self, product_name):
+                pass
+
+
+class PrimeAGBG:
+        def __init__():
+                self.STORE_URL = 'https://vedantcomputers.com'
+
+        def get_product_url(self, product_name):
+                pass
+
+        def get_product_price(self, product_name):
+                pass
+
+        def get_product_rating(self, product_name):
+                pass
+
+
+class Amazon:
+        def __init__():
+                self.STORE_URL = 'https://vedantcomputers.com'
+
+        def get_product_url(self, product_name):
+                pass
+
+        def get_product_price(self, product_name):
+                pass
+
+        def get_product_rating(self, product_name):
+                pass
+
+
+class Flipkart:
+        def __init__():
+                self.STORE_URL = 'https://vedantcomputers.com'
+
+        def get_product_url(self, product_name):
+                pass
+
+        def get_product_price(self, product_name):
+                pass
+
+        def get_product_rating(self, product_name):
+                pass
+
+
 if __name__ == '__main__':
         # Disable image loading
         SEARCH_TERM = 'Ryzen 7 5800X'
