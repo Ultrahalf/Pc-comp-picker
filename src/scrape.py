@@ -73,7 +73,7 @@ class VedantComputers:
 
 class TheITDepot:
         def __init__():
-                self.STORE_URL = 'https://vedantcomputers.com'
+                self.STORE_URL = 'https://theitdepot.com'
 
         def get_product_url(self, product_name):
                 pass
@@ -85,9 +85,9 @@ class TheITDepot:
                 pass
 
 
-class PrimeAGBG:
+class PrimeABGB:
         def __init__():
-                self.STORE_URL = 'https://vedantcomputers.com'
+                self.STORE_URL = 'https://primeabgb.com'
 
         def get_product_url(self, product_name):
                 pass
@@ -101,7 +101,7 @@ class PrimeAGBG:
 
 class Amazon:
         def __init__():
-                self.STORE_URL = 'https://vedantcomputers.com'
+                self.STORE_URL = 'https://amazon.in'
 
         def get_product_url(self, product_name):
                 pass
@@ -115,7 +115,7 @@ class Amazon:
 
 class Flipkart:
         def __init__():
-                self.STORE_URL = 'https://vedantcomputers.com'
+                self.STORE_URL = 'https://flipkart.com'
 
         def get_product_url(self, product_name):
                 pass
