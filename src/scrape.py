@@ -26,11 +26,11 @@ class MdComputers:
                 self.STORE_URL = 'https://mdcomputers.in'
                 self.driver = driver
 
-        def get_product_url(self, product) -> str:
+        def get_product_url(self, product_name) -> str:
                 driver.get(self.STORE_URL)
                 search_elem = driver.find_element_by_name('search')
                 search_elem.clear()
-                search_elem.send_keys(product)
+                search_elem.send_keys(product_name)
                 try:
                         # waits 7 seconds for dropdown
                         dropdown_elem = WebDriverWait(driver, 7).until(
