@@ -9,17 +9,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-SEARCH_TERM = 'Ryzen 7 5800X'
-URL = 'https://mdcomputers.in'
-
-# Disable image loading
-profile = webdriver.FirefoxProfile()
-profile.set_preference('permissions.default.image', 2)
-
-options = Options()
-# options.headless = True
-driver = webdriver.Firefox(options=options, firefox_profile=profile)
-
 
 class MdComputers:
         def __init__(self, driver):
@@ -45,7 +34,10 @@ class MdComputers:
 
         def get_product_price(self, product_url) -> str:
                 driver.get(product_url)
-                price_elem = driver.find_element_by_id('price-special')
+                try:
+                        price_elem = driver.find_element_by_id('price-special')
+                except NoSuchElementException:
+                        price_elem = driver.find_element_by_id('price-old')
                 return price_elem.text
 
         def get_product_rating(self, product_url) -> str:
