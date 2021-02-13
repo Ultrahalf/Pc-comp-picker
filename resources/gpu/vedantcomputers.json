@@ -1,0 +1,114 @@
+{
+ "product": [
+  {
+   "name": "Asus GeForce RTX 2070 SUPER Dual EVO Advanced 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/asus-dual-geforce-rtx-2070-super-evo-advanced-8gb-gddr6"
+  },
+  {
+   "name": "INNO3D GeForce GTX 1660 SUPER TWIN X2 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-super-twin-x2-6gb-gddr6"
+  },
+  {
+   "name": "INNO3D GeForce GTX 1660 Ti Twin X2 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-ti-twin-x2-6gb-gddr6"
+  },
+  {
+   "name": "INNO3D GeForce RTX 2060 Twin X2 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-rtx-2060-twin-x2-6gb-gddr6"
+  },
+  {
+   "name": "INNO3D GeForce RTX 2080 SUPER ICHILL X3 ULTRA 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-rtx-2080-super-ichill-x3-ultra-8gb-gddr6"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 5500 XT 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-5500-xt-8gb-gddr6"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 5600 XT BE 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-5600-xt-be-6gb-gddr6"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 5700 XT BE 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-5700-xt-be-8gb-gddr6"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 580 8GB OC Lite GDDR5",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-580-8gb-oc-lite-gddr5"
+  },
+  {
+   "name": "ZOTAC GAMING GeForce GTX 1650 SUPER Twin Fan 4GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/zotac-gaming-geforce-gtx-1650-super-twin-fan-4gb-gddr6"
+  },
+  {
+   "name": "ZOTAC GAMING GeForce RTX 2060 SUPER MINI 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/zotac-gaming-geforce-rtx-2060-super-mini-8gb-gddr6"
+  },
+  {
+   "name": "ZOTAC GAMING GeForce RTX 2070 SUPER MINI 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/zotac-gaming-geforce-rtx-2070-super-mini-8gb-gddr6"
+  }
+ ],
+ "price": [
+  {
+   "name": "Asus GeForce RTX 2070 SUPER Dual EVO Advanced 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/asus-dual-geforce-rtx-2070-super-evo-advanced-8gb-gddr6",
+   "amt": "₹53,600"
+  },
+  {
+   "name": "INNO3D GeForce GTX 1660 SUPER TWIN X2 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-super-twin-x2-6gb-gddr6",
+   "amt": "₹27,500"
+  },
+  {
+   "name": "INNO3D GeForce GTX 1660 Ti Twin X2 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-ti-twin-x2-6gb-gddr6",
+   "amt": "₹25,399 ₹22,790"
+  },
+  {
+   "name": "INNO3D GeForce RTX 2060 Twin X2 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-rtx-2060-twin-x2-6gb-gddr6",
+   "amt": "₹35,150 ₹30,550"
+  },
+  {
+   "name": "INNO3D GeForce RTX 2080 SUPER ICHILL X3 ULTRA 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-rtx-2080-super-ichill-x3-ultra-8gb-gddr6",
+   "amt": "₹62,899"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 5500 XT 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-5500-xt-8gb-gddr6",
+   "amt": "₹19,999"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 5600 XT BE 6GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-5600-xt-be-6gb-gddr6",
+   "amt": "₹28,500"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 5700 XT BE 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-5700-xt-be-8gb-gddr6",
+   "amt": "₹56,750 ₹48,999"
+  },
+  {
+   "name": "SAPPHIRE PULSE Radeon RX 580 8GB OC Lite GDDR5",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/sapphire-pulse-radeon-rx-580-8gb-oc-lite-gddr5",
+   "amt": "₹30,950"
+  },
+  {
+   "name": "ZOTAC GAMING GeForce GTX 1650 SUPER Twin Fan 4GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/zotac-gaming-geforce-gtx-1650-super-twin-fan-4gb-gddr6",
+   "amt": "₹14,650"
+  },
+  {
+   "name": "ZOTAC GAMING GeForce RTX 2060 SUPER MINI 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/zotac-gaming-geforce-rtx-2060-super-mini-8gb-gddr6",
+   "amt": "₹47,500 ₹44,499"
+  },
+  {
+   "name": "ZOTAC GAMING GeForce RTX 2070 SUPER MINI 8GB GDDR6",
+   "url": "https://www.vedantcomputers.com/pc-components/graphics-card/zotac-gaming-geforce-rtx-2070-super-mini-8gb-gddr6",
+   "amt": "₹42,499 ₹36,999"
+  }
+ ]
+}
