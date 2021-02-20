@@ -50,14 +50,20 @@ class MdComputers:
 
 
 class VedantComputers:
-        def __init__():
+        def __init__(self, driver):
                 self.STORE_URL = 'https://vedantcomputers.com'
+                self.driver = driver
 
         def get_product_url(self, product_name):
                 pass
 
-        def get_product_price(self, product_name):
-                pass
+        def get_product_price(self, product_url) -> str:
+                driver.get(product_url)
+                try:
+                        price_elem = driver.find_element_by_class_name('product-price-new')
+                except NoSuchElementException:
+                        price_elem = driver.find_element_by_class_name('product-price')
+                return price_elem.text
 
         def get_product_rating(self, product_name):
                 pass
