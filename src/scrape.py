@@ -3,11 +3,11 @@ import sys
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.options import Options
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.options import Options
+from selenium.common.exceptions import NoSuchElementException
 
 
 class MdComputers:
@@ -65,36 +65,57 @@ class VedantComputers:
                         price_elem = driver.find_element_by_class_name('product-price')
                 return price_elem.text
 
-        def get_product_rating(self, product_name):
-                pass
+        # todo
+        def get_product_rating(self, product_url) -> str:
+                driver.get(product_url)
+                rating_elem = driver.find_element_by_class_name('rating-stars')
+                stars = rating_elem.find_elements_by_tag_name('span')
+                for star in stars:
+                        print(star.find_element_by_tag_name('i').get_attribute('class'))
 
 
 class TheITDepot:
-        def __init__():
+        def __init__(self, driver):
                 self.STORE_URL = 'https://theitdepot.com'
+                self.driver = driver
 
         def get_product_url(self, product_name):
                 pass
 
-        def get_product_price(self, product_name):
-                pass
+        def get_product_price(self, product_url) -> str:
+                driver.get(product_url)
+                page_elem = driver.find_element_by_id('Product')
+                price_elem = page_elem.find_element_by_class_name('col-md-12')
+                price_elem = price_elem.find_element_by_class_name('font-weight-bold')
+                return price_elem.text
 
-        def get_product_rating(self, product_name):
-                pass
+        def get_product_rating(self, product_url) -> str:
+                driver.get(product_url)
+                rating_elem = driver.find_element_by_css_selector('span[itemprop="ratingValue"]')
+                if rating_elem.text == 'No ratings':
+                        return 0
+                else:
+                        return rating_elem.text
 
 
 class PrimeABGB:
-        def __init__():
+        def __init__(self, driver):
                 self.STORE_URL = 'https://primeabgb.com'
+                self.driver = driver
 
         def get_product_url(self, product_name):
                 pass
 
-        def get_product_price(self, product_name):
-                pass
+        def get_product_price(self, product_url) -> str:
+                driver.get(product_url)
+                price_elem = driver.find_element_by_class_name('price')
+                price_elem = price_elem.find_element_by_tag_name('ins')
+                return price_elem.text
 
-        def get_product_rating(self, product_name):
-                pass
+        def get_product_rating(self, product_url) -> str:
+                driver.get(product_url)
+                rating_elem = driver.find_element_by_css_selector('div[class="star-rating"]')
+                return rating_elem.get_attribute('aria-label')
 
 
 class Amazon:
@@ -111,23 +132,9 @@ class Amazon:
                 pass
 
 
-class Flipkart:
-        def __init__():
-                self.STORE_URL = 'https://flipkart.com'
-
-        def get_product_url(self, product_name):
-                pass
-
-        def get_product_price(self, product_name):
-                pass
-
-        def get_product_rating(self, product_name):
-                pass
-
-
 if __name__ == '__main__':
-        # Disable image loading
         SEARCH_TERM = 'Ryzen 7 5800X'
+        # Disable image loading
         profile = webdriver.FirefoxProfile()
         profile.set_preference('permissions.default.image', 2)
         options = Options()
@@ -135,6 +142,29 @@ if __name__ == '__main__':
         driver = webdriver.Firefox(options=options, firefox_profile=profile)
 
         mdcomp = MdComputers(driver)
-        # print(mdcomp.get_product_url(SEARCH_TERM))
-        # print(mdcomp.get_product_price('https://mdcomputers.in/amd-ryzen-7-5800x-100-100000063wof.html'))
+        # print(mdcomp.get_product_price('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
         # print(mdcomp.get_product_rating('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
+
+        vedant = VedantComputers(driver)
+        # print(vedant.get_product_price('https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-ti-twin-x2-6gb-gddr6'))
+        # 5 stars
+        # print(vedant.get_product_rating('https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-ti-twin-x2-6gb-gddr6'))
+        # 4 stars
+        # print(vedant.get_product_rating('https://www.vedantcomputers.com/combo/combo-amd-5-3600-processor-and-msi-x570-a-pro-motherboard?sort=p.price&order=DESC'))
+        # no stars
+        # print(vedant.get_product_rating('https://www.vedantcomputers.com/zotac-gaming-geforce-gtx-1660-ti-amp-6gb-gddr6'))
+
+        itdepot = TheITDepot(driver)
+        # print(itdepot.get_product_price('https://www.theitdepot.com/details-Gigabyte+Geforce+GT+710+2GB+DDR3+(GV-N710D3-2GL)_C45P30157.html'))
+        # print(itdepot.get_product_price('https://www.theitdepot.com/details-Gigabyte+GeForce+GTX+1650+SUPER+WINDFORCE+OC+4GB+DDR6+(GV-N165SWF2OC-4GD)_C45P33816.html'))
+        # 0 stars
+        print(itdepot.get_product_rating('https://www.theitdepot.com/details-Gigabyte+GeForce+GTX+1650+SUPER+WINDFORCE+OC+4GB+DDR6+(GV-N165SWF2OC-4GD)_C45P33816.html'))
+        # 5 stars
+        # print(itdepot.get_product_rating('https://www.theitdepot.com/details-Western+Digital+Blue+1TB+SATA+Internal+Desktop+Hard+Drive+(WD10EZEX)_C12P24121.html'))
+
+        primeabgb = PrimeABGB(driver)
+        # print(primeabgb.get_product_price('https://www.primeabgb.com/online-price-reviews-india/gigabyte-geforce-gtx-1660-super-oc-6g-gaming-graphic-card-gv-n166soc-6gd/'))
+        # 0 stars
+        # print(primeabgb.get_product_rating('https://www.primeabgb.com/online-price-reviews-india/gigabyte-geforce-gtx-1660-super-oc-6g-gaming-graphic-card-gv-n166soc-6gd/'))
+        # 5 stars
+        # print(primeabgb.get_product_rating('https://www.primeabgb.com/online-price-reviews-india/amd-ryzen-5-3600-3rd-gen-desktop-processor/'))
