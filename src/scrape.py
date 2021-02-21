@@ -6,11 +6,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 
 
-class MdComputers:
+class MDComputers:
         def __init__(self, driver):
                 self.STORE_URL = 'https://mdcomputers.in'
                 self.driver = driver
@@ -65,13 +65,14 @@ class VedantComputers:
                         price_elem = driver.find_element_by_class_name('product-price')
                 return price_elem.text
 
-        # todo
         def get_product_rating(self, product_url) -> str:
                 driver.get(product_url)
-                rating_elem = driver.find_element_by_class_name('rating-stars')
+                product_elem = driver.find_element_by_id('product')
+                rating_elem = product_elem.find_element_by_class_name('rating-stars')
                 stars = rating_elem.find_elements_by_tag_name('span')
-                for star in stars:
-                        print(star.find_element_by_tag_name('i').get_attribute('class'))
+                filled_stars = [star for star in stars if star.find_element_by_tag_name('i').
+                                get_attribute('class') == 'fa fa-star fa-stack-1x']
+                return len(filled_stars)
 
 
 class TheITDepot:
@@ -114,36 +115,63 @@ class PrimeABGB:
 
         def get_product_rating(self, product_url) -> str:
                 driver.get(product_url)
-                rating_elem = driver.find_element_by_css_selector('div[class="star-rating"]')
-                return rating_elem.get_attribute('aria-label')
+                try:
+                        rating_elem = driver.find_element_by_css_selector('div[class="star-rating"]')
+                        return rating_elem.get_attribute('aria-label')
+                except NoSuchElementException:
+                        return 0
 
 
 class Amazon:
-        def __init__():
+        def __init__(self, driver):
                 self.STORE_URL = 'https://amazon.in'
+                self.driver = driver
 
         def get_product_url(self, product_name):
                 pass
 
-        def get_product_price(self, product_name):
-                pass
+        def get_product_price(self, product_url):
+                driver.get(product_url)
+                try:
+                        price_elem = driver.find_element_by_id('priceblock_ourprice')
+                except NoSuchElementException:
+                        return "Out of stock"
+                return price_elem.text
 
-        def get_product_rating(self, product_name):
-                pass
+        def get_product_rating(self, product_url):
+                driver.get(product_url)
+                try:
+                        rating_elem = driver.find_element_by_css_selector('span[data-hook="rating-out-of-text"]')
+                        return rating_elem.text
+                except NoSuchElementException:
+                        return 0
 
 
 if __name__ == '__main__':
-        SEARCH_TERM = 'Ryzen 7 5800X'
-        # Disable image loading
-        profile = webdriver.FirefoxProfile()
-        profile.set_preference('permissions.default.image', 2)
-        options = Options()
-        # options.headless = True
-        driver = webdriver.Firefox(options=options, firefox_profile=profile)
+        # pref = webdriver.ChromeOptions()
+        chrome_options = Options()
 
-        mdcomp = MdComputers(driver)
-        # print(mdcomp.get_product_price('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
-        # print(mdcomp.get_product_rating('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
+        # disable image loading
+        chrome_prefs = {}
+        chrome_options.experimental_options["prefs"] = chrome_prefs
+        chrome_prefs["profile.default_content_settings"] = {"images": 2}
+        chrome_prefs["profile.managed_default_content_settings"] = {"images": 2}
+
+        # headless mode
+        chrome_options.add_argument('--headless')
+
+        driver = webdriver.Chrome(options=chrome_options)
+        amazon = Amazon(driver)
+        # print(amazon.get_product_price('https://www.amazon.in/GeForce-GDDR5-192-Bit-Profile-Graphics/dp/B0734YGRZT'))
+        # print(amazon.get_product_price('https://www.amazon.in/Cerberus-GeForce-Gaming-Graphics-Cerberus-GTX1050Ti-O4G/dp/B079JSKCW3'))
+        # not in stock
+        # print(amazon.get_product_price('https://www.amazon.in/MSI-GeForce-RTX-2060-Graphic/dp/B07TZ55K6J'))
+        # 4.1 stars
+        # print(amazon.get_product_rating('https://www.amazon.in/GeForce-GDDR5-192-Bit-Profile-Graphics/dp/B0734YGRZT'))
+        # no stars
+        # print(amazon.get_product_rating('https://www.amazon.in/KARIBUTM-Leather-Button-Black-Pendrive/dp/B08H5MBLHV'))
+        # 5 stars
+        # print(amazon.get_product_rating('https://www.amazon.in/Dragon-Honor-Swivel-Metal-Memory/dp/B08GK9RH3Q'))
 
         vedant = VedantComputers(driver)
         # print(vedant.get_product_price('https://www.vedantcomputers.com/pc-components/graphics-card/inno3d-geforce-gtx-1660-ti-twin-x2-6gb-gddr6'))
@@ -154,13 +182,9 @@ if __name__ == '__main__':
         # no stars
         # print(vedant.get_product_rating('https://www.vedantcomputers.com/zotac-gaming-geforce-gtx-1660-ti-amp-6gb-gddr6'))
 
-        itdepot = TheITDepot(driver)
-        # print(itdepot.get_product_price('https://www.theitdepot.com/details-Gigabyte+Geforce+GT+710+2GB+DDR3+(GV-N710D3-2GL)_C45P30157.html'))
-        # print(itdepot.get_product_price('https://www.theitdepot.com/details-Gigabyte+GeForce+GTX+1650+SUPER+WINDFORCE+OC+4GB+DDR6+(GV-N165SWF2OC-4GD)_C45P33816.html'))
-        # 0 stars
-        print(itdepot.get_product_rating('https://www.theitdepot.com/details-Gigabyte+GeForce+GTX+1650+SUPER+WINDFORCE+OC+4GB+DDR6+(GV-N165SWF2OC-4GD)_C45P33816.html'))
-        # 5 stars
-        # print(itdepot.get_product_rating('https://www.theitdepot.com/details-Western+Digital+Blue+1TB+SATA+Internal+Desktop+Hard+Drive+(WD10EZEX)_C12P24121.html'))
+        mdcomp = MDComputers(driver)
+        # print(mdcomp.get_product_price('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
+        # print(mdcomp.get_product_rating('https://mdcomputers.in/amd-dual-core-athlon-200ge.html'))
 
         primeabgb = PrimeABGB(driver)
         # print(primeabgb.get_product_price('https://www.primeabgb.com/online-price-reviews-india/gigabyte-geforce-gtx-1660-super-oc-6g-gaming-graphic-card-gv-n166soc-6gd/'))
@@ -168,3 +192,11 @@ if __name__ == '__main__':
         # print(primeabgb.get_product_rating('https://www.primeabgb.com/online-price-reviews-india/gigabyte-geforce-gtx-1660-super-oc-6g-gaming-graphic-card-gv-n166soc-6gd/'))
         # 5 stars
         # print(primeabgb.get_product_rating('https://www.primeabgb.com/online-price-reviews-india/amd-ryzen-5-3600-3rd-gen-desktop-processor/'))
+
+        itdepot = TheITDepot(driver)
+        # print(itdepot.get_product_price('https://www.theitdepot.com/details-Gigabyte+Geforce+GT+710+2GB+DDR3+(GV-N710D3-2GL)_C45P30157.html'))
+        # print(itdepot.get_product_price('https://www.theitdepot.com/details-Gigabyte+GeForce+GTX+1650+SUPER+WINDFORCE+OC+4GB+DDR6+(GV-N165SWF2OC-4GD)_C45P33816.html'))
+        # 0 stars
+        # print(itdepot.get_product_rating('https://www.theitdepot.com/details-Gigabyte+GeForce+GTX+1650+SUPER+WINDFORCE+OC+4GB+DDR6+(GV-N165SWF2OC-4GD)_C45P33816.html'))
+        # 5 stars
+        # print(itdepot.get_product_rating('https://www.theitdepot.com/details-Western+Digital+Blue+1TB+SATA+Internal+Desktop+Hard+Drive+(WD10EZEX)_C12P24121.html'))
