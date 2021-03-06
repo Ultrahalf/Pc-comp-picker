@@ -4,15 +4,15 @@ const puppeteer = require('puppeteer');
     const extractProducts = async url => {
         const browser = await puppeteer.launch({headless: false});
         const page = await browser.newPage();
-        // await page.setRequestInterception(true);
-        // page.on('request', (req) => {
-        //     if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
-        //         req.abort();
-        //     }
-        //     else {
-        //         req.continue();
-        //     }
-        // });
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
+                req.abort();
+            }
+            else {
+                req.continue();
+            }
+        });
         await page.goto(url);
         const results = await page.evaluate(() => {
             let products = [];
@@ -34,14 +34,14 @@ const puppeteer = require('puppeteer');
                             "price": product_items[i].querySelector("strong").textContent
                         })
                 }
-                document.querySelector("ul.pagination > li:last-child > a").click();
+                if(document.querySelector("ul.pagination > li:last-child > a"))
+                    document.querySelector("ul.pagination > li:last-child > a").click();
                 j++;
             }
             return products
         });
         await page.close();
         await browser.close();
-        // if(results.length < 1){
         return results
     };
 
