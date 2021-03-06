@@ -18,8 +18,12 @@ const puppeteer = require('puppeteer');
             let products = [];
             let product_items = document.getElementsByClassName("product-item");
             let len = product_items.length;
-            var next = document.querySelector("ul.pagination");
-            var totalLi = next.querySelectorAll("li").length;
+            if(document.querySelector("ul.pagination")) {
+                var next = document.querySelector("ul.pagination");
+                var totalLi = next.querySelectorAll("li").length;
+            } else {
+                totalLi = 5
+            }
             var j = 1
             while (j <= totalLi - 4){
                 for(i = 0; i < len; i++) {
