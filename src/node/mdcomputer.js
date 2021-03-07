@@ -4,6 +4,15 @@ const puppeteer = require('puppeteer');
 	const extractProducts = async url => {
 		const browser = await puppeteer.launch({headless: false});
 		const page = await browser.newPage();
+		await page.setRequestInterception(true);
+		page.on('request', (req) => {
+			if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
+				req.abort();
+			}
+			else {
+				req.continue();
+			}
+		});
 		await page.goto(url);
 		const nextUrl = await page.evaluate(() => {
 			let page = document.querySelector("ul.pagination > li.active").nextElementSibling;
@@ -13,17 +22,17 @@ const puppeteer = require('puppeteer');
 		});
 		const results = await page.evaluate(() => {
 			let products = []
-			let prd_titles = document.getElementsByClassName("right-block right-b");
-			let prd_prices = document.getElementsByClassName("price-new");
-			let tottitle = prd_titles.length
-			let totprice = prd_prices.length
-			if(tottitle == totprice) {
-				for(i = 0; i < tottitle; i++) {
+			let product_titles = document.getElementsByClassName("right-block right-b");
+			let product_prices = document.getElementsByClassName("price-new");
+			let titleLen = product_titles.length
+			let priceLen = product_prices.length
+			if(titleLen == priceLen) {
+				for(i = 0; i < titleLen; i++) {
 					products.push(
 						{
-							'title': prd_titles[i].querySelector("h4 a").textContent.replace(/\t|\n/g,''),
-							'url': prd_titles[i].querySelector("h4 a").href,
-							'price': prd_prices[i].textContent.replace(/\t|\n/g,'')
+							'title': product_titles[i].querySelector("h4 a").textContent.replace(/\t|\n/g,''),
+							'url': product_titles[i].querySelector("h4 a").href,
+							'price': product_prices[i].textContent.replace(/\t|\n/g,'')
 						})
 				}
 			}
@@ -41,6 +50,6 @@ const puppeteer = require('puppeteer');
 	const browser = await puppeteer.launch();
 	const firstUrl = "https://mdcomputers.in/memory?page=1";
 	const prds = await extractProducts(firstUrl);
-	console.log(prds);
+	console.table(prds);
 	process.exit();
 })();

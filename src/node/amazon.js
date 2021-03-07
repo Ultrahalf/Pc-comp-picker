@@ -4,6 +4,15 @@ const puppeteer = require('puppeteer');
 	const extractProducts = async url => {
 		const browser = await puppeteer.launch({headless: false});
 		const page = await browser.newPage();
+		await page.setRequestInterception(true);
+		page.on('request', (req) => {
+			if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
+				req.abort();
+			}
+			else {
+				req.continue();
+			}
+		});
 		await page.goto(url);
 		const nextUrl = await page.evaluate(() => {
 			if(document.querySelector("ul > li.a-last > a"))
@@ -39,6 +48,6 @@ const puppeteer = require('puppeteer');
 	const browser = await puppeteer.launch();
 	const firstUrl = "https://www.amazon.in/s?k=processsor&ref=nb_sb_noss_2";
 	const prds = await extractProducts(firstUrl);
-	console.log(prds);
+	console.table(prds);
 	process.exit();
 })();

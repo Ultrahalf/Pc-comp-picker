@@ -4,6 +4,15 @@ const puppeteer = require('puppeteer');
 	const extractProducts = async url => {
 		const browser = await puppeteer.launch({headless: false});
 		const page = await browser.newPage();
+		await page.setRequestInterception(true);
+		page.on('request', (req) => {
+			if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
+				req.abort();
+			}
+			else {
+				req.continue();
+			}
+		});
 		await page.goto(url);
 		const nextUrl = await page.evaluate(() => {
 			if(document.querySelector("ul.page-numbers li > a.next"))
@@ -37,6 +46,6 @@ const puppeteer = require('puppeteer');
 	const browser = await puppeteer.launch();
 	const firstUrl = "https://www.primeabgb.com/buy-online-price-india/ram-memory/?filters=_stock_status[instock]";
 	const prds = await extractProducts(firstUrl);
-	console.log(prds);
+	console.table(prds);
 	process.exit();
 })();

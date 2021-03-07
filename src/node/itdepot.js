@@ -46,8 +46,9 @@ const puppeteer = require('puppeteer');
     };
 
     const browser = await puppeteer.launch();
-    const firstUrl = "https://www.theitdepot.com/products-Monitor_C7.html";
-    const prds = await extractProducts(firstUrl);
-    console.log(prds);
+    let prds = 0;
+    const firstUrl = "https://www.theitdepot.com/products-RAM+(Memory)_C6.html";
+    prds = await extractProducts(firstUrl);
+    console.table(prds);
     process.exit();
 })();

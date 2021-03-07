@@ -23,14 +23,14 @@ const puppeteer = require('puppeteer');
         });
         const results = await page.evaluate(() => {
             let products = []
-            var prdgrid = document.querySelectorAll("#shopify-section-collection-template > div.grid > div:nth-child(2) > div .grid__item");
-            var len = prdgrid.length;
+            var product_items = document.querySelectorAll("#shopify-section-collection-template > div.grid > div:nth-child(2) > div .grid__item");
+            var len = product_items.length;
             for(i = 0;i <= len -1; i++){
                 products.push(
                     {
-                        "title": prdgrid[i].querySelector("p.product-title").textContent,
-                        "url": prdgrid[i].querySelector("div.grid div > a").href,
-                        "price": prdgrid[i].querySelector(".price-dis-sec span.visually-hidden + span.money").textContent
+                        "title": product_items[i].querySelector("p.product-title").textContent,
+                        "url": product_items[i].querySelector("div.grid div > a").href,
+                        "price": product_items[i].querySelector(".price-dis-sec span.visually-hidden + span.money").textContent
                     })
             }
             return products
@@ -47,6 +47,6 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch();
     const firstUrl = "https://computerspace.in/collections/cabinets?page=1";
     const prds = await extractProducts(firstUrl);
-    console.log(prds);
+    console.table(prds);
     process.exit();
 })();

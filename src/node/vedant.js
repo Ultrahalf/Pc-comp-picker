@@ -8,21 +8,21 @@ const puppeteer = require('puppeteer');
 		await autoScroll(page);
 		const results = await page.evaluate(() => {
 			let products = []
-			let prd = document.querySelectorAll(".product-thumb");
-			let len = prd.length
+			let product_items = document.querySelectorAll(".product-thumb");
+			let len = product_items.length
 			for(i = 0; i <= len - 1; i++) {
-				if(prd[i].querySelector(".price")) {
-					if(prd[i].querySelector(".price-new")){
-						price = prd[i].querySelector(".price-new").textContent
+				if(product_items[i].querySelector(".price")) {
+					if(product_items[i].querySelector(".price-new")){
+						price = product_items[i].querySelector(".price-new").textContent
 					}
 					else  {
-						price = prd[i].querySelector(".price").textContent
+						price = product_items[i].querySelector(".price").textContent
 					}
 				}
 				products.push(
 					{
-						'title': prd[i].querySelector(".name").textContent,
-						'url': prd[i].querySelector(".name > a").href,
+						'title': product_items[i].querySelector(".name").textContent,
+						'url': product_items[i].querySelector(".name > a").href,
 						'price': price.replace(/\t|\n/g,''),
 					})
 			}
@@ -36,8 +36,8 @@ const puppeteer = require('puppeteer');
 
 	const browser = await puppeteer.launch();
 	const firstUrl = "https://www.vedantcomputers.com/pc-components/graphics-card"
-	const prds = await extractProducts(firstUrl);
-	console.log(prds);
+	const products = await extractProducts(firstUrl);
+	console.table(products);
 	process.exit();
 })();
 
