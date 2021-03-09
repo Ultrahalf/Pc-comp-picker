@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PC Comp Picker</title>
+    <link href="../static/index.css" type="text/css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class="main">
+      <h3 class="centre main-title">PC Comp Picker</h3>
+      <p>The SQL commands that will be called:</p>
+      {{ sql }}
+    <div>
+    <div class="sidebar">
+      <h3 class="centre">Filters</h4>
+      <form method="post">
+        price low: <input type=text name="price-low">
+        price high: <input type=text name="price-high"><br>
+        <br>Components:<br>
+        <input type=checkbox name="cpu-check" checked> CPU<br>
+        <input type=checkbox name="ram-check" checked> Memory<br>
+        <input type=checkbox name="gpu-check" checked> GPU<br>
+        <br>Vendors:<br>
+        <input type=checkbox name="amazon-check" checked> Amazon<br>
+        <input type=checkbox name="mdcomputers-check" checked> MD Computers<br>
+        <input type=checkbox name="computerspace-check" checked> Computerspace<br>
+        <input type=checkbox name="vedantcomputers-check" checked> Vedant Computers<br>
+        <input type=checkbox name="primeabgb-check" checked> PrimeAGBG<br>
+        <input type=checkbox name="itdepot-check" checked> The IT Depot<br>
+        <br><button name="submit">Apply</button>
+      </form>
+      <a href="#">Contact</a>
+      <a href="/about">About</a>
+    </div>
+  </body>
+
+</html>

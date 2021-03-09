@@ -1,0 +1,53 @@
+@charset "UTF-8";
+html {
+    background-color: black;
+}
+body {
+    color: white;
+    font-family: "Fantasque Sans Mono";
+    font-size: 18px;
+}
+
+.centre {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.main-title {
+    color: cyan;
+    font-family: "Fantasque Sans Mono";
+}
+
+.small-text {
+    font-size: 17px;
+}
+
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 190px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #0c0c0c;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: cyan;
+}
+
+.main {
+  height: 100%;
+  padding-left: 190px;
+}
