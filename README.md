@@ -1,1 +1,1 @@
-# Pc-comp-picker
+# Pc component picker
