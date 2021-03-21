@@ -29,6 +29,7 @@ const puppeteer = require('puppeteer');
                 products.push(
                     {
                         "title": product_items[i].querySelector("p.product-title").textContent,
+                        "img": product_items[i].querySelector("img").src,
                         "url": product_items[i].querySelector("div.grid div > a").href,
                         "price": product_items[i].querySelector(".price-dis-sec span.visually-hidden + span.money").textContent
                     })

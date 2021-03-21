@@ -29,6 +29,7 @@ const puppeteer = require('puppeteer');
 					products.push(
 						{
 							'title': product_items[i].querySelector("h2 > a").textContent.replace(/\t|\n/g,''),
+							'img': product_items[i].querySelector("img").src,
 							'url': product_items[i].querySelector("h2 > a").href,
 							'price': product_items[i].querySelector(".a-price-whole").textContent
 						})
