@@ -1,2 +1,3 @@
 src/geckodriver.log
 src/__pycache__
+src/node/node_modules/
