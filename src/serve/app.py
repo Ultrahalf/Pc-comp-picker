@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
-def index(sql=''):
+def component(sql=''):
     pl = request.form.get('price-low')
     ph = request.form.get('price-high')
     cpu = request.form.get('cpu-check')

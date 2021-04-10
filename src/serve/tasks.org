@@ -1,0 +1,8 @@
+#+TITLE: Tasks
+
+* sidebar for filters
+* responsive css
+* postgreSQL integration
+* embed matplotlib plot in the webpage
+
+"An idiot admires complexity, the genius admires simplicity" - Terry A. Davis
