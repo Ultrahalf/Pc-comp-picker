@@ -1,0 +1,54 @@
+div.topnav {
+  background-color: #505050;
+  color: white;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition-duration: 0.4s;
+}
+
+.topnav a:hover {
+    background-color: black;
+    color: white;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+#navsearchbar {
+    float: right;
+}
+
+table {
+    margin: auto;
+}
+
+.btn_components {
+  background-color: #505050;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 180px;
+  transition-duration: 0.4s;
+}
+
+.btn_components:hover {
+    background-color: black;
+}
