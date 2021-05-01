@@ -1,4 +1,4 @@
 src/py/geckodriver.log
 src/py/__pycache__
 src/serve/__pycache__
-src/node/node_modules/
+/node_modules/

@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+var MongoClient = require('mongodb').MongoClient;
+var dbUrl = "mongodb://localhost:27017/";
+var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async url => {
@@ -16,6 +19,7 @@ const puppeteer = require('puppeteer');
         await page.goto(url);
         const results = await page.evaluate(() => {
             let products = [];
+            let vendor = "itdepot";
             let product_items = document.getElementsByClassName("product-item");
             let len = product_items.length;
             if(document.querySelector("ul.pagination")) {
@@ -29,10 +33,11 @@ const puppeteer = require('puppeteer');
                 for(i = 0; i < len; i++) {
                     products.push(
                         {
-                            "title": product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").textContent,
-                            "img": product_items[i].querySelector("img").src,
-                            "url": product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").href,
-                            "price": product_items[i].querySelector("strong").textContent
+                            'vendor': vendor,
+                            'title': product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").textContent,
+                            'img': product_items[i].querySelector("img").src,
+                            'url': product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").href,
+                            'price': product_items[i].querySelector("strong").textContent
                         })
                 }
                 if(document.querySelector("ul.pagination > li:last-child > a"))
@@ -50,6 +55,18 @@ const puppeteer = require('puppeteer');
     let prds = 0;
     const firstUrl = "https://www.theitdepot.com/products-RAM+(Memory)_C6.html";
     prds = await extractProducts(firstUrl);
-    console.table(prds);
+    let client;
+    try {
+        client = await MongoClient.connect(dbUrl);
+        console.log("Connected correctly to server");
+        const db = client.db(dbName);
+        await db.collection("products").insertMany(prds, function(err, res) {
+            if (err) throw err;
+            db.close();
+        });
+    } catch (err) {
+        console.log(err.stack);
+    }
+    client.close();
     process.exit();
 })();

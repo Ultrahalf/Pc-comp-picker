@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongodb": "^3.6.6",
+    "puppeteer": "^9.0.0"
+  }
+}

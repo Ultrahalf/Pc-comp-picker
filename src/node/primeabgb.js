@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+var MongoClient = require('mongodb').MongoClient;
+var dbUrl = "mongodb://localhost:27017/";
+var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async url => {
@@ -22,7 +25,8 @@ const puppeteer = require('puppeteer');
             return null
         });
         const results = await page.evaluate(() => {
-            let products = []
+            let vendor = "primeabgb";
+            let products = [];
             let product_items = document.getElementsByClassName("product-item");
             for(i = 0; i < product_items.length; i++) {
 
@@ -32,6 +36,7 @@ const puppeteer = require('puppeteer');
                             price = "call for price"
                 products.push(
                     {
+                        'vendor': vendor,
                         'title': product_items[i].querySelector("div.product-innfo > h3 > a").textContent,
                         'url': product_items[i].querySelector("div.product-innfo > h3 > a").href,
                         'img': product_items[i].querySelector("div.product-thumb > div.thumb-inner > a > img").src,
@@ -52,6 +57,18 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch();
     const firstUrl = "https://www.primeabgb.com/buy-online-price-india/ram-memory/?filters=_stock_status[instock]";
     const prds = await extractProducts(firstUrl);
-    console.table(prds);
+    let client;
+    try {
+        client = await MongoClient.connect(dbUrl);
+        console.log("Connected correctly to server");
+        const db = client.db(dbName);
+        await db.collection("products").insertMany(prds, function(err, res) {
+            if (err) throw err;
+            db.close();
+        });
+    } catch (err) {
+        console.log(err.stack);
+    }
+    client.close();
     process.exit();
 })();

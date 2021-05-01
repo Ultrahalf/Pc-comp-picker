@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+var MongoClient = require('mongodb').MongoClient;
+var dbUrl = "mongodb://localhost:27017/";
+var dbName = "pccomppicker";
 
 (async () => {
 	const extractProducts = async url => {
@@ -22,12 +25,14 @@ const puppeteer = require('puppeteer');
 			return null
 		});
 		const results = await page.evaluate(() => {
+            let vendor = "amazon";
 			let products = [];
 			let product_items = document.getElementsByClassName("s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col sg-col-12-of-16");
 			for(i = 0; i < product_items.length; i++) {
 				if(product_items[i].querySelector("h2 > a") && product_items[i].querySelector(".a-price-whole")) {
 					products.push(
 						{
+                            'vendor': vendor,
 							'title': product_items[i].querySelector("h2 > a").textContent.replace(/\t|\n/g,''),
 							'img': product_items[i].querySelector("img").src,
 							'url': product_items[i].querySelector("h2 > a").href,
@@ -49,6 +54,18 @@ const puppeteer = require('puppeteer');
 	const browser = await puppeteer.launch();
 	const firstUrl = "https://www.amazon.in/s?k=processsor&ref=nb_sb_noss_2";
 	const prds = await extractProducts(firstUrl);
-	console.table(prds);
+    let client;
+    try {
+        client = await MongoClient.connect(dbUrl);
+        console.log("Connected correctly to server");
+        const db = client.db(dbName);
+        await db.collection("products").insertMany(prds, function(err, res) {
+            if (err) throw err;
+            db.close();
+        });
+    } catch (err) {
+        console.log(err.stack);
+    }
+    client.close();
 	process.exit();
 })();

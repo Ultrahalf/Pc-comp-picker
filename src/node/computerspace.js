@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+var MongoClient = require('mongodb').MongoClient;
+var dbUrl = "mongodb://localhost:27017/";
+var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async url => {
@@ -22,16 +25,18 @@ const puppeteer = require('puppeteer');
             return null
         });
         const results = await page.evaluate(() => {
-            let products = []
+            let vendor = "computerspace";
+            let products = [];
             var product_items = document.querySelectorAll("#shopify-section-collection-template > div.grid > div:nth-child(2) > div .grid__item");
             var len = product_items.length;
             for(i = 0;i <= len -1; i++){
                 products.push(
                     {
-                        "title": product_items[i].querySelector("p.product-title").textContent,
-                        "img": product_items[i].querySelector("img").src,
-                        "url": product_items[i].querySelector("div.grid div > a").href,
-                        "price": product_items[i].querySelector(".price-dis-sec span.visually-hidden + span.money").textContent
+                        'vendor': vendor,
+                        'title': product_items[i].querySelector("p.product-title").textContent,
+                        'img': product_items[i].querySelector("img").src,
+                        'url': product_items[i].querySelector("div.grid div > a").href,
+                        'price': product_items[i].querySelector(".price-dis-sec span.visually-hidden + span.money").textContent
                     })
             }
             return products
@@ -48,6 +53,18 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch();
     const firstUrl = "https://computerspace.in/collections/cabinets?page=1";
     const prds = await extractProducts(firstUrl);
-    console.table(prds);
+    let client;
+    try {
+        client = await MongoClient.connect(dbUrl);
+        console.log("Connected correctly to server");
+        const db = client.db(dbName);
+        await db.collection("products").insertMany(prds, function(err, res) {
+            if (err) throw err;
+            db.close();
+        });
+    } catch (err) {
+        console.log(err.stack);
+    }
+    client.close();
     process.exit();
 })();
