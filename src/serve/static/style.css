@@ -1,54 +1,145 @@
-div.topnav {
-  background-color: #505050;
-  color: white;
+* {
+    padding: 0px;
+    margin: 0px;
 }
 
-.topnav {
-  overflow: hidden;
+body {
+    box-sizing: border-box;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transition-duration: 0.4s;
+ul.topnav {
+    list-style-type: none;
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    background: linear-gradient(to right, #434343, #000000);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
 }
 
-.topnav a:hover {
-    background-color: black;
+ul.topnav > li {
+    padding: 5px;
+    border: none;
+}
+ul.topnav a {
+    text-decoration: none;
     color: white;
 }
 
-.topnav a.active {
-  background-color: black;
-  color: white;
+ul.topnav a:hover {
+    border-bottom: solid;
+    border-color: white;
 }
 
-#navsearchbar {
-    float: right;
+ul.topnav input {
+    padding: 8px;
 }
 
-table {
-    margin: auto;
+ul.topnav button {
+    padding: 8px;
+    border: none;
+    background-color: lightgreen;
+    cursor: pointer;
 }
 
-.btn_components {
-  background-color: #505050;
-  border: none;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 180px;
-  transition-duration: 0.4s;
+ul.topnav button:hover {
+    opacity: 0.9;
 }
 
-.btn_components:hover {
-    background-color: black;
+.product-filter {
+    display: flex;
+    padding: 10px;
+    gap: 12px;
+    justify-content: flex-end;
+    background: #434343;
+}
+
+.product-filter > * {
+    padding: 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product-card {
+    width: 220px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.product-card > img {
+    width: 200px;
+    height: 200px;
+    margin: 0px 10px;
+}
+
+.product-card  .btn-group  > button {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-card  .btn-group {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas: "vist compare" "add add";
+}
+
+.btn-vist {
+    background-color: lightgreen;
+    padding: 10px;
+    grid-area: vist;
+}
+
+.btn-vist:hover {
+    opacity: 0.8;
+}
+
+.btn-compare {
+    background-color: lightblue;
+    grid-area: compare;
+}
+
+.btn-compare:hover {
+    opacity: 0.8;
+}
+
+.btn-add {
+    background-color: #3d3d3d;
+    color: white;
+    grid-area: add;
+}
+
+.btn-add:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1150px) {
+
+.product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: 0 auto;
+}
+
+}
+
+@media (max-width: 700px) {
+
+.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    margin: 0 auto;
+}
+
 }
