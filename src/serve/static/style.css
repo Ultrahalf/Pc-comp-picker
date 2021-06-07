@@ -47,6 +47,55 @@ ul.topnav button:hover {
     opacity: 0.9;
 }
 
+/* index page */
+
+.product-catalog-grid {
+    display: grid;
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 80%;
+    justify-content: center;
+    color: white;
+}
+
+.product-catalog-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    background: #434343;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-product-page {
+    padding: 15px;
+    cursor: pointer;
+    background: #FFD814;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-product-page:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 400px) {
+
+    .product-catalog-grid {
+        width: 95%;
+        justify-content: center;
+    }
+
+    .product-catalog-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* end of index page */
+
+/* Components page */
+
 .product-filter {
     display: flex;
     padding: 10px;
@@ -57,6 +106,10 @@ ul.topnav button:hover {
 
 .product-filter > * {
     padding: 5px;
+}
+
+.product-filter > select {
+    text-align: center;
 }
 
 .product-grid {
@@ -126,20 +179,57 @@ ul.topnav button:hover {
 
 @media (max-width: 1150px) {
 
-.product-grid {
-    grid-template-columns: repeat(3, 1fr);
-    width: 95%;
-    margin: 0 auto;
-}
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+    }
 
 }
 
 @media (max-width: 700px) {
 
-.product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    width: 95%;
-    margin: 0 auto;
-}
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
 
 }
+
+@media (max-width: 500px) {
+
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .product-filter {
+        gap: 12px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    ul.topnav {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+
+    ul.topnav button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    ul.topnav input {
+        width: 95%;
+    }
+}
+/* end of the components page */
