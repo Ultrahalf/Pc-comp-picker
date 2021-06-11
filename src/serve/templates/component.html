@@ -49,21 +49,29 @@
             <div class="product-grid">
 
                 {% for prod in data %}
-                <div class="product-card">
-                    <img src="{{ prod['img'] }}" alt="product"/>
-                    <!-- <h3>Title of the product</h3> -->
-                    <h3>{{ prod['title'] }}</h3>
-                    <span>{{ prod['price'] }} ₹</span>
-                    <br>
-                    <div class="btn-group">
-                        <a href="{{ prod['url'] }}"><button class="btn-vist">Visit the page</button></a>
-                        <button class="btn-compare">Compare</button>
-                        <button class="btn-add">Add to the list</button>
-                    </div>
-                </div>
+                    {% if loop.index0 < pagelen %}
+                        <div class="product-card">
+                            <img src="{{ prod['img'] }}" alt="product"/>
+                            <h3>{{ prod['title'] }}</h3>
+                            <span>{{ prod['price'] }} ₹</span>
+                            <br>
+                            <div class="btn-group">
+                                <a href="{{ prod['url'] }}"><button class="btn-vist">Visit the page</button></a>
+                                <button class="btn-compare">Compare</button>
+                                <button class="btn-add">Add to the list</button>
+                            </div>
+                        </div>
+                    {% endif %}
                 {% endfor %}
 
             </div>
+
+            <!-- <form action="/component/{{ name }}"> -->
+            <!--     Enter page number: <input type="text" name="pageno" /> -->
+            <!--     <button type="submit">Go</button> -->
+            <!-- </form> -->
+            <a href="{{ url_for('component', name=name, pageno=pageno-1) }}">Previous</a>
+            <a href="{{ url_for('component', name=name, pageno=pageno+1) }}">Next</a>
         </main>
     </body>
 </html>
