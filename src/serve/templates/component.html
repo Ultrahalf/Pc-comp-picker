@@ -47,54 +47,21 @@
             <hr/>
 
             <div class="product-grid">
+
+                {% for prod in data %}
                 <div class="product-card">
-                    <img src="../static/img/android-chrome-192x192.png" alt="product"/>
-                    <h3>Title of the product</h3>
-                    <span>$0.00</span>
+                    <img src="{{ prod['img'] }}" alt="product"/>
+                    <!-- <h3>Title of the product</h3> -->
+                    <h3>{{ prod['title'] }}</h3>
+                    <span>{{ prod['price'] }} ₹</span>
                     <br>
                     <div class="btn-group">
-                        <button class="btn-vist">Vist the page</button>
+                        <a href="{{ prod['url'] }}"><button class="btn-vist">Visit the page</button></a>
                         <button class="btn-compare">Compare</button>
                         <button class="btn-add">Add to the list</button>
                     </div>
                 </div>
-
-
-                <div class="product-card">
-                    <img src="../static/img/android-chrome-192x192.png" alt="product"/>
-                    <h3>Title of the product</h3>
-                    <span>$0.00</span>
-                    <br>
-                    <div class="btn-group">
-                        <button class="btn-vist">Vist the page</button>
-                        <button class="btn-compare">Compare</button>
-                        <button class="btn-add">Add to the list</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="../static/img/android-chrome-192x192.png" alt="product"/>
-                    <h3>Title of the product</h3>
-                    <span>$0.00</span>
-                    <br>
-                    <div class="btn-group">
-                        <button class="btn-vist">Vist the page</button>
-                        <button class="btn-compare">Compare</button>
-                        <button class="btn-add">Add to the list</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="../static/img/android-chrome-192x192.png" alt="product"/>
-                    <h3>Title of the product</h3>
-                    <span>$0.00</span>
-                    <br>
-                    <div class="btn-group">
-                        <button class="btn-vist">Vist the page</button>
-                        <button class="btn-compare">Compare</button>
-                        <button class="btn-add">Add to the list</button>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
         </main>
