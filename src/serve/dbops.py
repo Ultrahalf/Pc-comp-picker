@@ -11,6 +11,7 @@ class Product(mongoengine.Document):
     img = mongoengine.StringField(required=True)
     url = mongoengine.StringField(required=True)
     price = mongoengine.StringField(required=True)
+    category = mongoengine.StringField(required=True)
 
     meta = {
         'collection': 'products',
