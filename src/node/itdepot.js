@@ -7,6 +7,8 @@ var dbName = "pccomppicker";
     const extractProducts = async obj => {
         const browser = await puppeteer.launch({headless: false});
         const page = await browser.newPage();
+
+        // disable css
         await page.setRequestInterception(true);
         page.on('request', (req) => {
             if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
@@ -16,7 +18,10 @@ var dbName = "pccomppicker";
                 req.continue();
             }
         });
+
         await page.goto(obj.url);
+
+        // evaluate the page and return the products
         const results = await page.evaluate((obj) => {
             let products = [];
             let vendor = "itdepot";
@@ -97,17 +102,24 @@ var dbName = "pccomppicker";
 
     // create a array of object
     const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
+
+    // dummy variable for database
     let itdepot = []
     // loop through the links array
     for(i = 0; i < links.length; i++) {
         prds = await extractProducts(links[i]);
+
+        //log for debugging
+        console.log(links[i].component + " has been scraped");
+
         // spread operator
         itdepot.push(...prds);
     }
 
+    // Database
     let client;
     try {
-        client = await MongoClient.connect(dbUrl);
+        client = await MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log("Connected correctly to server");
         const db = client.db(dbName);
         await db.collection("products").insertMany(itdepot, function(err, res) {
