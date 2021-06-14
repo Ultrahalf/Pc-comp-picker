@@ -8,8 +8,6 @@ var dbName = "pccomppicker";
         const browser = await puppeteer.launch({headless: false});
         const page = await browser.newPage();
 
-        await page.goto(obj.url);
-
         // disable css
         await page.setRequestInterception(true);
         page.on('request', (req) => {
@@ -20,6 +18,11 @@ var dbName = "pccomppicker";
                 req.continue();
             }
         });
+
+        // Configure the navigation timeout
+        await page.setDefaultNavigationTimeout(0);
+
+        await page.goto(obj.url);
 
         // check if there's next page button
         const nextUrl = await page.evaluate(() => {
@@ -124,7 +127,7 @@ var dbName = "pccomppicker";
     // Database
     let client;
     try {
-        client = await MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+        client = await MongoClient.connect(dbUrl);
         console.log("Connected correctly to server");
         const db = client.db(dbName);
         await db.collection("products").insertMany(computerspace, function(err, res) {

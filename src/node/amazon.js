@@ -19,6 +19,9 @@ var dbName = "pccomppicker";
             }
         });
 
+        // Configure the navigation timeout
+        await page.setDefaultNavigationTimeout(0);
+
         await page.goto(obj.url);
 
         // check if there's a next page button
@@ -135,7 +138,7 @@ var dbName = "pccomppicker";
     // Database
     let client;
     try {
-        client = await MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+        client = await MongoClient.connect(dbUrl);
         console.log("Connected correctly to server");
         const db = client.db(dbName);
         await db.collection("products").insertMany(amazon, function(err, res) {

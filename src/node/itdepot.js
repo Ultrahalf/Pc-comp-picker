@@ -19,6 +19,9 @@ var dbName = "pccomppicker";
             }
         });
 
+        // Configure the navigation timeout
+        await page.setDefaultNavigationTimeout(0);
+
         await page.goto(obj.url);
 
         // evaluate the page and return the products
@@ -105,6 +108,7 @@ var dbName = "pccomppicker";
 
     // dummy variable for database
     let itdepot = []
+
     // loop through the links array
     for(i = 0; i < links.length; i++) {
         prds = await extractProducts(links[i]);
@@ -119,7 +123,7 @@ var dbName = "pccomppicker";
     // Database
     let client;
     try {
-        client = await MongoClient.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+        client = await MongoClient.connect(dbUrl);
         console.log("Connected correctly to server");
         const db = client.db(dbName);
         await db.collection("products").insertMany(itdepot, function(err, res) {
