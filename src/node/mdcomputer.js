@@ -110,7 +110,6 @@ var dbName = "pccomppicker";
     };
 
     // create a array of object
-    // const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
     const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
 
     // dummy variable for database
