@@ -4,9 +4,11 @@ var dbUrl = "mongodb://localhost:27017/";
 var dbName = "pccomppicker";
 
 (async () => {
-    const extractProducts = async url => {
+    const extractProducts = async obj => {
         const browser = await puppeteer.launch({headless: false});
         const page = await browser.newPage();
+
+        // disable css
         await page.setRequestInterception(true);
         page.on('request', (req) => {
             if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
@@ -16,7 +18,13 @@ var dbName = "pccomppicker";
                 req.continue();
             }
         });
-        await page.goto(url);
+
+        // Configure the navigation timeout
+        await page.setDefaultNavigationTimeout(0);
+
+        await page.goto(obj.url);
+
+        // check if there's a next page button
         const nextUrl = await page.evaluate(() => {
             if(document.querySelector("ul.page-numbers li > a.next"))
                 var url = document.querySelector("ul.page-numbers li > a.next").href;
@@ -24,18 +32,22 @@ var dbName = "pccomppicker";
                 return url
             return null
         });
-        const results = await page.evaluate(() => {
+
+        // evaluate the page and return the products
+        const results = await page.evaluate((obj) => {
             let vendor = "primeabgb";
             let products = [];
+            let category = obj.component;
             let product_items = document.getElementsByClassName("product-item");
             for(i = 0; i < product_items.length; i++) {
 
-                        if(product_items[i].querySelector("div.product-innfo span.price bdi"))
-                            price = product_items[i].querySelector("div.product-innfo span.price bdi").textContent
-                        else
-                            price = "call for price"
+                if(product_items[i].querySelector("div.product-innfo span.price bdi"))
+                    price = product_items[i].querySelector("div.product-innfo span.price bdi").textContent
+                else
+                    price = "call for price"
                 products.push(
                     {
+                        'category': category,
                         'vendor': vendor,
                         'title': product_items[i].querySelector("div.product-innfo > h3 > a").textContent,
                         'url': product_items[i].querySelector("div.product-innfo > h3 > a").href,
@@ -44,25 +56,85 @@ var dbName = "pccomppicker";
                     })
             }
             return products
-        });
+        },obj);
         await page.close();
         await browser.close();
         if(results.length < 1 || nextUrl == null){
             return results
         } else {
-            return results.concat(await extractProducts(nextUrl))
+            var link = {
+                component: obj.component,
+                url : nextUrl
+            };
+            return results.concat(await extractProducts(link))
         }
     };
 
     const browser = await puppeteer.launch();
-    const firstUrl = "https://www.primeabgb.com/buy-online-price-india/ram-memory/?filters=_stock_status[instock]";
-    const prds = await extractProducts(firstUrl);
+
+    // defines all the links as object
+    let cpu  =  {
+        component: "cpu",
+        url : "https://www.primeabgb.com/buy-online-price-india/cpu-processor/"
+    };
+
+    cooler = {
+        component: "cooler",
+        url : "https://www.primeabgb.com/buy-online-price-india/cpu-cooler/"
+    };
+    motherboard = {
+        component: "motherboard",
+        url : "https://www.primeabgb.com/buy-online-price-india/motherboards/"
+    };
+    memory = {
+        component: "memory",
+        url : "https://www.primeabgb.com/buy-online-price-india/ram-memory/"
+    };
+    storage = {
+        component: "storage",
+        url : "https://www.primeabgb.com/buy-online-price-india/internal-hard-drive/"
+    };
+    pccase = {
+        component: "case",
+        url : "https://www.primeabgb.com/buy-online-price-india/pc-cases-cabinet/"
+    };
+    psu = {
+        component: "psu",
+        url : "https://www.primeabgb.com/buy-online-price-india/power-supplies-smps/"
+    };
+    gpu = {
+        component: "gpu",
+        url : "https://www.primeabgb.com/buy-online-price-india/graphic-cards-gpu/"
+    };
+    monitor = {
+        component: "monitor",
+        url : "https://www.primeabgb.com/buy-online-price-india/led-monitors/"
+    };
+
+    // create a array of object
+    const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
+
+    // create a dummy variable for database
+    let primeabgb = [];
+
+    // loop through the links array
+    for(i = 0; i < links.length; i++) {
+        prds = await extractProducts(links[i]);
+
+        // log message for debugging
+        console.log(links[i].component + " has been scraped");
+
+        // spread operator
+        primeabgb.push(...prds);
+    }
+
+    // database
     let client;
     try {
         client = await MongoClient.connect(dbUrl);
         console.log("Connected correctly to server");
         const db = client.db(dbName);
-        await db.collection("products").insertMany(prds, function(err, res) {
+        await db.collection("products").insertMany(primeabgb, function(err, res) {
             if (err) throw err;
             db.close();
         });
