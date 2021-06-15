@@ -27,7 +27,7 @@ var dbName = "pccomppicker";
         // evaluate the page and return the products
         const results = await page.evaluate((obj) => {
             let products = [];
-            let vendor = "vendant";
+            let vendor = "vedant";
             let category = obj.component;
             let product_items = document.querySelectorAll(".product-thumb");
             let len = product_items.length
@@ -130,7 +130,7 @@ var dbName = "pccomppicker";
     try {
         client = await MongoClient.connect(dbUrl);
         console.log("Connected correctly to server");
-        const db = client.db(dbName);
+        const db = client.db(dbName, { useUnifiedTopology: true });
         await db.collection("products").insertMany(vedant, function(err, res) {
             if (err) throw err;
             db.close();
