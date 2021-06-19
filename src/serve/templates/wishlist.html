@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>PC Comp Picker</title>
-        <link href="../static/style.css" type="text/css" rel="stylesheet"></link>
-        <link rel="apple-touch-icon" sizes="180x180" href="../static/img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-    </head>
-    <body>
-        <nav>
-            <ul class="topnav">
-                <li><a href="#">Pccp</a></li>
-                <li><a href="#">Wishlist</a></li>
-                <li class="search">
-                    <input type="text" class="search-input" placeholder="Search">
-                    <button type="submit"> Go</button>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <div class="product-filter">
-                <button> List</button>
-                <button> Grid</button>
-                <select>
-                    <option>Low to high</option>
-                    <option>High to low</option>
-                </select>
-                <button> Filter</button>
-            </div>
+{% extends "base.html" %}
+{% block main %}
+    <div class="product-filter">
+        <button> List</button>
+        <button> Grid</button>
+        <select>
+            <option>Low to high</option>
+            <option>High to low</option>
+        </select>
+        <button> Filter</button>
+    </div>
 
-            <hr/>
+    <hr/>
 
-                <div class="product-card">
-                    {{ session['wish'] }}
-                    </div>
-                </div>
-
-        </main>
-    </body>
-</html>
+    <div class="product-card">
+        {{ session['wish'] }}
+        </div>
+    </div>
+{% endblock %}

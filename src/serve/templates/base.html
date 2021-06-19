@@ -1,0 +1,29 @@
+<html>
+    {% block head %}
+    <head>
+        <meta charset="UTF-8">
+        <title>PC Comp Picker</title>
+        <link href="../static/style.css" type="text/css" rel="stylesheet"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon-32x32.png">
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+    {% endblock %}
+    <body>
+        <nav>
+            <ul class="topnav">
+                <li><a href="#">Pccp</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li class="search">
+                    <input type="text" class="search-input" placeholder="Search">
+                    <button type="submit"> Go</button>
+                </li>
+                {% block nav %}{% endblock %}
+            </ul>
+        </nav>
+
+        {% block main %}
+        {% endblock %}
+    </body>
+</html>
