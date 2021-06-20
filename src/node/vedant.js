@@ -45,6 +45,7 @@ var dbName = "pccomppicker";
                         'category': String(category),
                         'vendor': String(vendor),
                         'title': String(product_items[i].querySelector(".name").textContent),
+                        'img': product_items[i].querySelector("img").getAttribute('data-src'),
                         'url': String(product_items[i].querySelector(".name > a").href),
                         'price': price.replace(/\t|\n/g,''),
                     })
