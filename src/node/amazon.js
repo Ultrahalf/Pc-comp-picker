@@ -5,7 +5,7 @@ var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async obj => {
-        const browser = await puppeteer.launch({headless: false});
+        const browser = await puppeteer.launch({headless: true});
         const page = await browser.newPage();
 
         // disable css
@@ -46,12 +46,12 @@ var dbName = "pccomppicker";
                 if(product_items[i].querySelector("h2 > a") && product_items[i].querySelector(".a-price-whole")) {
                     products.push(
                         {
-                            'category': category,
-                            'vendor': vendor,
-                            'title': product_items[i].querySelector("h2 > a").textContent.replace(/\t|\n/g,''),
-                            'img': product_items[i].querySelector("img").src,
-                            'url': product_items[i].querySelector("h2 > a").href,
-                            'price': product_items[i].querySelector(".a-price-whole").textContent
+                            'category': String(category),
+                            'vendor': String(vendor),
+                            'title': String(product_items[i].querySelector("h2 > a").textContent.replace(/\t|\n/g,'')),
+                            'img': String(product_items[i].querySelector("img").src),
+                            'url': String(product_items[i].querySelector("h2 > a").href),
+                            'price': product_items[i].querySelector(".a-price-whole").textContent,
                         })
                 }
             }

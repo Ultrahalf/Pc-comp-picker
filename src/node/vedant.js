@@ -42,11 +42,10 @@ var dbName = "pccomppicker";
                 }
                 products.push(
                     {
-                        'category': category,
-                        'vendor': vendor,
-                        'title': product_items[i].querySelector(".name").textContent,
-                        'img': product_items[i].querySelector("img").getAttribute('data-src'),
-                        'url': product_items[i].querySelector(".name > a").href,
+                        'category': String(category),
+                        'vendor': String(vendor),
+                        'title': String(product_items[i].querySelector(".name").textContent),
+                        'url': String(product_items[i].querySelector(".name > a").href),
                         'price': price.replace(/\t|\n/g,''),
                     })
             }

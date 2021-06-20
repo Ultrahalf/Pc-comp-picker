@@ -5,7 +5,7 @@ var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async obj => {
-        const browser = await puppeteer.launch({headless: false});
+        const browser = await puppeteer.launch({headless: true});
         const page = await browser.newPage();
 
         // disable css
@@ -40,20 +40,22 @@ var dbName = "pccomppicker";
             let category = obj.component;
             let product_items = document.getElementsByClassName("product-item");
             for(i = 0; i < product_items.length; i++) {
-
-                if(product_items[i].querySelector("div.product-innfo span.price bdi"))
-                    price = product_items[i].querySelector("div.product-innfo span.price bdi").textContent
-                else
-                    price = "call for price"
-                products.push(
-                    {
-                        'category': category,
-                        'vendor': vendor,
-                        'title': product_items[i].querySelector("div.product-innfo > h3 > a").textContent,
-                        'url': product_items[i].querySelector("div.product-innfo > h3 > a").href,
-                        'img': product_items[i].querySelector("div.product-thumb > div.thumb-inner > a > img").src,
-                        'price': price
-                    })
+                if(product_items[i].querySelector("div.flashs > span.out-of-stock")){
+                } else {
+                    if(product_items[i].querySelector("div.product-innfo span.price bdi"))
+                        price = product_items[i].querySelector("div.product-innfo span.price ins bdi").textContent
+                    else
+                        price = "call for price"
+                    products.push(
+                        {
+                            'category': String(category),
+                            'vendor': String(vendor),
+                            'title': String(product_items[i].querySelector("div.product-innfo > h3 > a").textContent),
+                            'url': String(product_items[i].querySelector("div.product-innfo > h3 > a").href),
+                            'img': String(product_items[i].querySelector("div.product-thumb > div.thumb-inner > a > img").src),
+                            'price': price
+                        })
+                }
             }
             return products
         },obj);
@@ -112,7 +114,8 @@ var dbName = "pccomppicker";
     };
 
     // create a array of object
-    const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
+    // const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
+    const links = [cpu];
 
     // create a dummy variable for database
     let primeabgb = [];

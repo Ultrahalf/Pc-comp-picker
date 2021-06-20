@@ -5,7 +5,7 @@ var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async obj => {
-        const browser = await puppeteer.launch({headless: false});
+        const browser = await puppeteer.launch({headless: true});
         const page = await browser.newPage();
 
         // disable css
@@ -40,15 +40,18 @@ var dbName = "pccomppicker";
             var j = 1
             while (j <= totalLi - 4){
                 for(i = 0; i < len; i++) {
-                    products.push(
-                        {
-                            'category': category,
-                            'vendor': vendor,
-                            'title': product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").textContent,
-                            'img': product_items[i].querySelector("img").src,
-                            'url': product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").href,
-                            'price': product_items[i].querySelector("strong").textContent
-                        })
+                    if(product_items[i].querySelector("div.product-details span.textcentered")){
+                    } else {
+                        products.push(
+                            {
+                                'category': String(category),
+                                'vendor': String(vendor),
+                                'title': String(product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").textContent),
+                                'img': String(product_items[i].querySelector("img").src),
+                                'url': String(product_items[i].querySelector("div.product-details.text-md-left.flex-grow-1 > div.card-text.px-2.py-1.font-size85.product_title > a").href),
+                                'price': product_items[i].querySelector("strong").textContent
+                            })
+                    }
                 }
                 if(document.querySelector("ul.pagination > li:last-child > a"))
                     document.querySelector("ul.pagination > li:last-child > a").click();

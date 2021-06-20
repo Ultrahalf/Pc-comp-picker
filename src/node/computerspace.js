@@ -5,7 +5,7 @@ var dbName = "pccomppicker";
 
 (async () => {
     const extractProducts = async obj => {
-        const browser = await puppeteer.launch({headless: false});
+        const browser = await puppeteer.launch({headless: true});
         const page = await browser.newPage();
 
         // disable css
@@ -41,15 +41,24 @@ var dbName = "pccomppicker";
             var product_items = document.querySelectorAll("#shopify-section-collection-template > div.grid > div:nth-child(2) > div .grid__item");
             var len = product_items.length;
             for(i = 0;i <= len -1; i++){
-                products.push(
-                    {
-                        'category': category,
-                        'vendor': vendor,
-                        'title': product_items[i].querySelector("p.product-title").textContent,
-                        'img': product_items[i].querySelector("img").src,
-                        'url': product_items[i].querySelector("div.grid div > a").href,
-                        'price': product_items[i].querySelector(".price-dis-sec span.money").textContent
-                    })
+                // ignore the items which are out of stock
+                if(product_items[i].querySelector(".badge--sold-out")) {
+                } else {
+                    if(product_items[i].querySelectorAll(".price-dis-sec span.money").length > 1) {
+                        price  = product_items[i].querySelectorAll(".price-dis-sec span.money")[1].textContent;
+                    } else {
+                        price  = product_items[i].querySelector(".price-dis-sec span.money").textContent;
+                    }
+                    products.push(
+                        {
+                            'category': String(category),
+                            'vendor': String(vendor),
+                            'title': String(product_items[i].querySelector("p.product-title").textContent),
+                            'img': String(product_items[i].querySelector("img").src),
+                            'url': String(product_items[i].querySelector("div.grid div > a").href),
+                            'price': price
+                        })
+                }
             }
             return products
         },obj);
