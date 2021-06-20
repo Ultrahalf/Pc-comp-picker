@@ -114,8 +114,7 @@ var dbName = "pccomppicker";
     };
 
     // create a array of object
-    // const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
-    const links = [cpu];
+    const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
 
     // create a dummy variable for database
     let primeabgb = [];
