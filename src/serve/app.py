@@ -2,6 +2,7 @@
 
 import os
 from markupsafe import escape
+from collections import OrderedDict
 
 from flask import Flask, render_template, request
 from flask import flash, url_for, redirect, session
@@ -19,7 +20,19 @@ ITEMS_PER_PAGE = 20
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    components = OrderedDict([
+        ('CPU', 'cpu'),
+        ('Cooling System', 'cooler'),
+        ('Motherboard', 'motherboard'),
+        ('Memory', 'memory'),
+        ('Storage Device', 'storage'),
+        ('Case', 'case'),
+        ('Power Supply Unit', 'psu'),
+        ('Graphic Card', 'gpu'),
+        ('Monitor', 'monitor'),
+    ])
+
+    return render_template('index.html', components=components)
 
 
 @app.route('/about')
