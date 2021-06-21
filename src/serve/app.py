@@ -65,8 +65,17 @@ def component(name):
 
 @app.route('/_add_to_wishlist/<product_id>')
 def add_to_wishlist(product_id):
+    # Ensure session['wishlist'] is not empty
+    session_ = session.setdefault('wishlist', [])
+
+    # Ensure product is not already in the wishlist
+    for s in session_:
+        if s["_id"] == product_id:
+            flash("Product has already been added")
+            return "Not added"
+
     product = dbops.get_product_from_id(product_id)
-    session.setdefault('wishlist', []).append(product)
+    session_.append(product)
     session.modified = True
     return "Added"
 

@@ -35,3 +35,8 @@ def get_product_from_id(product_id):
         print("No such product id!")
         sys.exit(1)
     return product
+
+
+def id_exists(product_id):
+    product = products.find_one({'_id': ObjectId(product_id)})
+    return not product == None
