@@ -8,13 +8,14 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon-32x32.png">
         <link rel="shortcut icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
     {% endblock %}
     <body>
         <nav>
             <ul class="topnav">
-                <li><a href="#">Pccp</a></li>
-                <li><a href="#">Wishlist</a></li>
+                <li><a href="{{ url_for('index') }}">Pccp</a></li>
+                <li><a href="{{ url_for('wishlist') }}">Wishlist</a></li>
                 <li class="search">
                     <input type="text" class="search-input" placeholder="Search">
                     <button type="submit"> Go</button>

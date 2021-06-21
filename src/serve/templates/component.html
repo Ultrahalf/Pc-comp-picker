@@ -1,18 +1,6 @@
 {% extends "base.html" %}
 {% block main %}
-    <!--     <form method="post"> -->
-    <!--         <label>price: </label><br> -->
-    <!--         <input type=text name="price-low" placeholder="min"><input type=text name="price-high" placeholder="max"><br> -->
-    <!--         <br><label>Vendors:</label><br> -->
-    <!--         <input type=checkbox name="amazon-check"> Amazon<br> -->
-    <!--         <input type=checkbox name="mdcomputers-check"> MD Computers<br> -->
-    <!--         <input type=checkbox name="computerspace-check"> Computerspace<br> -->
-    <!--         <input type=checkbox name="vedantcomputers-check"> Vedant Computers<br> -->
-    <!--         <input type=checkbox name="primeabgb-check"> PrimeAGBG<br> -->
-    <!--         <input type=checkbox name="itdepot-check"> The IT Depot<br> -->
-    <!--         <br><label>Feature:</label><br> -->
-    <!--         <input type=submit name="submit"/><br> -->
-    <!--     </form> -->
+
     <div class="product-filter">
             <button> List</button>
             <button> Grid</button>
@@ -35,9 +23,34 @@
                     <span>{{ prod['price'] }} ₹</span>
                     <br>
                     <div class="btn-group">
-                        <a href="{{ prod['url'] }}"><button class="btn-vist">Visit the page</button></a>
+
+                        <a href="{{ prod['url'] }}">
+                            <button class="btn-vist">
+                                    Visit the page
+                            </button>
+                        </a>
+
+                        <!-- compare button -->
                         <button class="btn-compare">Compare</button>
-                        <button class="btn-add">Add to the list</button>
+
+                        <!-- add to wishlist button -->
+                        <a href="#" id=add-{{prod["_id"]}}>
+                            <button class="btn-add">
+                                    Add to the list
+                            </button>
+                        </a>
+                        <script type=text/javascript>
+                            $(function() {
+                            $('a#add-{{prod["_id"]}}').on('click', function(e) {
+                                e.preventDefault()
+                                  $.getJSON('/_add_to_wishlist/{{prod["_id"]}}',
+                                    function(data) {
+                                });
+                                return false;
+                              });
+                            });
+                        </script>
+
                     </div>
                 </div>
             {% endif %}
@@ -45,10 +58,7 @@
 
     </div>
 
-    <!-- <form action="/component/{{ name }}"> -->
-    <!--     Enter page number: <input type="text" name="pageno" /> -->
-    <!--     <button type="submit">Go</button> -->
-    <!-- </form> -->
     <a href="{{ url_for('component', name=name, pageno=pageno-1) }}">Previous</a>
     <a href="{{ url_for('component', name=name, pageno=pageno+1) }}">Next</a>
+
 {% endblock %}

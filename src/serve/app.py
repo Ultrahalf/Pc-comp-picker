@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+from markupsafe import escape
 
 from flask import Flask, render_template, request
 from flask import flash, url_for, redirect, session
@@ -10,10 +11,10 @@ import util
 
 app = Flask(__name__)
 
-ITEMS_PER_PAGE = 100
-
 app.secret_key = util.gen_secret_key()
 app.json_encoder = dbops.JSONEncoder
+
+ITEMS_PER_PAGE = 20
 
 
 @app.route('/')
@@ -28,10 +29,6 @@ def about():
 
 @app.route('/wishlist')
 def wishlist():
-    product_id = '60ccb5ffc3aa12d41a9a9b1b'
-    product = util.add_to_wishlist(product_id)
-    session['wish'] = product
-    session.modified = True
     return render_template('wishlist.html')
 
 
@@ -51,6 +48,14 @@ def component(name):
         pagelen=ITEMS_PER_PAGE,
         pageno=pageno
     )
+
+
+@app.route('/_add_to_wishlist/<product_id>')
+def add_to_wishlist(product_id):
+    product = dbops.get_product_from_id(product_id)
+    session.setdefault('wishlist', []).append(product)
+    session.modified = True
+    return "Added"
 
 
 if __name__ == '__main__':

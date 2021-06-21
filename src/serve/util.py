@@ -13,7 +13,7 @@ def gen_wishlist_url() -> str:
 
 
 def add_to_wishlist(product_id):
-    product = dbops.get_product_with_id(product_id)
+    product = dbops.get_product_from_id(product_id)
     return product
 
 

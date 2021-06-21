@@ -29,14 +29,9 @@ def get_data(pagelen: int, category: str):
     return list_of_dicts
 
 
-def get_product_with_id(product_id):
+def get_product_from_id(product_id):
     product = products.find_one({'_id': ObjectId(product_id)})
     if product == None:
         print("No such product id!")
         sys.exit(1)
     return product
-
-
-if __name__ == '__main__':
-    prod = get_product_with_id('60ccb5ffc3aa12d41a9a9b1b')
-    print(prod['title'])
