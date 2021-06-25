@@ -32,24 +32,26 @@
 
                         <!-- compare button -->
                         <button class="btn-compare">Compare</button>
+                        <!-- end compare button -->
 
                         <!-- add to wishlist button -->
                         <a href="#" id=add-{{prod["_id"]}}>
                             <button class="btn-add">
-                                    Add to the list
+                                Add to Wishlist
                             </button>
                         </a>
                         <script type=text/javascript>
                             $(function() {
                             $('a#add-{{prod["_id"]}}').on('click', function(e) {
                                 e.preventDefault()
-                                  $.getJSON('/_add_to_wishlist/{{prod["_id"]}}',
-                                    function(data) {
-                                });
+                                $.getJSON('/_add_to_wishlist/{{prod["_id"]}}',
+                                    function(data) { }
+                                );
                                 return false;
                               });
                             });
                         </script>
+                        <!-- end add to wishlist button -->
 
                     </div>
                 </div>

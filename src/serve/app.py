@@ -59,25 +59,36 @@ def component(name):
         name=name,
         data=data[-ITEMS_PER_PAGE:],
         pagelen=ITEMS_PER_PAGE,
-        pageno=pageno
+        pageno=pageno,
     )
 
 
 @app.route('/_add_to_wishlist/<product_id>')
 def add_to_wishlist(product_id):
-    # Ensure session['wishlist'] is not empty
-    session_ = session.setdefault('wishlist', [])
+    # Create session['wishlist'] if it doesn't exist
+    wishlist = session.setdefault('wishlist', [])
 
     # Ensure product is not already in the wishlist
-    for s in session_:
-        if s["_id"] == product_id:
+    for prod in wishlist:
+        if prod['_id'] == product_id:
             flash("Product has already been added")
             return "Not added"
 
     product = dbops.get_product_from_id(product_id)
-    session_.append(product)
+    wishlist.append(product)
     session.modified = True
-    return "Added"
+    return "Added successfully"
+
+
+@app.route('/_remove_from_wishlist/<product_id>')
+def remove_from_wishlist(product_id):
+    # Ensure session['wishlist'] exists
+    if 'wishlist' not in session:
+        return "Failed to Remove"
+
+    session['wishlist'] = [prod for prod in session['wishlist'] if not (prod['_id']) == product_id]
+    session.modified = True
+    return "Removed Successfully"
 
 
 if __name__ == '__main__':

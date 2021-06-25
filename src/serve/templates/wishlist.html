@@ -3,7 +3,9 @@
 
 <div class="product-grid">
     {% for prod in session['wishlist'] %}
+
         <div class="product-card">
+
             <img src="{{ prod['img'] }}" alt="product"/>
             <h3>{{ prod['title'] }}</h3>
             <span>{{ prod['price'] }} ₹</span>
@@ -14,9 +16,31 @@
                         Visit the page
                     </button>
                 </a>
+
                 <button class="btn-compare">Compare</button>
+
+                <!-- remove from wishlist button -->
+                <a href="#" id=remove-{{prod["_id"]}}>
+                    <button class="btn-remove">
+                        Remove from Wishlist
+                    </button>
+                </a>
+                <script type=text/javascript>
+                    $(function() {
+                    $('a#remove-{{prod["_id"]}}').on('click', function(e) {
+                        e.preventDefault()
+                        $.getJSON('/_remove_from_wishlist/{{prod["_id"]}}',
+                            function(data) { }
+                        );
+                        return false;
+                      });
+                    });
+                </script>
+                <!-- end remove from wishlist button -->
             </div>
+
         </div>
+
     {% endfor %}
 </div>
 
