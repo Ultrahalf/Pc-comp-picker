@@ -122,6 +122,7 @@ def wishlist_toggle(product_id):
         # definitely add
         product = dbops.get_product_from_id(product_id)
         wishlist.append(product)
+        session['wishlist'] = sorted(session['wishlist'], key=lambda k: k['url']) 
         session.modified = True
         return jsonify(
             message="change button to remove",
