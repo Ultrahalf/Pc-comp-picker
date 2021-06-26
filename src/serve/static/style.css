@@ -173,6 +173,12 @@ ul.topnav button:hover {
     grid-area: add;
 }
 
+.btn-remove {
+    background-color: #8A1049;
+    color: white;
+    grid-area: add;
+}
+
 .btn-add:hover {
     opacity: 0.8;
 }

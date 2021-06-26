@@ -11,32 +11,41 @@
             <span>{{ prod['price'] }} ₹</span>
             <br>
             <div class="btn-group">
-                <a href="{{ prod['url'] }}">
+                <a href="{{ prod['url'] }}", target="_blank">
                     <button class="btn-vist">
-                        Visit the page
+                        visit the page
                     </button>
                 </a>
 
-                <button class="btn-compare">Compare</button>
+                <button class="btn-compare">compare</button>
 
-                <!-- remove from wishlist button -->
-                <a href="#" id=remove-{{prod["_id"]}}>
-                    <button class="btn-remove">
-                        Remove from Wishlist
-                    </button>
-                </a>
+                <div id=wishlist-{{prod["_id"]}}>
+                    <a href="#" id=remove-{{prod["_id"]}}>
+                        <button class="btn-remove">
+                            remove from wishlist
+                        </button>
+                    </a>
+                </div>
+
                 <script type=text/javascript>
-                    $(function() {
-                    $('a#remove-{{prod["_id"]}}').on('click', function(e) {
-                        e.preventDefault()
-                        $.getJSON('/_remove_from_wishlist/{{prod["_id"]}}',
-                            function(data) { }
-                        );
-                        return false;
-                      });
-                    });
+                $(function() {
+                $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
+                        function(data) { 
+                            $("#wishlist-{{prod['_id']}}").html(
+                                "<a href=# id="+data.newbuttonid+">"+
+                                    "<button class="+data.newbuttonclass+">"+
+                                        data.newbuttontext+
+                                    "</button>"+
+                                "</a>"
+                            )
+                        }
+                    );
+                    return false;
+                  });
+                });
                 </script>
-                <!-- end remove from wishlist button -->
             </div>
 
         </div>

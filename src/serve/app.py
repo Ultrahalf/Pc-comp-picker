@@ -4,7 +4,7 @@ import os
 from markupsafe import escape
 from collections import OrderedDict
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask import flash, url_for, redirect, session
 
 import dbops
@@ -72,12 +72,12 @@ def add_to_wishlist(product_id):
     for prod in wishlist:
         if prod['_id'] == product_id:
             flash("Product has already been added")
-            return "Not added"
+            return jsonify(message="Failed to add")
 
     product = dbops.get_product_from_id(product_id)
     wishlist.append(product)
     session.modified = True
-    return "Added successfully"
+    return jsonify(newtext="Remove from Wishlist", newid=f"remove-{product_id}")
 
 
 @app.route('/_remove_from_wishlist/<product_id>')
@@ -88,7 +88,47 @@ def remove_from_wishlist(product_id):
 
     session['wishlist'] = [prod for prod in session['wishlist'] if not (prod['_id']) == product_id]
     session.modified = True
-    return "Removed Successfully"
+    return jsonify(newtext="Add to Wishlist", newid=f"add-{product_id}")
+
+
+@app.route('/_wishlist_toggle/<product_id>')
+def wishlist_toggle(product_id):
+    if 'wishlist' not in session:           # definitely add
+        wishlist = session.setdefault('wishlist', [])
+        product = dbops.get_product_from_id(product_id)
+        wishlist.append(product)
+        session.modified = True
+        return jsonify(
+            message="change button to remove",
+            newbuttonid=f"remove-{product_id}",
+            newbuttonclass="btn-remove",
+            newbuttontext="remove from wishlist",
+        )
+
+    else:                                   # maybe add, maybe remove
+        wishlist = session['wishlist']
+        for prod in wishlist:
+            if prod['_id'] == product_id:   # definitely remove
+                session['wishlist'] = [
+                    prod for prod in session['wishlist'] if not (prod['_id']) == product_id
+                ]
+                session.modified = True
+                return jsonify(
+                    message="change button to add",
+                    newbuttonid=f"add-{product_id}",
+                    newbuttonclass="btn-add",
+                    newbuttontext="add to wishlist",
+                )
+        # definitely add
+        product = dbops.get_product_from_id(product_id)
+        wishlist.append(product)
+        session.modified = True
+        return jsonify(
+            message="change button to remove",
+            newbuttonid=f"remove-{product_id}",
+            newbuttonclass="btn-remove",
+            newbuttontext="remove from wishlist",
+        )
 
 
 if __name__ == '__main__':

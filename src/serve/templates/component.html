@@ -24,34 +24,45 @@
                     <br>
                     <div class="btn-group">
 
-                        <a href="{{ prod['url'] }}">
+                        <a href="{{ prod['url'] }}" target="_blank">
                             <button class="btn-vist">
-                                    Visit the page
+                                    visit page
                             </button>
                         </a>
 
                         <!-- compare button -->
-                        <button class="btn-compare">Compare</button>
+                        <button class="btn-compare">compare</button>
                         <!-- end compare button -->
 
-                        <!-- add to wishlist button -->
-                        <a href="#" id=add-{{prod["_id"]}}>
-                            <button class="btn-add">
-                                Add to Wishlist
-                            </button>
-                        </a>
+                        <!-- wishlist button -->
+                        <div id=wishlist-{{prod["_id"]}}>
+                            <a href="#" id='add-{{prod["_id"]}}'>
+                                <button class="btn-add">
+                                    add to wishlist
+                                </button>
+                            </a>
+                        </div>
+
                         <script type=text/javascript>
                             $(function() {
-                            $('a#add-{{prod["_id"]}}').on('click', function(e) {
+                            $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
                                 e.preventDefault()
-                                $.getJSON('/_add_to_wishlist/{{prod["_id"]}}',
-                                    function(data) { }
+                                $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
+                                    function(data) {
+                                        $("#wishlist-{{prod['_id']}}").html(
+                                            "<a href=# id="+data.newbuttonid+">"+
+                                                "<button class="+data.newbuttonclass+">"+
+                                                    data.newbuttontext+
+                                                "</button>"+
+                                            "</a>"
+                                        )
+                                    }
                                 );
                                 return false;
                               });
                             });
                         </script>
-                        <!-- end add to wishlist button -->
+                        <!-- end wishlist button -->
 
                     </div>
                 </div>
