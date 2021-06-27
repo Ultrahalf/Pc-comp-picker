@@ -49,7 +49,7 @@ var dbName = "pccomppicker";
                             'vendor': String(vendor),
                             'title': String(product_titles[i].querySelector("h4 a").textContent.replace(/\t|\n/g,'')),
                             'url': String(product_titles[i].querySelector("h4 a").href),
-                            'price': product_prices[i].textContent.replace(/\t|\n/g,'')
+                            'price': Number(product_prices[i].textContent.replace(/\D/g,''))
                         })
                 }
             }
