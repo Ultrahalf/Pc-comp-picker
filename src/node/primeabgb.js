@@ -42,10 +42,11 @@ var dbName = "pccomppicker";
             for(i = 0; i < product_items.length; i++) {
                 if(product_items[i].querySelector("div.flashs > span.out-of-stock")){
                 } else {
-                    if(product_items[i].querySelector("div.product-innfo span.price bdi"))
-                        price = product_items[i].querySelector("div.product-innfo span.price ins bdi").textContent
-                    else
-                        price = "call for price"
+                    if(product_items[i].querySelector("div.product-innfo span.price bdi")) {
+                        if(product_items[i].querySelector("div.product-innfo span.price ins bdi"))
+                            price = Number(product_items[i].querySelector("div.product-innfo span.price ins bdi").textContent.replace(/\D/g,''))
+                        else
+                            price = Number(product_items[i].querySelector("div.product-innfo span.price bdi").textContent.replace(/\D/g,''))
                     products.push(
                         {
                             'category': String(category),
@@ -55,6 +56,7 @@ var dbName = "pccomppicker";
                             'img': String(product_items[i].querySelector("div.product-thumb > div.thumb-inner > a > img").src),
                             'price': price
                         })
+                    }
                 }
             }
             return products
