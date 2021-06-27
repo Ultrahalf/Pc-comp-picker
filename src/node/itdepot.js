@@ -31,14 +31,6 @@ var dbName = "pccomppicker";
             let category = obj.component;
             let product_items = document.getElementsByClassName("product-item");
             let len = product_items.length;
-            if(document.querySelector("ul.pagination")) {
-                var next = document.querySelector("ul.pagination");
-                var totalLi = next.querySelectorAll("li").length;
-            } else {
-                totalLi = 5
-            }
-            var j = 1
-            while (j <= totalLi - 4){
                 for(i = 0; i < len; i++) {
                     if(product_items[i].querySelector("div.product-details span.textcentered")){
                     } else {
@@ -53,10 +45,6 @@ var dbName = "pccomppicker";
                             })
                     }
                 }
-                if(document.querySelector("ul.pagination > li:last-child > a"))
-                    document.querySelector("ul.pagination > li:last-child > a").click();
-                j++;
-            }
             return products
         },obj);
         await page.close();
