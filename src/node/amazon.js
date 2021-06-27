@@ -51,7 +51,7 @@ var dbName = "pccomppicker";
                             'title': String(product_items[i].querySelector("h2 > a").textContent.replace(/\t|\n/g,'')),
                             'img': String(product_items[i].querySelector("img").src),
                             'url': String(product_items[i].querySelector("h2 > a").href),
-                            'price': product_items[i].querySelector(".a-price-whole").textContent
+                            'price': Number(product_items[i].querySelector(".a-price-whole").textContent.replace(/\D/g,''))
                         })
                 }
             }
