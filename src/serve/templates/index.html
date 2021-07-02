@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block main %}
 
-    <div class="product-catalog-grid">
+    <h1>welcome to pccp</h1>
+    <h2>blah blah</h2>
+    <div class="product-catalog-grid-index">
         {% for component, compid in components.items() %}
-        <div class="product-catalog-item">
-            <span id="{{ compid }}" class="product-name">{{ component }}</span>
-            <div>
-                <a href="{{ url_for('component', name=compid) }}">
-                    <button id="btn-{{ compid }}" class="btn-product-page">Choose the item</button>
+            <button>
+                <a href="{{url_for('component', name=compid)}}" id="btn-{{compid}}" class="btn-product-page">
+                    {{component}}
                 </a>
-            </div>
-        </div>
+            </button>
         {% endfor %}
     </div>
 

@@ -20,7 +20,7 @@
                 <div class="product-card">
                     <img src="{{ prod['img'] }}" alt="product"/>
                     <h3>{{ prod['title'] }}</h3>
-                    <span>{{ prod['price'] }} ₹</span>
+                    <span>{{ prod['price'] }}</span>
                     <br>
                     <div class="btn-group">
 
@@ -71,7 +71,13 @@
 
     </div>
 
-    <a href="{{ url_for('component', name=name, pageno=pageno-1) }}">Previous</a>
-    <a href="{{ url_for('component', name=name, pageno=pageno+1) }}">Next</a>
+    <div class="pagination">
+        <button id="previous" class="accent"><a href="{{ url_for('component', name=name, pageno=pageno-1) }}">Previous</a></button>
+        <button id="no">1</button> 
+        <button id="no" class="cur">2</button> 
+        <button id="no">3</button> 
+        <button id="next" class="accent"><a href="{{ url_for('component', name=name, pageno=pageno+1) }}">Next</a></button>
+    </div>
+
 
 {% endblock %}
