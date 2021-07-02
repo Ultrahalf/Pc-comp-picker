@@ -30,8 +30,7 @@ const args = process.argv;
         return results
     };
     const browser = await puppeteer.launch();
-    // let url = args.slice(-1);
-    let url = args.pop()
+    let url = args.pop();
     console.log(url);
     prds = await extractProducts(url);
     console.table(prds);

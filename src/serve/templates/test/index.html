@@ -1,0 +1,115 @@
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="Website to find and compare products from different Indian ecommerce websites to buy pc parts">
+        <title>PC Comp Picker</title>
+        <link href="style.css" type="text/css" rel="stylesheet"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav id="topnav">
+            <ul class="topnav">
+                <li><a href="index.html">Pccp</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li class="search">
+                    <input type="text" class="search-input" placeholder="Search">
+                    <button type="submit"> Go</button>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="category">
+                <button class="btn_category">Category</button>
+                <div class="product-catalog-grid">
+                    <span>
+                        <a id="btn-processor" class="btn-product-page">Processor</a>
+                    </span>
+                    <span>
+                        <a id="btn-cooling-system" class="btn-product-page">Cooling system</a>
+                    </span>
+                    <span>
+                        <a id="btn-motherboard" class="btn-product-page">Motherboard</a>
+                    </span>
+                    <span>
+                        <a id="btn-memory" class="btn-product-page">Memory/Ram</a>
+                    </span>
+                    <span>
+                        <a id="btn-storage-device" class="btn-product-page">Storage device</a>
+                    </span>
+                    <span>
+                        <a id="btn-case" class="btn-product-page">Case</a>
+                    </span>
+                    <span>
+                        <a id="btn-psu" class="btn-product-page">Power supply unit</a>
+                    </span>
+                    <span>
+                        <a id="btn-gpu" class="btn-product-page">Graphics card</a>
+                    </span>
+                    <span>
+                        <a id="btn-monitor" class="btn-product-page">Monitor</a>
+                    </span>
+                </div>
+            </div>
+
+            <hr/>
+            <h1>Processor</h1>
+            <hr/>
+
+            <div class="product-filter">
+                <select>
+                    <option>Low to high</option>
+                    <option>High to low</option>
+                </select>
+                <button> Filter</button>
+            </div>
+            <hr/>
+
+            <div id="product-grid">
+
+                <div class="product-card">
+                    <img src="" alt="product"/>
+                    <h3>Title of productTitle of productTitle of productTitle of productTitle of productTitle of productTitle of productTitle of productTitle of productTitle of product</h3>
+                    <span>$0.00</span>
+                    <br>
+                    <br>
+                    <div class="btn-group">
+                        <button class="btn-vist">Vist the page</button>
+                        <button class="btn-compare">Compare</button>
+                        <button class="btn-add">Add to the list</button>
+                    </div>
+                </div>
+
+            </div>
+
+        <div id="spacer">​</div>
+
+        <div class="pagination">
+            <button id="previous" class="accent">Previous</button>
+            <button id="no">1</button> 
+            <button id="no" class="cur">2</button> 
+            <button id="no">3</button> 
+            <button id="next" class="accent">Next</button>
+        </div>
+
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="https://github.com/Ultrahalf/pccp/" target="_blank">Github</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+            </ul>
+        </footer>
+
+                <script src="index.js"></script>
+
+    </body>
+</html>
