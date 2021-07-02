@@ -167,6 +167,64 @@ main > h1 {
 
 /* END OF PRODUCT-FILTERr */
 
+/* FILTER PAGE */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--light-grey);
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: var(--light-color);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: var(--light-color);
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+/* END OF FILTER PAGE */
+
 /* PRODUCT-GRID */
 
 #product-grid {
@@ -193,9 +251,9 @@ main > h1 {
 }
 
 .product-card > h3 {
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product-card > .btn-group > button {
@@ -389,3 +447,4 @@ footer > ul > li > a:hover {
 }
 
 /* END OF WISHLIST PAGE */
+

@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -69,7 +69,29 @@
                     <option>Low to high</option>
                     <option>High to low</option>
                 </select>
-                <button> Filter</button>
+                <button id="openfilter"> Filter</button>
+            </div>
+
+            <div id="features-page" class="overlay">
+                <a href="javascript:void(0)" class="closebtn">&times;</a>
+                <div class="overlay-content">
+                    <div class="form-wrapper">
+                        <form method="post">
+                            <label>Price: </label><br>
+                            <input type=text name="price-low" placeholder="min" min="1" minlength="1" maxlength="7" size="7"></input></br>
+                            <input type=text name="price-high" placeholder="max" min="1" minlength="1" maxlength="7" size="7"></input><br>
+                            <br><label>Vendors:</label><br>
+                            <input type=checkbox name="amazon-check"> Amazon</input><br>
+                            <input type=checkbox name="mdcomputers-check"> MD Computers</input><br>
+                            <input type=checkbox name="computerspace-check"> Computerspace</input><br>
+                            <input type=checkbox name="vedantcomputers-check"> Vedant Computers</input><br>
+                            <input type=checkbox name="primeabgb-check"> PrimeAGBG</input><br>
+                            <input type=checkbox name="itdepot-check"> The IT Depot</input><br>
+                            <br><label>Feature:</label><br>
+                            <button type="submit" name="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             <hr/>
 
@@ -90,15 +112,15 @@
 
             </div>
 
-        <div id="spacer">​</div>
+            <div id="spacer">​</div>
 
-        <div class="pagination">
-            <button id="previous" class="accent">Previous</button>
-            <button id="no">1</button> 
-            <button id="no" class="cur">2</button> 
-            <button id="no">3</button> 
-            <button id="next" class="accent">Next</button>
-        </div>
+            <div class="pagination">
+                <button id="previous" class="accent">Previous</button>
+                <button id="no">1</button> 
+                <button id="no" class="cur">2</button> 
+                <button id="no">3</button> 
+                <button id="next" class="accent">Next</button>
+            </div>
 
         </main>
 
@@ -109,7 +131,7 @@
             </ul>
         </footer>
 
-                <script src="index.js"></script>
+        <script src="index.js"></script>
 
     </body>
 </html>
