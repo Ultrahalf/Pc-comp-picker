@@ -1,56 +1,78 @@
 {% extends "base.html" %}
 {% block main %}
 
-<div class="product-grid">
-    {% for prod in session['wishlist'] %}
+        <main>
+            <div class="table-wrapper">
 
-        <div class="product-card">
+                <nav class="wishlist-nav">
+                    <div class="tab">Wishlist</div>
+                    <div class="tab">Comparison</div>
+                    <div class="tab">Price graph</div>
+                    <div class="tab">Share</div>
+                </nav>
 
-            <img src="{{ prod['img'] }}" alt="product"/>
-            <h3>{{ prod['title'] }}</h3>
-            <span>{{ prod['price'] }} ₹</span>
-            <br>
-            <div class="btn-group">
-                <a href="{{ prod['url'] }}", target="_blank">
-                    <button class="btn-vist">
-                        visit the page
-                    </button>
-                </a>
+                <div id="tab-content-area">
+                    <div id="wishlist" class="tab-content">
+                        <div class="product-grid">
+                            {% for prod in session['wishlist'] %}
 
-                <button class="btn-compare">compare</button>
+                                <div class="product-card">
 
-                <div id=wishlist-{{prod["_id"]}}>
-                    <a href="#" id=remove-{{prod["_id"]}}>
-                        <button class="btn-remove">
-                            remove from wishlist
-                        </button>
-                    </a>
+                                    <img src="{{ prod['img'] }}" alt="product"/>
+                                    <h3>{{ prod['title'] }}</h3>
+                                    <span>{{ prod['price'] }}</span>
+                                    <br>
+                                    <div class="btn-group">
+                                        <a href="{{ prod['url'] }}", target="_blank">
+                                            <button class="btn-vist">
+                                                visit the page
+                                            </button>
+                                        </a>
+
+                                        <button class="btn-compare">compare</button>
+
+                                        <div id=wishlist-{{prod["_id"]}}>
+                                            <a href="#" id=remove-{{prod["_id"]}}>
+                                                <button class="btn-remove">
+                                                    remove from wishlist
+                                                </button>
+                                            </a>
+                                        </div>
+
+                                        <script type=text/javascript>
+                                        $(function() {
+                                        $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
+                                            e.preventDefault()
+                                            $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
+                                                function(data) { 
+                                                    $("#wishlist-{{prod['_id']}}").html(
+                                                        "<a href=# id="+data.newbuttonid+">"+
+                                                            "<button class="+data.newbuttonclass+">"+
+                                                                data.newbuttontext+
+                                                            "</button>"+
+                                                        "</a>"
+                                                    )
+                                                }
+                                            );
+                                            return false;
+                                          });
+                                        });
+                                        </script>
+                                    </div>
+
+                                </div>
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="comparision" class="tab-content">comparision test</div>
+                    <div id="price-graph" class="tab-content">price graph test</div>
+                    <div id="share" class="tab-content">Share test</div>
                 </div>
 
-                <script type=text/javascript>
-                $(function() {
-                $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
-                    e.preventDefault()
-                    $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
-                        function(data) { 
-                            $("#wishlist-{{prod['_id']}}").html(
-                                "<a href=# id="+data.newbuttonid+">"+
-                                    "<button class="+data.newbuttonclass+">"+
-                                        data.newbuttontext+
-                                    "</button>"+
-                                "</a>"
-                            )
-                        }
-                    );
-                    return false;
-                  });
-                });
-                </script>
+                <script src="index.js"></script>
+
             </div>
-
-        </div>
-
-    {% endfor %}
-</div>
+        </main>
 
 {% endblock %}
