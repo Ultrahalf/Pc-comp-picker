@@ -19,7 +19,7 @@ class JSONEncoder(json.JSONEncoder):
         return super(JSONEncoder, self).default(obj)
 
 
-def get_data(pagelen: int, category: str):
+def get_products(pagelen: int, category: str):
     objects = products.find({'category': category}).limit(pagelen)
 
     list_of_dicts = list()
@@ -29,14 +29,14 @@ def get_data(pagelen: int, category: str):
     return list_of_dicts
 
 
-def get_product_from_id(product_id):
+def get_product_from_id(product_id: str):
     product = products.find_one({'_id': ObjectId(product_id)})
     if product == None:
-        print("No such product id!")
+        print("dbops.get_product_from_id: No such product id!")
         sys.exit(1)
     return product
 
 
-def id_exists(product_id):
+def id_exists(product_id: str):
     product = products.find_one({'_id': ObjectId(product_id)})
     return not product == None

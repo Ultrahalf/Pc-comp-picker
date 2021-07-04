@@ -50,9 +50,9 @@ def component(name):
     pageno = 1
     if request.method == 'GET' and request.args.get('pageno') != None:
         pageno = int(request.args.get('pageno'))
-        data = dbops.get_data(ITEMS_PER_PAGE*pageno, name)
+        data = dbops.get_products(ITEMS_PER_PAGE*pageno, name)
 
-    data = dbops.get_data(ITEMS_PER_PAGE*pageno, name)
+    data = dbops.get_products(ITEMS_PER_PAGE*pageno, name)
 
     return render_template(
         'component.html',
