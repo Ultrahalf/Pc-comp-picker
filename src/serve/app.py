@@ -17,22 +17,22 @@ app.json_encoder = dbops.JSONEncoder
 
 ITEMS_PER_PAGE = 20
 
+COMPONENTS = OrderedDict([
+    ('CPU', 'cpu'),
+    ('Cooling System', 'cooler'),
+    ('Motherboard', 'motherboard'),
+    ('Memory', 'memory'),
+    ('Storage Device', 'storage'),
+    ('Case', 'case'),
+    ('Power Supply Unit', 'psu'),
+    ('Graphic Card', 'gpu'),
+    ('Monitor', 'monitor'),
+])
+
 
 @app.route('/')
 def index():
-    components = OrderedDict([
-        ('CPU', 'cpu'),
-        ('Cooling System', 'cooler'),
-        ('Motherboard', 'motherboard'),
-        ('Memory', 'memory'),
-        ('Storage Device', 'storage'),
-        ('Case', 'case'),
-        ('Power Supply Unit', 'psu'),
-        ('Graphic Card', 'gpu'),
-        ('Monitor', 'monitor'),
-    ])
-
-    return render_template('index.html', components=components)
+    return render_template('index.html', components=COMPONENTS)
 
 
 @app.route('/about')
@@ -60,6 +60,7 @@ def component(name):
         data=data[-ITEMS_PER_PAGE:],
         pagelen=ITEMS_PER_PAGE,
         pageno=pageno,
+        components=COMPONENTS,
     )
 
 
