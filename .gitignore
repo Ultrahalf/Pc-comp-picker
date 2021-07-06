@@ -2,3 +2,4 @@ src/py/geckodriver.log
 src/py/__pycache__
 src/serve/__pycache__
 /node_modules/
+package-lock.json
