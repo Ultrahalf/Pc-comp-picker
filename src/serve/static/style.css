@@ -105,6 +105,11 @@ ul.topnav button:hover {
     justify-items: center;
 }
 
+.btn-product-page {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
 .btn-product-page:hover {
     cursor: pointer;
     border-bottom: solid;
@@ -131,7 +136,9 @@ ul.topnav button:hover {
 }
 
 /* END OF ACCORDION */
-main > h1 {
+
+/* TITLE OF THE PAGE */
+h1#category {
     text-align: center;
 }
 
@@ -448,3 +455,50 @@ footer > ul > li > a:hover {
 
 /* END OF WISHLIST PAGE */
 
+/* INDEX PAGE */
+
+#index-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#index-wrapper > .wrapper {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#index-hero {
+    text-align: center;
+    background-color: var(--light-grey);
+    color: var(--dark-color);
+    margin-top: 20px;
+}
+
+.product-catalog-grid-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1ch;
+}
+
+.product-catalog-grid-index > button {
+    padding: 10px;
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--light-color);
+}
+
+@media (max-width: 550px) {
+    .product-catalog-grid-index {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    .product-catalog-grid-index {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+    /* END INDEX PAGE */

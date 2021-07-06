@@ -36,6 +36,7 @@ if(document.querySelectorAll(".wishlist-nav .tab")) {
 // END OF WISHLIST
 
 // BUTTON CATEGORY 
+
 if(document.querySelector(".btn_category")) {
     document.querySelector(".btn_category").addEventListener("click", function() {
         this.classList.toggle("active");
@@ -48,28 +49,10 @@ if(document.querySelector(".btn_category")) {
     });
 }
 
-// ACTIVE CATEGORY INDICATOR
-
-if(document.querySelectorAll(".btn-product-page")) {
-    productPageBtns = document.querySelectorAll(".btn-product-page");
-    for( i = 0; i < productPageBtns.length; i++) {
-        productPageBtns[i].addEventListener("click", (event) => {
-            categoryBtn = document.querySelectorAll(".btn-product-page")
-            for (i = 0; i < categoryBtn.length; i++) {
-                categoryBtn[i].className = categoryBtn[i].className.replace(" active", "");
-            }
-            event.currentTarget.className += " active";
-        })
-    }
-    // select default category
-}
-if(document.querySelectorAll(".btn-product-page")) {
-    (function() { productPageBtns[0].click() })()
-}
-// END OF ACTIVE CATEGORY INDICATOR
 // END OF BUTTON CATEGORY
 
 //  FILTER PAGE
+
 if(document.querySelector("#openfilter")) {
     document.querySelector("#openfilter").addEventListener("click", (event) => {
         document.querySelector("#features-page").style.width = "100%";
@@ -83,4 +66,3 @@ if(document.querySelector("#features-page > .closebtn")) {
 }
 
 //  END OF FILTER PAGE
-

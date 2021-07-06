@@ -1,16 +1,39 @@
 {% extends "base.html" %}
 {% block main %}
-
-    <h1>welcome to pccp</h1>
-    <h2>blah blah</h2>
-    <div class="product-catalog-grid-index">
-        {% for component, compid in components.items() %}
-            <button>
-                <a href="{{url_for('component', name=compid)}}" id="btn-{{compid}}" class="btn-product-page">
-                    {{component}}
-                </a>
-            </button>
-        {% endfor %}
+<div id="index-wrapper">
+    <div class="wrapper">
+        <div id="index-hero">
+            <h1>welcome to pccp</h1>
+            <h2>blah blah</h2>
+            <p>
+            test test test test test test test test test test test test test test test
+            test test test test test test test test test test test test test 
+            </p>
+        </div>
     </div>
+
+    <div class="wrapper">
+        <div id="index-btn-grid">
+            <h1 id="category">Choose a category</h1><br>
+            <div class="product-catalog-grid-index">
+                {% for component, compid in components.items() %}
+
+                <button onclick="javascript:window.open('{{url_for('component', name=compid)}}','_self');" id="btn-{{compid}}" class="btn-product-page-index">
+                    {{component}}
+                </button>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://github.com/Ultrahalf/pccp/" target="_blank">Github</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+        </ul>
+    </footer>
+</div>
+
 
 {% endblock %}

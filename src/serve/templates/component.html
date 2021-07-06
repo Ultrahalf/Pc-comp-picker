@@ -1,83 +1,89 @@
 {% extends "base.html" %}
 {% block main %}
 
-    <div class="product-filter">
-            <button> List</button>
-            <button> Grid</button>
-            <select>
-                <option>Low to high</option>
-                <option>High to low</option>
-            </select>
-            <button> Filter</button>
-    </div>
-
-    <hr/>
-
-    <div class="product-grid">
-
-        {% for prod in data %}
-            {% if loop.index0 < pagelen %}
-                <div class="product-card">
-                    <img src="{{ prod['img'] }}" alt="product"/>
-                    <h3>{{ prod['title'] }}</h3>
-                    <span>{{ prod['price'] }}</span>
-                    <br>
-                    <div class="btn-group">
-
-                        <a href="{{ prod['url'] }}" target="_blank">
-                            <button class="btn-vist">
-                                    visit page
-                            </button>
-                        </a>
-
-                        <!-- compare button -->
-                        <button class="btn-compare">compare</button>
-                        <!-- end compare button -->
-
-                        <!-- wishlist button -->
-                        <div id=wishlist-{{prod["_id"]}}>
-                            <a href="#" id='add-{{prod["_id"]}}'>
-                                <button class="btn-add">
-                                    add to wishlist
-                                </button>
-                            </a>
-                        </div>
-
-                        <script type=text/javascript>
-                            $(function() {
-                            $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
-                                e.preventDefault()
-                                $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
-                                    function(data) {
-                                        $("#wishlist-{{prod['_id']}}").html(
-                                            "<a href=# id="+data.newbuttonid+">"+
-                                                "<button class="+data.newbuttonclass+">"+
-                                                    data.newbuttontext+
-                                                "</button>"+
-                                            "</a>"
-                                        )
-                                    }
-                                );
-                                return false;
-                              });
-                            });
-                        </script>
-                        <!-- end wishlist button -->
-
-                    </div>
-                </div>
-            {% endif %}
+<div class="category">
+    <button class="btn_category">Category</button>
+    <div class="product-catalog-grid">
+        {% for component, compid in components.items() %}
+        <span>
+            <a href="{{url_for('component', name=compid)}}" id="btn-{{compid}}" class="btn-product-page">
+                {{component}}
+            </a>
+        </span>
         {% endfor %}
-
     </div>
+</div>
 
-    <div class="pagination">
-        <button id="previous" class="accent"><a href="{{ url_for('component', name=name, pageno=pageno-1) }}">Previous</a></button>
-        <button id="no">1</button> 
-        <button id="no" class="cur">2</button> 
-        <button id="no">3</button> 
-        <button id="next" class="accent"><a href="{{ url_for('component', name=name, pageno=pageno+1) }}">Next</a></button>
+<hr/>
+<h1 id="category">{{name}}</h1>
+<hr/>
+
+<div class="product-filter">
+    <select>
+        <option>Low to high</option>
+        <option>High to low</option>
+    </select>
+    <button id="openfilter"> Filter</button>
+</div>
+<hr/>
+
+<div id="features-page" class="overlay">
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+    <div class="overlay-content">
+        <div class="form-wrapper">
+            <form method="post">
+                <label>Price: </label><br>
+                <input type=text name="price-low" placeholder="min" min="1" minlength="1" maxlength="7" size="7"></input></br>
+                <input type=text name="price-high" placeholder="max" min="1" minlength="1" maxlength="7" size="7"></input><br>
+                <br><label>Vendors:</label><br>
+                <input type=checkbox name="amazon-check"> Amazon</input><br>
+                <input type=checkbox name="mdcomputers-check"> MD Computers</input><br>
+                <input type=checkbox name="computerspace-check"> Computerspace</input><br>
+                <input type=checkbox name="vedantcomputers-check"> Vedant Computers</input><br>
+                <input type=checkbox name="primeabgb-check"> PrimeAGBG</input><br>
+                <input type=checkbox name="itdepot-check"> The IT Depot</input><br>
+                <br><label>Feature:</label><br>
+                <button type="submit" name="submit">Submit</button>
+            </form>
+        </div>
     </div>
+</div>
 
+<div id="product-grid">
+
+    {% for prod in data %}
+    {% if loop.index0 < pagelen %}
+    <div class="product-card">
+        <img src="{{ prod['img'] }}" alt="{{ prod['title'] }}"/>
+        <h3>{{ prod['title'] }}</h3>
+        <span>{{ prod['price'] }}</span>
+        <br><br>
+        <div class="btn-group">
+
+            <button class="btn-vist" onclick="javascript:window.open('{{ prod['url'] }}', '_blank');">
+                visit page
+            </button>
+            <button class="btn-compare" id="compare-{{prod["_id"]}}">
+                compare
+            </button>
+            <button class="btn-add" id="add-{{prod["_id"]}}">
+                add to wishlist
+            </button>
+
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+<div class="pagination">
+    <!-- add conditional for pagination -->
+    <button id="previous" class="accent" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno-1) }}', '_self');">Prev</button>
+    <button id="no" class="cur" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno) }}', '_self');">{{pageno}}</button>
+    <button id="no" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno+1) }}', '_self');">{{pageno+1}}</button>
+    <button id="no" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno+2) }}', '_self');">{{pageno+2}}</button>
+    <button id="next" class="accent" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno+1) }}', '_self');">Next</button>
+</div>
 
 {% endblock %}
