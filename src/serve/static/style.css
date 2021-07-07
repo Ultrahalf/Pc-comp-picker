@@ -410,7 +410,6 @@ footer > ul > li > a:hover {
     height: 85vh;
     width: 85vw;
     margin: 20px auto;
-    border-style: groove;
 }
 
 .wishlist-nav {
@@ -440,7 +439,7 @@ footer > ul > li > a:hover {
     border: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
 
     .table-wrapper {
         display: inline-block;
