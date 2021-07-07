@@ -19,7 +19,7 @@ if(document.querySelectorAll(".wishlist-nav .tab")) {
             }
 
             // toggle off active tabs
-            tab = document.getElementsByClassName("tab");
+            tab = document.querySelectorAll(".tab");
             for (i = 0; i < tab.length; i++) {
                 tab[i].className = tab[i].className.replace(" active", "");
             }

@@ -517,6 +517,7 @@ footer > ul > li > a:hover {
 #about-content {
     width: 80%;
     margin: 10px auto;
+    font-size: 1.10rem;
 }
 
 #about-content ul {
@@ -525,6 +526,10 @@ footer > ul > li > a:hover {
 
 #about-content mark {
     background-color: var(--accent-color);
+}
+
+#about-content mark:hover {
+    background-color: var(--light-grey);
 }
 
 #about-content a {
