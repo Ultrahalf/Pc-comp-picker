@@ -13,32 +13,27 @@
 
                 <div id="tab-content-area">
                     <div id="wishlist" class="tab-content">
-                        <div class="wishlist-product-grid">
+                        <div id="product-grid">
                             {% for prod in session['wishlist'] %}
-
-                                <div class="product-card">
-
-                                    <img src="{{ prod['img'] }}" alt="product"/>
-                                    <h3>{{ prod['title'] }}</h3>
+                            <div class="product-card">
+                                <img src="{{ prod['img'] }}" alt="{{ prod['title'] }}"/>
+                                <h4>{{ prod['title'] }}</h4>
                                     <span>{{ prod['price'] }}</span>
-                                    <br>
+                                    <br><br>
                                     <div class="btn-group">
-                                        <a href="{{ prod['url'] }}", target="_blank">
-                                            <button class="btn-vist">
-                                                visit the page
+
+                                        <button class="btn-vist" onclick="javascript:window.open('{{ prod['url'] }}', '_blank');">
+                                            visit page
+                                        </button>
+                                        <button class="btn-compare" id="compare-{{prod["_id"]}}">
+                                            compare
+                                        </button>
+
+                                        <div class="btn-add-rm" id="wishlist-{{prod["_id"]}}">
+                                            <button class="btn-add">
+                                                 remove from wishlist
                                             </button>
-                                        </a>
-
-                                        <button class="btn-compare">compare</button>
-
-                                        <div id=wishlist-{{prod["_id"]}}>
-                                            <a href="#" id=remove-{{prod["_id"]}}>
-                                                <button class="btn-remove">
-                                                    remove from wishlist
-                                                </button>
-                                            </a>
                                         </div>
-
                                         <script type=text/javascript>
                                         $(function() {
                                         $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
@@ -46,11 +41,9 @@
                                             $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
                                                 function(data) { 
                                                     $("#wishlist-{{prod['_id']}}").html(
-                                                        "<a href=# id="+data.newbuttonid+">"+
-                                                            "<button class="+data.newbuttonclass+">"+
-                                                                data.newbuttontext+
-                                                            "</button>"+
-                                                        "</a>"
+                                                        "<button class="+data.newbuttonclass+">"+
+                                                            data.newbuttontext+
+                                                        "</button>"
                                                     )
                                                 }
                                             );
@@ -58,13 +51,12 @@
                                           });
                                         });
                                         </script>
+
                                     </div>
-
                                 </div>
-
-                            {% endfor %}
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
                     <div id="comparison" class="tab-content">comparision test</div>
                     <div id="price-graph" class="tab-content">price graph test</div>
                     <div id="share" class="tab-content">Share test</div>
