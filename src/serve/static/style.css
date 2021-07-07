@@ -14,6 +14,7 @@
     --dark-blue: #121B42;
     --red: #ff1a1a;
     --anti-white: #f2f3f4;
+    --links: #20b2aa;
 }
 
 /* TOP NAVBAR */
@@ -244,7 +245,7 @@ h1#category {
 .product-card {
     background-color: var(--anti-white);
     width: 250px;
-    height: 360px;
+    height: 400px;
     margin: 0 auto;
     padding: 10px;
     text-align: center;
@@ -257,10 +258,11 @@ h1#category {
     padding: 10px;
 }
 
-.product-card > h3 {
-    white-space: nowrap;
+.product-card > h4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .product-card > .btn-group button {
@@ -396,7 +398,7 @@ footer > ul > li > a {
 }
 
 footer > ul > li > a:hover {
-    opacity: 0.9;
+    text-decoration: underline;
 }
 /* END OF FOOTER */
 
@@ -481,13 +483,14 @@ footer > ul > li > a:hover {
     background-color: var(--light-grey);
     color: var(--dark-color);
     margin-top: 20px;
+    height: 30vh;
 }
 
 #index-hero > #index-hero-btn {
     padding: 10px;
     border: none;
-    background-color: var(--dark-blue);
-    color: var(--light-color);
+    background-color: var(--accent-color);
+    color: var(--dark-color);
     margin: 10px 0px;
 }
 
@@ -500,7 +503,7 @@ footer > ul > li > a:hover {
 .product-catalog-grid-index > button {
     padding: 10px;
     border: none;
-    background-color: var(--dark-blue);
+    background-color: var(--dark-grey);
     color: var(--light-color);
 }
 
@@ -515,7 +518,7 @@ footer > ul > li > a:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-    /* END INDEX PAGE */
+/* END INDEX PAGE */
 
 /* ABOUT PAGE */
 
@@ -542,16 +545,16 @@ footer > ul > li > a:hover {
 }
 
 #about-content mark:hover {
-    background-color: var(--light-grey);
+    background-color: var(--links);
 }
 
 #about-content a {
     text-decoration: none;
-    color: #6495ED;
+    color: var(--links);
 }
 
 #about-content a:hover {
-    color: var(--dark-color);
+    text-decoration: underline;
 }
 
 #about-content ul.bulletpoint {

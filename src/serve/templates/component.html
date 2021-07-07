@@ -55,7 +55,7 @@
     {% if loop.index0 < pagelen %}
     <div class="product-card">
         <img src="{{ prod['img'] }}" alt="{{ prod['title'] }}"/>
-        <h3>{{ prod['title'] }}</h3>
+        <h4>{{ prod['title'] }}</h4>
         <span>{{ prod['price'] }}</span>
         <br><br>
         <div class="btn-group">
@@ -100,15 +100,15 @@
 <div class="pagination">
 
     {% if pageno > 1 %}
-    <button id="previous" class="no" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=1) }}', '_self');"><<</button>
-    <button id="previous" class="accent" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno-1) }}', '_self');">Prev</button>
+    <button id="previous" class="no" title="Go to first page" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=1) }}', '_self');"><<</button>
+    <button id="previous" class="accent" title="Previous page" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno-1) }}', '_self');">Prev</button>
     {% endif %}
 
-    <button id="no" class="cur" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno) }}', '_self');">{{pageno}}</button>
+    <button id="no" class="cur" title="current page number" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno) }}', '_self');">{{pageno}}</button>
 
     {% if pageno < numpages %}
-    <button id="next" class="accent" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno+1) }}', '_self');">Next</button>
-    <button id="next" class="no" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=numpages) }}', '_self');">>></button>
+    <button id="next" class="accent" title="Next page" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=pageno+1) }}', '_self');">Next</button>
+    <button id="next" class="no" title="Go to last page" onclick="javascript:window.open('{{ url_for('component', name=name, pageno=numpages) }}', '_self');">>></button>
     {% endif %}
 
 </div>
