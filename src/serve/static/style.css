@@ -478,6 +478,14 @@ footer > ul > li > a:hover {
     margin-top: 20px;
 }
 
+#index-hero > #index-hero-btn {
+    padding: 10px;
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--light-color);
+    margin: 10px 0px;
+}
+
 .product-catalog-grid-index {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
