@@ -66,9 +66,29 @@
             <button class="btn-compare" id="compare-{{prod["_id"]}}">
                 compare
             </button>
-            <button class="btn-add" id="add-{{prod["_id"]}}">
-                add to wishlist
-            </button>
+
+            <div id="wishlist-{{prod["_id"]}}">
+                <button class="btn-add">
+                    add to wishlist
+                </button>
+            </div>
+            <script type=text/javascript>
+            $(function() {
+            $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
+                    function(data) { 
+                        $("#wishlist-{{prod['_id']}}").html(
+                            "<button class="+data.newbuttonclass+">"+
+                                data.newbuttontext+
+                            "</button>"
+                        )
+                    }
+                );
+                return false;
+              });
+            });
+            </script>
 
         </div>
     </div>
