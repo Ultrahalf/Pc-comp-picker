@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import math
 from markupsafe import escape
 from collections import OrderedDict
 
@@ -50,17 +51,22 @@ def component(name):
     pageno = 1
     if request.method == 'GET' and request.args.get('pageno') != None:
         pageno = int(request.args.get('pageno'))
-        data = dbops.get_products(ITEMS_PER_PAGE*pageno, name)
+        products = dbops.get_products(name)
 
-    data = dbops.get_products(ITEMS_PER_PAGE*pageno, name)
+    products = dbops.get_products(name)
+    numpages = math.ceil(len(products) / ITEMS_PER_PAGE)
+
+    # gives the products to be displayed on page {pageno}
+    data = products[pageno * ITEMS_PER_PAGE - ITEMS_PER_PAGE : pageno * ITEMS_PER_PAGE]
 
     return render_template(
         'component.html',
         name=name,
-        data=data[-ITEMS_PER_PAGE:],
+        data=data,
         pagelen=ITEMS_PER_PAGE,
         pageno=pageno,
         components=COMPONENTS,
+        numpages=numpages,
     )
 
 
