@@ -263,14 +263,15 @@ h1#category {
     text-overflow: ellipsis;
 }
 
-.product-card > .btn-group > button {
+.product-card > .btn-group button {
     padding: 10px;
     border: none
 }
+
 .product-card > .btn-group {
     display: grid;
     grid-gap: 5px;
-    grid-template-areas: "vist compare" "add add";
+    grid-template-areas: "vist compare" "add-rm add-rm";
 }
 
 .btn-vist {
@@ -292,10 +293,14 @@ h1#category {
     opacity: 0.8;
 }
 
-.btn-add {
+.btn-add-rm {
+    grid-area: add-rm;
+}
+
+.btn-add, .btn-remove {
     background-color: var(--red);
-    grid-area: add;
     color: var(--light-color);
+    width: 100%;
 }
 
 .btn-add:hover {
