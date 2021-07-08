@@ -58,9 +58,22 @@
                         </div>
 
                     <div id="price-graph" class="tab-content">
-                        {% if price_graph %}
-                            <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
-                        {% endif %}
+
+                        <div class="btn-graph-group">
+                            <button id="btn-graph-total" class="btn">Total</button>
+                            <button id="btn-graph-hist" class="btn">Price history</button>
+                        </div>
+
+                        <div id="graph-total" class="graph">
+                            {% if price_graph %}
+                                <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
+                            {% endif %}
+                        </div>
+
+                        <div id="graph-hist" class="graph">
+                            price history
+                        </div>
+
                     </div>
 
                     <div id="share" class="tab-content">Share test</div>

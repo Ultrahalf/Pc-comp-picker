@@ -448,6 +448,31 @@ footer > ul > li > a:hover {
     border: none;
 }
 
+#tab-content-area > #price-graph {
+    display: flex;
+    justify-content: center;
+}
+
+#tab-content-area > #price-graph > .btn-graph-group {
+    display: flex;
+    justify-content: center;
+    background-color: var(--anti-white);
+    margin-bottom: 5px;
+}
+
+.btn-graph-group > button {
+    padding: 10px;
+    background-color: var(--accent-color);
+    border: none;
+    margin: 5px;
+}
+
+.btn-graph-group > button:hover, button.active {
+    background-color: var(--dark-color);
+    color: var(--accent-color);
+    opacity: 1;
+}
+
 @media (max-width: 650px) {
 
     .table-wrapper {

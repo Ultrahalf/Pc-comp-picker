@@ -35,6 +35,44 @@ if(document.querySelectorAll(".wishlist-nav .tab")) {
 
 // END OF WISHLIST
 
+// PRICE GRAPH
+
+if(document.querySelectorAll(".btn-graph-group")) {
+    btn = document.querySelectorAll(".btn-graph-group .btn");
+    for (var i = 0; i < btn.length; i++) { 
+        (function() { btn[0].click() })()
+        btn[i].addEventListener('click', event => {
+            // set id
+            var id = event.currentTarget.id
+            if(id == "btn-graph-total") { 
+                id = "graph-total";
+            } else { 
+                id = "graph-hist";
+            }
+
+            // hide content
+            let graphs = document.querySelectorAll("#price-graph.tab-content > .graph");
+            for (var i = 0; i < graphs.length; i++) { 
+                graphs[i].style.display = 'none';
+            }
+
+            // toggle off active tabs
+            btn = document.querySelectorAll(".btn-graph-group .btn");
+            for (i = 0; i < btn.length; i++) {
+                btn[i].className = btn[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(id).style.display = "block";
+            event.currentTarget.className += " active";
+
+        })
+
+    }
+}
+
+// END OF PRICE GRAPH
+
 // BUTTON CATEGORY 
 
 if(document.querySelector(".btn_category")) {
