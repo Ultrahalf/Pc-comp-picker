@@ -54,15 +54,30 @@ if(document.querySelector(".btn_category")) {
 //  FILTER PAGE
 
 if(document.querySelector("#openfilter")) {
-    document.querySelector("#openfilter").addEventListener("click", (event) => {
+    document.querySelector("#openfilter").addEventListener("click", () => {
         document.querySelector("#features-page").style.width = "100%";
     });
 }
 
 if(document.querySelector("#features-page > .closebtn")) {
-    document.querySelector("#features-page > .closebtn").addEventListener("click", (event) => {
+    document.querySelector("#features-page > .closebtn").addEventListener("click", () => {
         document.querySelector("#features-page").style.width = "0%";
     });
 }
 
 //  END OF FILTER PAGE
+
+//  COMPARISON
+
+if(document.querySelector("#openComparison")) {
+    document.querySelector("#openComparison").addEventListener("click", () => {
+        document.querySelector("#comparison-page").style.width = "100%";
+    });
+}
+
+if(document.querySelector("#comparison-page > .closebtn")) {
+    document.querySelector("#comparison-page > .closebtn").addEventListener("click", () => {
+        document.querySelector("#comparison-page").style.width = "0%";
+    });
+}
+//  END OF COMPARISON

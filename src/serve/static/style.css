@@ -223,6 +223,15 @@ h1#category {
     color: var(--light-color);
 }
 
+/* COMPARISON PAGE*/
+#comparison-page.overlay {
+    background-color: var(--light-color);
+}
+
+.overlay .closebtn:hover {
+    color: var(--dark-color);
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
