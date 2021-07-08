@@ -58,7 +58,9 @@
                         </div>
 
                     <div id="price-graph" class="tab-content">
-                        <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
+                        {% if price_graph %}
+                            <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
+                        {% endif %}
                     </div>
 
                     <div id="share" class="tab-content">Share test</div>

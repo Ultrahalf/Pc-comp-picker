@@ -44,6 +44,9 @@ def about():
 
 @app.route('/wishlist')
 def wishlist():
+    if 'wishlist' not in session or not session['wishlist']:
+        return render_template('wishlist.html')
+
     total = util.total_build_cost(session['wishlist'])
 
     chart = pygal.Pie(inner_radius=.4)
