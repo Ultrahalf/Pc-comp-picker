@@ -5,6 +5,7 @@ import math
 from markupsafe import escape
 from collections import OrderedDict
 
+import pygal
 from flask import Flask, render_template, request, jsonify
 from flask import flash, url_for, redirect, session
 
@@ -43,7 +44,16 @@ def about():
 
 @app.route('/wishlist')
 def wishlist():
-    return render_template('wishlist.html')
+    total = util.total_build_cost(session['wishlist'])
+
+    chart = pygal.Pie(inner_radius=.4)
+    chart.title = f"Total Build Cost: ₹{total}"
+
+    for prod in session['wishlist']:
+        chart.add(prod['title'], prod['price'])
+    price_graph = chart.render_data_uri()
+
+    return render_template('wishlist.html', price_graph=price_graph)
 
 
 @app.route('/component/<name>', methods=['GET', 'POST'])

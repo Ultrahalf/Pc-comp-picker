@@ -21,6 +21,13 @@ def gen_secret_key():
     return os.urandom(12).hex()
 
 
+def total_build_cost(wishlist):
+    total = 0
+    for prod in wishlist:
+        total += prod['price']
+    return total
+
+
+# testing
 if __name__ == '__main__':
     print(gen_wishlist_url())
-    add_to_wishlist('60ccb5ffc3aa12d41a9a9b1b')
