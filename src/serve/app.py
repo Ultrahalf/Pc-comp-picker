@@ -49,7 +49,10 @@ def wishlist():
 
     total = util.total_build_cost(session['wishlist'])
 
-    chart = pygal.Pie(inner_radius=.4)
+    config = pygal.Config()
+    config.human_readable = True
+
+    chart = pygal.Pie(config, inner_radius=.4)
     chart.title = f"Total Build Cost: ₹{total}"
 
     for prod in session['wishlist']:
