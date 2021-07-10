@@ -155,5 +155,40 @@ def wishlist_toggle(product_id):
         )
 
 
+@app.route('/_comparison/<product_id>')
+def comparison_toggle(product_id):
+    product = dbops.get_product_from_id(product_id)
+
+    if product['vendor'] not in ['itdepot', 'mdcomputer', 'vedant']:
+        flash(f"Comparison not available for vendor {product['vendor']}")
+        return "incompatible vendor"
+
+    if 'comparison' not in session: # definitely add
+        comparison = session.setdefault('comparison', [])
+        comparison.append(product)
+        session.modified = True
+        newbuttontext = "remove"
+        return jsonify(newbuttontext=newbuttontext)
+
+    else:   # maybe add, maybe remove
+        comparison = session['comparison']
+        for prod in comparison:
+            if prod['_id'] == product_id:  # definitely remove
+                session['comparison'] = [
+                    prod for prod in session['comparison'] if not (prod['_id']) == product_id
+                ]
+                session.modified = True
+                return jsonify(newbuttontext="compare")
+
+        # definitely add
+        if len(comparison) >= 2:
+            flash("Two elements already added for comparison.  Remove one of them if you want to add another.")
+            os.system("echo two added")
+            return "too many products"
+        comparison.append(product)
+        session.modified = True
+        return jsonify(newbuttontext="compare")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
