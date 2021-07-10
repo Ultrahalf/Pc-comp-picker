@@ -156,6 +156,11 @@ def wishlist_toggle(product_id):
         )
 
 
+@app.route('/comparison')
+def comparison():
+    return render_template('comparison.html')
+
+
 @app.route('/_comparison/<product_id>')
 def comparison_toggle(product_id):
     product = dbops.get_product_from_id(product_id)
