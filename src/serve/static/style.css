@@ -153,6 +153,7 @@ h1#category {
 
 .product-filter > * {
     margin: 6px;
+    border: none;
 }
 
 .product-filter > button {
@@ -161,7 +162,7 @@ h1#category {
     padding: 1ch;
 }
 
-.product-filter > select {
+.product-filter  select {
     background-color: var(--light-grey);
     padding: 1ch;
     border: none;
@@ -221,15 +222,6 @@ h1#category {
     display: flex;
     flex-direction: column;
     color: var(--light-color);
-}
-
-/* COMPARISON PAGE*/
-#comparison-page.overlay {
-    background-color: var(--light-color);
-}
-
-.overlay .closebtn:hover {
-    color: var(--dark-color);
 }
 
 @media screen and (max-height: 450px) {

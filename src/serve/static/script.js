@@ -104,18 +104,3 @@ if(document.querySelector("#features-page > .closebtn")) {
 }
 
 //  END OF FILTER PAGE
-
-//  COMPARISON
-
-if(document.querySelector("#openComparison")) {
-    document.querySelector("#openComparison").addEventListener("click", () => {
-        document.querySelector("#comparison-page").style.width = "100%";
-    });
-}
-
-if(document.querySelector("#comparison-page > .closebtn")) {
-    document.querySelector("#comparison-page > .closebtn").addEventListener("click", () => {
-        document.querySelector("#comparison-page").style.width = "0%";
-    });
-}
-//  END OF COMPARISON
