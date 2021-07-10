@@ -73,9 +73,13 @@ var dbName = "pccomppicker";
         component: "memory",
         url : "https://www.theitdepot.com/products-RAM+(Memory)_C6.html"
     };
-    storage = {
+    hdd = {
         component: "storage",
         url : "https://www.theitdepot.com/products-Hard+Drives+HDD_C12.html"
+    };
+    ssd = {
+        component: "storage",
+        url : "https://www.theitdepot.com/products-Solid+State+Drive+(SSD)_C93.html"
     };
     pccase = {
         component: "case",
@@ -95,7 +99,7 @@ var dbName = "pccomppicker";
     };
 
     // create a array of object
-    const links = [cpu, cooler, motherboard, memory, storage, pccase, psu, gpu, monitor];
+    const links = [cpu, cooler, motherboard, memory, hdd, ssd, pccase, psu, gpu, monitor];
 
     // dummy variable for database
     let itdepot = []
