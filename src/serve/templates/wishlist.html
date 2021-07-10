@@ -66,7 +66,9 @@
 
                         <div id="graph-total" class="graph">
                             {% if price_graph %}
+                            <div style='margin-right:auto; margin-left:auto; text-align:center;'>
                                 <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
+                            </div>
                             {% endif %}
                         </div>
 
