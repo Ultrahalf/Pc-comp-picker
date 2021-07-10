@@ -51,6 +51,7 @@ def wishlist():
 
     config = pygal.Config()
     config.human_readable = True
+    config.style = pygal.style.LightGreenStyle
 
     chart = pygal.Pie(config, inner_radius=.4)
     chart.title = f"Total Build Cost: ₹{total}"
