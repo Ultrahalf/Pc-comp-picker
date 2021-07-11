@@ -52,9 +52,15 @@
             </div>
 
             <div id="share" class="tab-content">
-                build name: {{ build_name }}<br>
-                url: {{ build_url }}<br>
-                <img src="{{ qrcode(build_url) }}">
+                <div class="save-build">
+                    <img src="{{ qrcode(build_url) }}">
+                    <h3 class="build-name">build name: {{ build_name }}</h3>
+                    <label>url: </label>
+                    <input type="text" value="{{ build_url }}" id="build-url"></input>
+                    <button id="copyText"> Copy </button>
+                    <a href="{{ qrcode(build_url) }}" download="{{ build_name }}-pcbuild-pccp">
+                    <button>Download QR code</button></a>
+                </div>
             </div>
         </div>
 

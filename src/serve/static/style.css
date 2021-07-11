@@ -474,7 +474,46 @@ footer > ul > li > a:hover {
     grid-gap: 2ch;
 }
 
+/* QRCODE */
+.save-build {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 10 auto;
+    align-items: center;
+    gap: 1ch;
+    max-width: 1000px;
+}
 
+.save-build > img {
+    width: 250px;
+    height: 250px;
+}
+
+.save-build > input {
+    padding: 10px;
+    width: 80%;
+}
+
+.save-build > a {
+    width: 80%;
+}
+
+.save-build > a > button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-grey);
+    border: none;
+}
+
+.save-build > button {
+    padding: 10px;
+    background-color: var(--light-grey);
+    border: none;
+    width: 80%;
+}
+
+/* End of QRCODE */
 
 #submit-btn {
     padding: 8px;

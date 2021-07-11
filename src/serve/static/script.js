@@ -114,3 +114,25 @@ if(document.querySelector(".comparison-btn-group")) {
 
 }
 // END OF COMPARISON PAGE
+
+// COPY TO CLIPBOARD
+
+if(document.querySelector(".save-build")) {
+    document.querySelector("#copyText").addEventListener("click", () => {
+            /* Get the text field */
+            var copyText = document.getElementById("build-url");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + copyText.value);
+    });
+}
+
+// END OF COPY TO CLIPBOARD
+
