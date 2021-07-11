@@ -13,7 +13,7 @@
                 <div id="tab-content-area">
                     <div id="wishlist" class="tab-content">
                         {% if not session['wishlist'] %}
-                            You have not added any items to your wishlist.
+                            <h3 class="no-content-warn">You have not added any items to your wishlist.</h3>
                         {% else %}
                         <div id="product-grid">
                             {% for prod in session['wishlist'] %}
@@ -71,7 +71,7 @@
 
                         <div id="graph-total" class="graph">
                             {% if not session['wishlist'] %}
-                                You have not added any items to your wishlist.
+                                <h3 class="no-content-warn">You have not added any items to your wishlist.</h3>
                             {% else %}
                                 {% if price_graph %}
                                 <div style='margin-right:auto; margin-left:auto; text-align:center;'>
@@ -82,14 +82,14 @@
                         </div>
 
                         <div id="graph-hist" class="graph">
-                            Please save your build in the "Save" tab on the left to view the price history graph.
+                            <h3 class="no-content-warn">Please save your build in the "Save" tab on the left to view the price history graph.</h3>
                         </div>
 
                     </div>
 
                     <div id="save" class="tab-content">
                         {% if not session['wishlist'] %}
-                            You have not added any items to your wishlist.
+                                <h3 class="no-content-warn">You have not added any items to your wishlist.</h3>
                         {% else %}
                         <div class="form-save-build">
                             <form action="" method="post">

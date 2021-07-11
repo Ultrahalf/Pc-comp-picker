@@ -17,6 +17,9 @@
     --links: #20b2aa;
 }
 
+.no-content-warn {
+    text-align: center;
+}
 /* TOP NAVBAR */
 
 ul.topnav {
