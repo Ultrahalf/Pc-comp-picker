@@ -1,70 +1,66 @@
 {% extends "base.html" %}
 {% block main %}
 
-        <main>
-            <div class="table-wrapper">
+<main>
+    <div class="table-wrapper">
 
-                <nav class="wishlist-nav">
-                    <div class="tab">Wishlist</div>
-                    <div class="tab">Price graph</div>
-                    <div class="tab">
-                        Share
+        <nav class="wishlist-nav">
+            <div class="tab">Wishlist</div>
+            <div class="tab">Price graph</div>
+            <div class="tab">
+                Share
+            </div>
+        </nav>
+
+        <div id="tab-content-area">
+            <div id="wishlist" class="tab-content">
+                <div id="product-grid">
+                    {% for prod in session['wishlist'] %}
+                    <div class="product-card">
+                        <img src="{{ prod['img'] }}" alt="{{ prod['title'] }}"/>
+                        <h4>{{ prod['title'] }}</h4>
+                        <h5>by {{ prod['vendor'] }}</h5>
+                        <span>{{ prod['price'] }}</span>
+                        <br><br>
+                        <button class="btn-vist" onclick="javascript:window.open('{{ prod['url'] }}', '_blank');" style="padding:10px; width: 100%;border: none">
+                            visit page
+                        </button>
                     </div>
-                </nav>
+                    {% endfor %}
+                </div>
+            </div>
 
-                <div id="tab-content-area">
-                    <div id="wishlist" class="tab-content">
-                        <div id="product-grid">
-                            {% for prod in session['wishlist'] %}
-                            <div class="product-card">
-                                <img src="{{ prod['img'] }}" alt="{{ prod['title'] }}"/>
-                                <h4>{{ prod['title'] }}</h4>
-                                <h5>by {{ prod['vendor'] }}</h5>
-                                    <span>{{ prod['price'] }}</span>
-                                    <br><br>
-                                    <div class="btn-group">
+            <div id="price-graph" class="tab-content">
 
-                                        <button class="btn-vist" onclick="javascript:window.open('{{ prod['url'] }}', '_blank');">
-                                            visit page
-                                        </button>
+                <div class="btn-graph-group">
+                    <button id="btn-graph-total" class="btn">Total</button>
+                    <button id="btn-graph-hist" class="btn">Price history</button>
+                </div>
 
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                    <div id="price-graph" class="tab-content">
-
-                        <div class="btn-graph-group">
-                            <button id="btn-graph-total" class="btn">Total</button>
-                            <button id="btn-graph-hist" class="btn">Price history</button>
-                        </div>
-
-                        <div id="graph-total" class="graph">
-                            {% if price_graph %}
-                            <div style='margin-right:auto; margin-left:auto; text-align:center;'>
-                                <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
-                            </div>
-                            {% endif %}
-                        </div>
-
-                        <div id="graph-hist" class="graph">
-                            price history
-                        </div>
-
+                <div id="graph-total" class="graph">
+                    {% if price_graph %}
+                    <div style='margin-right:auto; margin-left:auto; text-align:center;'>
+                        <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
                     </div>
+                    {% endif %}
+                </div>
 
-                    <div id="share" class="tab-content">
-                        <form action="" method="post">
-                            build name: {{ build_name }}<br>
-                            url: {{ build_url }}<br>
-                            qrcode: to be generated soon
-                        </form>
-                    </div>
+                <div id="graph-hist" class="graph">
+                    price history
                 </div>
 
             </div>
-        </main>
+
+            <div id="share" class="tab-content">
+                <form action="" method="post">
+                    build name: {{ build_name }}<br>
+                    url: {{ build_url }}<br>
+                    qrcode: to be generated soon
+                </form>
+            </div>
+        </div>
+
+    </div>
+</main>
 
 {% endblock %}

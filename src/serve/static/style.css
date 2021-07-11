@@ -439,11 +439,6 @@ footer > ul > li > a:hover {
     border: none;
 }
 
-#tab-content-area > #price-graph {
-    display: flex;
-    justify-content: center;
-}
-
 #tab-content-area > #price-graph > .btn-graph-group {
     display: flex;
     justify-content: center;
@@ -464,6 +459,32 @@ footer > ul > li > a:hover {
     opacity: 1;
 }
 
+.form-save-build {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.form-save-build > form {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 2ch;
+}
+
+
+
+#submit-btn {
+    padding: 8px;
+    background-color: var(--dark-grey);
+    color: var(--light-color);
+    border: none;
+    width: 100%;
+}
+
+.form-save-build > form > * {
+    font-size: 1.5rem;
+}
+
 @media (max-width: 650px) {
 
     .table-wrapper {
@@ -473,14 +494,15 @@ footer > ul > li > a:hover {
 
     .wishlist-nav {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
 
 @media (max-width: 450px) {
     .wishlist-nav {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
     }
 
 }

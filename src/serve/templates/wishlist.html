@@ -7,7 +7,7 @@
                 <nav class="wishlist-nav">
                     <div class="tab">Wishlist</div>
                     <div class="tab">Price graph</div>
-                    <div class="tab">Share</div>
+                    <div class="tab">Save</div>
                 </nav>
 
                 <div id="tab-content-area">
@@ -87,14 +87,16 @@
 
                     </div>
 
-                    <div id="share" class="tab-content">
+                    <div id="save" class="tab-content">
                         {% if not session['wishlist'] %}
                             You have not added any items to your wishlist.
                         {% else %}
-                        <form action="" method="post">
-                            Enter build name: <input type=text name="build_name"></input>
-                            <input type="submit" value="Save Build"></input>
-                        </form>
+                        <div class="form-save-build">
+                            <form action="" method="post">
+                                <input type=text name="build_name" id="text-box" required placeholder="Enter the build name"></input>
+                                <button type="submit" value="Save Build" id="submit-btn">Save build</button>
+                            </form>
+                        </div>
                         {% endif %}
                     </div>
                 </div>
