@@ -8,6 +8,7 @@ from collections import OrderedDict
 import pygal
 from flask import Flask, render_template, request, jsonify
 from flask import flash, url_for, redirect, session
+from flask_qrcode import QRcode
 
 import dbops
 import util
@@ -16,6 +17,8 @@ app = Flask(__name__)
 
 app.secret_key = util.gen_secret_key()
 app.json_encoder = dbops.JSONEncoder
+
+qrcode = QRcode(app)
 
 ITEMS_PER_PAGE = 20
 MAIN_URL_HEAD = '127.0.0.1:5000'

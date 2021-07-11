@@ -55,7 +55,7 @@
                 <form action="" method="post">
                     build name: {{ build_name }}<br>
                     url: {{ build_url }}<br>
-                    qrcode: to be generated soon
+                    <img src="{{ qrcode(build_url) }}">
                 </form>
             </div>
         </div>
