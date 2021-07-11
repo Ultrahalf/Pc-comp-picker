@@ -58,10 +58,9 @@ ul.topnav button:hover {
     opacity: 0.8;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     ul.topnav {
         flex-direction: column;
-        /* justify-content: center; // horizontal alignment */
         align-items: center; // vertical alignemnt
     }
 
@@ -586,3 +585,45 @@ footer > ul > li > a:hover {
     list-style-type: disc;
 }
 /* END OF ABOUT PAGE */
+
+/* COMPARISON PAGE */
+
+.comparison-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10 auto;
+    width: 90%;
+    height: 85%;
+    background-color: var(--anti-white);
+    align-items: center;
+    justify-items: center;
+}
+.comparison-content > iframe{
+    width: 90%;
+    height: 90%;
+}
+
+.comparison-btn-group {
+    display: flex;
+    justify-content: center;
+    background-color: var(--anti-white);
+    margin-bottom: 5px;
+}
+
+.comparison-btn-group > button {
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--accent-color);
+    border: none;
+}
+
+@media (max-width: 800px) {
+
+.comparison-content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2ch;
+}
+
+}
+/* COMPARISON PAGE */

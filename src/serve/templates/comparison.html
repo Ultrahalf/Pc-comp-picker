@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block main %}
 
-    <div class="comparison-content">
-        {% for prod in session['comparison'] %}
-        <iframe src="{{prod['url']}}" title="{{prod['url']}}"></iframe>
-        {% endfor %}
-    </div>
+<div class="comparison-btn-group">
+    <button>go back</button>
+    <button>remove all</button>
+</div>
+
+<div class="comparison-content">
+    {% for prod in session['comparison'] %}
+    <iframe src="{{prod['url']}}" title="{{prod['url']}}"></iframe>
+    {% endfor %}
+</div>
 
 {% endblock %}

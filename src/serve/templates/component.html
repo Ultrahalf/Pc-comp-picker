@@ -19,14 +19,13 @@
 <hr/>
 
 <div class="product-filter">
-    <form method="">
+    <form method="" name="">
         <select>
             <option>Low to high</option>
             <option>High to low</option>
         </select>
     </form>
     <button id="openfilter"> Filter</button>
-    <button onclick="javascript:window.open('','_self');"> Comparison</button>
 </div>
 <hr/>
 
@@ -34,7 +33,7 @@
     <a href="javascript:void(0)" class="closebtn">&times;</a>
     <div class="overlay-content">
         <div class="form-wrapper">
-            <form method="post">
+            <form method="post" name="">
                 <label>Price: </label><br>
                 <input type=text name="price-low" placeholder="min" min="1" minlength="1" maxlength="7" size="7"></input></br>
                 <input type=text name="price-high" placeholder="max" min="1" minlength="1" maxlength="7" size="7"></input><br>
