@@ -3,8 +3,22 @@
 
 <div class="comparison-btn-group">
     <button id="comparison-btn-back">go back</button>
-    <button>remove all</button>
+    <button id="comparison-remove-all">remove all</button>
 </div>
+
+<script type=text/javascript>
+    $(function() {
+    $('button#comparison-remove-all').on('click', function(e) {
+        e.preventDefault()
+        $.getJSON('/_comparison_remove_all',
+            function(data) { 
+                // no change to button
+            }
+        );
+        return false;
+      });
+    });
+</script>
 
 {% if session['comparison'] %}
     <div class="comparison-content">
