@@ -529,7 +529,6 @@ footer > ul > li > a:hover {
 
 #index-hero {
     text-align: center;
-    background-color: var(--light-grey);
     color: var(--dark-color);
     margin-top: 20px;
     height: 30vh;
