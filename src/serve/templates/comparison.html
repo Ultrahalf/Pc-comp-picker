@@ -7,9 +7,13 @@
 </div>
 
 <div class="comparison-content">
-    {% for prod in session['comparison'] %}
-    <iframe src="{{prod['url']}}" title="{{prod['url']}}"></iframe>
-    {% endfor %}
+    {% if session['comparison'] %}
+        {% for prod in session['comparison'] %}
+        <iframe src="{{prod['url']}}" title="{{prod['url']}}"></iframe>
+        {% endfor %}
+    {% else %}
+        <h3>No products have been added for comparison.</h3>
+    {% endif %}
 </div>
 
 {% endblock %}
