@@ -231,5 +231,11 @@ def comparison_toggle(product_id):
         return jsonify(newbuttontext="compare")
 
 
+@app.route('/_comparison_remove_all')
+def comparison_remove_all():
+    del session['comparison']
+    session.modified = True
+    return redirect(url_for('comparison'))
+
 if __name__ == '__main__':
     app.run(debug=True)
