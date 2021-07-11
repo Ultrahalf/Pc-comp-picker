@@ -12,6 +12,9 @@
 
                 <div id="tab-content-area">
                     <div id="wishlist" class="tab-content">
+                        {% if not session['wishlist'] %}
+                            You have not added any items to your wishlist.
+                        {% else %}
                         <div id="product-grid">
                             {% for prod in session['wishlist'] %}
                             <div class="product-card">
@@ -56,6 +59,7 @@
                                 </div>
                                 {% endfor %}
                             </div>
+                            {% endif %}
                         </div>
 
                     <div id="price-graph" class="tab-content">
@@ -66,24 +70,32 @@
                         </div>
 
                         <div id="graph-total" class="graph">
-                            {% if price_graph %}
-                            <div style='margin-right:auto; margin-left:auto; text-align:center;'>
-                                <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
-                            </div>
+                            {% if not session['wishlist'] %}
+                                You have not added any items to your wishlist.
+                            {% else %}
+                                {% if price_graph %}
+                                <div style='margin-right:auto; margin-left:auto; text-align:center;'>
+                                    <embed type="image/svg+xml" src={{price_graph|safe}} style='max-width:1000px'/>
+                                </div>
+                                {% endif %}
                             {% endif %}
                         </div>
 
                         <div id="graph-hist" class="graph">
-                            price history
+                            Please save your build in the "Save" tab on the left to view the price history graph.
                         </div>
 
                     </div>
 
                     <div id="share" class="tab-content">
+                        {% if not session['wishlist'] %}
+                            You have not added any items to your wishlist.
+                        {% else %}
                         <form action="" method="post">
                             Enter build name: <input type=text name="build_name"></input>
                             <input type="submit" value="Save Build"></input>
                         </form>
+                        {% endif %}
                     </div>
                 </div>
 
