@@ -1,5 +1,0 @@
-flask
-pymongo
-mongoengine
-pygal
-Flask-QRcode
