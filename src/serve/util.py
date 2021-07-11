@@ -9,7 +9,7 @@ import dbops
 
 def gen_wishlist_url() -> str:
     url = ''.join(random.choice(string.ascii_letters) for _ in range(9))
-    return f'/wishlist/{url}'
+    return url
 
 
 def add_to_wishlist(product_id):

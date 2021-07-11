@@ -7,7 +7,9 @@
                 <nav class="wishlist-nav">
                     <div class="tab">Wishlist</div>
                     <div class="tab">Price graph</div>
-                    <div class="tab">Share</div>
+                    <div class="tab">
+                        Share
+                    </div>
                 </nav>
 
                 <div id="tab-content-area">
@@ -25,32 +27,6 @@
                                         <button class="btn-vist" onclick="javascript:window.open('{{ prod['url'] }}', '_blank');">
                                             visit page
                                         </button>
-                                        <button class="btn-compare" id="compare-{{prod["_id"]}}">
-                                            compare
-                                        </button>
-
-                                        <div class="btn-add-rm" id="wishlist-{{prod["_id"]}}">
-                                            <button class="btn-add">
-                                                 remove from wishlist
-                                            </button>
-                                        </div>
-                                        <script type=text/javascript>
-                                        $(function() {
-                                        $('#wishlist-{{prod["_id"]}}').on('click', function(e) {
-                                            e.preventDefault()
-                                            $.getJSON('/_wishlist_toggle/{{prod["_id"]}}',
-                                                function(data) { 
-                                                    $("#wishlist-{{prod['_id']}}").html(
-                                                        "<button class="+data.newbuttonclass+">"+
-                                                            data.newbuttontext+
-                                                        "</button>"
-                                                    )
-                                                }
-                                            );
-                                            return false;
-                                          });
-                                        });
-                                        </script>
 
                                     </div>
                                 </div>
@@ -81,8 +57,9 @@
 
                     <div id="share" class="tab-content">
                         <form action="" method="post">
-                            Enter build name: <input type=text name="build_name"></input>
-                            <input type="submit" value="Save Build"></input>
+                            build name: {{ build_name }}<br>
+                            url: {{ build_url }}<br>
+                            qrcode: to be generated soon
                         </form>
                     </div>
                 </div>

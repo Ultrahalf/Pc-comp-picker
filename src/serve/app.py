@@ -18,6 +18,7 @@ app.secret_key = util.gen_secret_key()
 app.json_encoder = dbops.JSONEncoder
 
 ITEMS_PER_PAGE = 20
+MAIN_URL_HEAD = '127.0.0.1:5000'
 
 COMPONENTS = OrderedDict([
     ('CPU', 'cpu'),
@@ -42,8 +43,16 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/wishlist')
+@app.route('/wishlist', methods=['GET', 'POST'])
 def wishlist():
+    # save build
+    if request.method == 'POST' and request.form.get('build_name') != None:
+        return redirect(url_for(
+            'saved_builds',
+            build_url=util.gen_wishlist_url(),
+            build_name=request.form.get('build_name'),
+        ))
+
     if 'wishlist' not in session or not session['wishlist']:
         return render_template('wishlist.html')
 
@@ -61,6 +70,32 @@ def wishlist():
     price_graph = chart.render_data_uri()
 
     return render_template('wishlist.html', price_graph=price_graph)
+
+
+@app.route('/saved_build/<build_url>')
+def saved_builds(build_url):
+    build_name = request.args.get('build_name')
+    build_url = f'{MAIN_URL_HEAD}/saved_build/{build_url}'
+
+    config = pygal.Config()
+    config.human_readable = True
+    config.style = pygal.style.LightGreenStyle
+
+    total = util.total_build_cost(session['wishlist'])
+
+    chart = pygal.Pie(config, inner_radius=.4)
+    chart.title = f"Total Build Cost: ₹{total}"
+
+    for prod in session['wishlist']:
+        chart.add(prod['title'], prod['price'])
+    price_graph = chart.render_data_uri()
+
+    return render_template(
+        'saved_build.html',
+        build_url=build_url,
+        build_name=build_name,
+        price_graph=price_graph,
+    )
 
 
 @app.route('/component/<name>', methods=['GET', 'POST'])
