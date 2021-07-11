@@ -104,3 +104,13 @@ if(document.querySelector("#features-page > .closebtn")) {
 }
 
 //  END OF FILTER PAGE
+
+// COMPARISON PAGE
+
+if(document.querySelector(".comparison-btn-group")) {
+    document.querySelector("#comparison-btn-back").addEventListener("click", () => {
+        window.history.back()
+    });
+
+}
+// END OF COMPARISON PAGE
