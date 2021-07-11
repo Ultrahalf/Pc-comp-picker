@@ -557,6 +557,10 @@ footer > ul > li > a:hover {
 }
 
 @media (max-width: 550px) {
+
+    #index-hero {
+        height: 40vh;
+    }
     .product-catalog-grid-index {
         grid-template-columns: repeat(2, 1fr);
     }
