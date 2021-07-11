@@ -6,14 +6,14 @@
     <button>remove all</button>
 </div>
 
-<div class="comparison-content">
-    {% if session['comparison'] %}
+{% if session['comparison'] %}
+    <div class="comparison-content">
         {% for prod in session['comparison'] %}
-        <iframe src="{{prod['url']}}" title="{{prod['url']}}"></iframe>
+            <iframe src="{{prod['url']}}" title="{{prod['url']}}"></iframe>
         {% endfor %}
-    {% else %}
-        <h3>No products have been added for comparison.</h3>
-    {% endif %}
-</div>
+    </div>
+{% else %}
+    <h3>No products have been added for comparison.</h3>
+{% endif %}
 
 {% endblock %}
