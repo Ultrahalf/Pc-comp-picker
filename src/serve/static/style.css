@@ -271,7 +271,7 @@ h1#category {
 
 .product-card > .btn-group button {
     padding: 10px;
-    border: none
+    border: none;
 }
 
 .product-card > .btn-group {
@@ -444,6 +444,7 @@ footer > ul > li > a:hover {
     border: none;
     transition: 0.4s;
 }
+
 .wishlist-nav  div.active {
     color: var(--accent-color);
     background-color: var(--dark-color);

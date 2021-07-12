@@ -56,7 +56,7 @@
             <div id="share" class="tab-content">
                 <h3 class="build-name">build name: {{ build_name }}</h3>
                 <div class="save-build">
-                    <img src="{{ qrcode(build_url) }}">
+                    <img src="{{ qrcode(build_url) }}"/>
                     <label>url: </label>
                     <input type="text" value="{{ build_url }}" id="build-url"></input>
                     <button id="copyText"> Copy </button>
