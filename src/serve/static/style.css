@@ -188,9 +188,9 @@ h1#category {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--dark-color);
     overflow-x: hidden;
     transition: 0.5s;
+    background-color: var(--light-color);
 }
 
 .overlay-content {
@@ -198,20 +198,19 @@ h1#category {
     top: 25%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
 }
 
 .overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: var(--light-grey);
+    color: var(--dark-grey);
     display: block;
     transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: var(--light-color);
+    color: var(--red);
 }
 
 .overlay .closebtn {
@@ -222,10 +221,20 @@ h1#category {
 }
 
 .form-wrapper {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    color: var(--light-color);
+    flex-direction: row;
+    justify-content: center;
 }
+
+.form-wrapper button {
+    background-color: var(--dark-color);
+    color: var(--light-grey);
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
 
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
