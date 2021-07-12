@@ -38,29 +38,29 @@
 <div id="features-page" class="overlay">
     <a href="javascript:void(0)" class="closebtn">&times;</a>
     <div class="overlay-content">
-            <form method="post" name="">
+            <form method="get" name="filter-form">
                 <div class="form-wrapper">
                     <table>
                         <tr><th span="2">Filters</th></tr>
                         <tr><td><label>Price: </label></td></tr>
-                        <tr><td><input type=text name="price-low" placeholder="min" min="1" minlength="1" maxlength="7" size="7"></input></td></tr>
-                        <tr><td><input type=text name="price-high" placeholder="max" min="1" minlength="1" maxlength="7" size="7"></input></td></tr>
+                        <tr><td><input type=text name="price-low-check" placeholder="min" min="1" minlength="1" maxlength="7" size="7"></input></td></tr>
+                        <tr><td><input type=text name="price-high-check" placeholder="max" min="1" minlength="1" maxlength="7" size="7"></input></td></tr>
                         <tr><td><br><label>Vendors:</label></td></tr>
-                        <tr><td><input type=checkbox name="amazon-check"> Amazon</input></td></tr>
-                        <tr><td><input type=checkbox name="mdcomputers-check"> MD Computers</input></td></tr>
-                        <tr><td><input type=checkbox name="computerspace-check"> Computerspace</input></td></tr>
-                        <tr><td><input type=checkbox name="vedantcomputers-check"> Vedant Computers</input></td></tr>
-                        <tr><td><input type=checkbox name="primeabgb-check"> PrimeAGBG</input></td></tr>
-                        <tr><td><input type=checkbox name="itdepot-check"> The IT Depot</input></td></tr>
+                        <tr><td><input type=checkbox name="vendor-amazon-check"> Amazon</input></td></tr>
+                        <tr><td><input type=checkbox name="vendor-mdcomputer-check"> MD Computers</input></td></tr>
+                        <tr><td><input type=checkbox name="vendor-computerspace-check"> Computerspace</input></td></tr>
+                        <tr><td><input type=checkbox name="vendor-vedant-check"> Vedant Computers</input></td></tr>
+                        <tr><td><input type=checkbox name="vendor-primeabgb-check"> PrimeAGBG</input></td></tr>
+                        <tr><td><input type=checkbox name="vendor-itdepot-check"> The IT Depot</input></td></tr>
                         <tr><td><label>Feature:</label></td></tr>
                         {% for (feat, inputs) in featdict.items() %}
                             <tr><td>{{feat}}:</td></tr>
                             {% for input in inputs %}
-                                <tr><td><input type=checkbox name="{{input}}-check"> {{input}}</input></td></tr>
+                                <tr><td><input type=checkbox name="{{feat}}-{{input}}-check"> {{input}}</input></td></tr>
                             {% endfor %}
                         {% endfor %}
                         <tr><td>​</td></tr>
-                        <tr><td span="2"><button type="submit" name="submit">Submit</button></td></tr>
+                        <tr><td span="2"><button type="submit" name="filter-submit">Submit</button></td></tr>
                     </table>
                 </div>
             </form>

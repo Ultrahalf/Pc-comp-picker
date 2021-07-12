@@ -126,44 +126,65 @@ def saved_builds(build_url):
 
 @app.route('/component/<name>', methods=['GET', 'POST'])
 def component(name):
+    vendors = []
+
     if name == 'cpu':
         brands = dbops.get_category_key_vals('cpu', 'brand')
         cpu_series = dbops.get_category_key_vals('cpu', 'series')
-        featdict = {'Brand': brands, 'Series': cpu_series}
+        featdict = {'brand': brands, 'series': cpu_series}
     elif name == 'gpu':
         brands = dbops.get_category_key_vals('gpu', 'brand')
         gpu_series = dbops.get_category_key_vals('gpu', 'series')
-        featdict = {'Brand': brands, 'Series': gpu_series}
+        featdict = {'brand': brands, 'series': gpu_series}
     elif name == 'monitor':
         brands = dbops.get_category_key_vals('monitor', 'brand')
         panels = dbops.get_category_key_vals('monitor', 'panel')
-        featdict = {'Brand': brands, 'Panel': panels}
+        featdict = {'brand': brands, 'panel': panels}
     elif name == 'memory':
         brands = dbops.get_category_key_vals('memory', 'brand')
         speed = dbops.get_category_key_vals('memory', 'speed')
         memtype = dbops.get_category_key_vals('memory', 'type')
         capacity = dbops.get_category_key_vals('memory', 'capacity')
-        featdict = {'Brand': brands, 'Speed': speed, 'Type': memtype, 'Capacity': capacity}
+        featdict = {'brand': brands, 'speed': speed, 'type': memtype, 'capacity': capacity}
     else:
         brands = dbops.get_category_key_vals(name, 'brand')
-        featdict = {'Brand': brands}
+        featdict = {'brand': brands}
 
     pageno = 1
+    queryfeatdict = featdict
+
+    if request.method == 'GET' and request.args.get('filter-submit') != None:
+        queryfeatdict = {}
+        for arg in request.args:
+            if arg.endswith('-check'):
+                arg_split_list = arg.split('-')
+                dbfield = arg_split_list[0]
+                dbfieldval = arg_split_list[1]
+
+                if dbfield == 'vendor':
+                    vendors.append(dbfieldval)
+                elif dbfield == 'price':
+                    pass
+                else:
+                    if dbfield not in queryfeatdict:
+                        queryfeatdict[dbfield] = []
+                    queryfeatdict[dbfield].append(dbfieldval)
+                os.system(f"echo {arg.split('-')} queryfeatdict: {queryfeatdict}, featdict: {featdict}")
 
     if request.method == 'GET' and request.args.get('pageno') != None:
         pageno = int(request.args.get('pageno'))
-        products = dbops.get_products(name, request.form.get('hiloselect'))
+        products = dbops.get_products(name, request.form.get('hiloselect'), queryfeatdict, vendors)
 
     if request.method == 'POST' and request.form.get('hiloselect') != None:
         if request.form.get('hiloselect') == 'hilo':
-            products = dbops.get_products(name, -1)
+            products = dbops.get_products(name, -1, queryfeatdict, vendors)
             hilodirection = 'hilo'
         elif request.form.get('hiloselect') == 'lohi':
-            products = dbops.get_products(name, 1)
+            products = dbops.get_products(name, 1, queryfeatdict, vendors)
             hilodirection = 'lohi'
     else:
         hilodirection = 'lohi'
-        products = dbops.get_products(name, 1)
+        products = dbops.get_products(name, 1, queryfeatdict, vendors)
 
     numpages = math.ceil(len(products) / ITEMS_PER_PAGE)
 
