@@ -15,7 +15,7 @@
         <div id="tab-content-area">
             <div id="wishlist" class="tab-content">
                 <div id="product-grid">
-                    {% for prod in session['wishlist'] %}
+                    {% for prod in build['products'] %}
                     <div class="product-card">
                         <img src="{{ prod['img'] }}" alt="{{ prod['title'] }}"/>
                         <h4>{{ prod['title'] }}</h4>

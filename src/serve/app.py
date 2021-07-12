@@ -50,9 +50,13 @@ def about():
 def wishlist():
     # save build
     if request.method == 'POST' and request.form.get('build_name') != None:
+        build_url = util.gen_wishlist_url()
+        while dbops.build_url_exists(build_url):
+            build_url = util.gen_wishlist_url()
+
         return redirect(url_for(
             'saved_builds',
-            build_url=util.gen_wishlist_url(),
+            build_url=build_url,
             build_name=request.form.get('build_name'),
         ))
 
@@ -77,27 +81,39 @@ def wishlist():
 
 @app.route('/saved_build/<build_url>')
 def saved_builds(build_url):
-    build_name = request.args.get('build_name')
-    build_url = f'{MAIN_URL_HEAD}/saved_build/{build_url}'
+    if not dbops.build_url_exists(f"{MAIN_URL_HEAD}/saved_build/{build_url}"):
+        if 'wishlist' not in session or not len(session['wishlist']) >= 1:
+            return(render_template('404.html'))
+        build_name = request.args.get('build_name')
+        build_url = f'{MAIN_URL_HEAD}/saved_build/{build_url}'
+        dbops.save_build(build_name, build_url, session['wishlist'])
 
+    build_url = f'{MAIN_URL_HEAD}/saved_build/{build_url}'
+    build = dbops.get_build_from_build_url(build_url)
+    os.system(f"echo bule bule {build['build_url']}")
+
+    # price graph
     config = pygal.Config()
     config.human_readable = True
     config.style = pygal.style.LightGreenStyle
 
-    total = util.total_build_cost(session['wishlist'])
+    # price history graph
+
+    total = util.total_build_cost(build['products'])
 
     chart = pygal.Pie(config, inner_radius=.4)
     chart.title = f"Total Build Cost: ₹{total}"
 
-    for prod in session['wishlist']:
+    for prod in build['products']:
         chart.add(prod['title'], prod['price'])
     price_graph = chart.render_data_uri()
 
     return render_template(
         'saved_build.html',
-        build_url=build_url,
-        build_name=build_name,
+        build_url=build['build_url'],
+        build_name=build['build_name'],
         price_graph=price_graph,
+        build=build,
     )
 
 
@@ -252,6 +268,7 @@ def comparison_remove_all():
     del session['comparison']
     session.modified = True
     return redirect(url_for('comparison'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
