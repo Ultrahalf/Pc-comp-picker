@@ -14,6 +14,7 @@
 
         <div id="tab-content-area">
             <div id="wishlist" class="tab-content">
+                <h3 class="build-name">build name: {{ build_name }}</h3>
                 <div id="product-grid">
                     {% for prod in build['products'] %}
                     <div class="product-card">
@@ -32,6 +33,7 @@
 
             <div id="price-graph" class="tab-content">
 
+                <h3 class="build-name">build name: {{ build_name }}</h3>
                 <div class="btn-graph-group">
                     <button id="btn-graph-total" class="btn">Total</button>
                     <button id="btn-graph-hist" class="btn">Price history</button>
@@ -52,9 +54,9 @@
             </div>
 
             <div id="share" class="tab-content">
+                <h3 class="build-name">build name: {{ build_name }}</h3>
                 <div class="save-build">
                     <img src="{{ qrcode(build_url) }}">
-                    <h3 class="build-name">build name: {{ build_name }}</h3>
                     <label>url: </label>
                     <input type="text" value="{{ build_url }}" id="build-url"></input>
                     <button id="copyText"> Copy </button>
