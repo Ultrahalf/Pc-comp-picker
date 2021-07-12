@@ -17,6 +17,7 @@ function updateContent(category, items, key) {
                     let match = string.match(regex);
                     if(match != null && match[1] != undefined) {
                         match = match[1].toLowerCase();
+                        match = match.replace(/\s/g,"");
                         query = { _id: id };
                         value = { $set: { [key]: match } };
                         dbo.collection("products").updateOne(query, value, function(err) {
