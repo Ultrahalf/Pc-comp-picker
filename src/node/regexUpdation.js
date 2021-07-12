@@ -6,7 +6,7 @@ function updateContent(category, items, key) {
     MongoClient.connect(dbUrl, function(err, db) {
         if (err) throw err;
         var dbo = db.db("pccomppicker");
-        dbo.collection("test").find({"category": category}).project({title:1,_id:1}).toArray(function(err, result) {
+        dbo.collection("products").find({"category": category}).project({title:1,_id:1}).toArray(function(err, result) {
             if (err) throw err;
             regexItem = items;
             for(j = 0;  j < result.length; j++) {
@@ -19,7 +19,7 @@ function updateContent(category, items, key) {
                         match = match[1].toLowerCase();
                         query = { _id: id };
                         value = { $set: { [key]: match } };
-                        dbo.collection("test").updateOne(query, value, function(err) {
+                        dbo.collection("products").updateOne(query, value, function(err) {
                             if (err) throw err;
                             db.close();
                         });
