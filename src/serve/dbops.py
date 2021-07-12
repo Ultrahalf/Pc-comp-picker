@@ -19,8 +19,8 @@ class JSONEncoder(json.JSONEncoder):
         return super(JSONEncoder, self).default(obj)
 
 
-def get_products(category: str):
-    objects = products.find({'category': category})
+def get_products(category: str, direction: int):
+    objects = products.find({'category': category}).sort("price", direction)
 
     list_of_dicts = list()
     for obj in objects:

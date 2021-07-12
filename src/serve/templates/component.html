@@ -19,11 +19,17 @@
 <hr/>
 
 <div class="product-filter">
-    <form method="" name="">
-        <select>
-            <option>Low to high</option>
-            <option>High to low</option>
+    <form method="post" name="hiloform">
+        <select name="hiloselect">
+            {% if hilodirection == 'hilo' %}
+                <option value="hilo">High to Low</option>
+                <option value="lohi">Low to High</option>
+            {% elif hilodirection == 'lohi' %}
+                <option value="lohi">Low to High</option>
+                <option value="hilo">High to Low</option>
+            {% endif %}
         </select>
+        <input type="submit" value="OK">
     </form>
     <button id="openfilter"> Filter</button>
 </div>

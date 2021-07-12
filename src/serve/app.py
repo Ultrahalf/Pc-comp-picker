@@ -104,11 +104,23 @@ def saved_builds(build_url):
 @app.route('/component/<name>', methods=['GET', 'POST'])
 def component(name):
     pageno = 1
+
     if request.method == 'GET' and request.args.get('pageno') != None:
         pageno = int(request.args.get('pageno'))
         products = dbops.get_products(name)
 
-    products = dbops.get_products(name)
+    if request.method == 'POST' and request.form.get('hiloselect') != None:
+        os.system(f"echo eh bure bure {request.form.get('hiloselect')}")
+        if request.form.get('hiloselect') == 'hilo':
+            products = dbops.get_products(name, -1)
+            hilodirection = 'hilo'
+        elif request.form.get('hiloselect') == 'lohi':
+            products = dbops.get_products(name, 1)
+            hilodirection = 'lohi'
+    else:
+        hilodirection = 'lohi'
+        products = dbops.get_products(name, 1)
+
     numpages = math.ceil(len(products) / ITEMS_PER_PAGE)
 
     # gives the products to be displayed on page {pageno}
@@ -122,6 +134,7 @@ def component(name):
         pageno=pageno,
         components=COMPONENTS,
         numpages=numpages,
+        hilodirection=hilodirection,
     )
 
 
