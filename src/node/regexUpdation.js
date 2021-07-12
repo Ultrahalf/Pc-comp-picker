@@ -3,31 +3,33 @@ var dbUrl = "mongodb://localhost:27017/";
 
 
 function updateContent(category, items, key) {
-MongoClient.connect(dbUrl, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("pccomppicker");
-    dbo.collection("products").find({"category": category}).project({title:1,_id:0}).toArray(function(err, result) {
-    if (err) throw err;
-    regexItem = items;
-    for(j = 0;  j < result.length; j++) {
-        for(i = 0;  i < regexItem.length; i++) {
-            let regex = new RegExp(regexItem[i], "i");
-            let string = result[j].title;
-            let match = string.match(regex);
-            if(match != null){
-                value = {$set: { [key]: match[1] } };
-                 dbo.collection("products").updateOne({ _id: id }, value, function(err) {
-                    if (err) throw err;
-                    console.log("1 document updated");
-                    db.close();
-                  });
-                break;
+    MongoClient.connect(dbUrl, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("pccomppicker");
+        dbo.collection("test").find({"category": category}).project({title:1,_id:1}).toArray(function(err, result) {
+            if (err) throw err;
+            regexItem = items;
+            for(j = 0;  j < result.length; j++) {
+                for(i = 0;  i < regexItem.length; i++) {
+                    let id = result[j]._id;
+                    let regex = new RegExp(regexItem[i], "i");
+                    let string = result[j].title;
+                    let match = string.match(regex);
+                    if(match != null && match[1] != undefined) {
+                        match = match[1].toLowerCase();
+                        query = { _id: id };
+                        value = { $set: { [key]: match } };
+                        dbo.collection("test").updateOne(query, value, function(err) {
+                            if (err) throw err;
+                            db.close();
+                        });
+                        break;
+                    }
+                }
             }
-        }
-    }
-    db.close();
-  });
-});
+            db.close();
+        });
+    });
 }
 
 var category, key, category;
@@ -43,7 +45,7 @@ key = "series";
 var cpu_series = ['(i.?[0-9])', '(ryzen.?[0-9])'];
 updateContent(category, cpu_series, key)
 
-//**************COOLER UPDATION****************//
+//**************COOLER UPDATION****************/
 
 category = "cooler";
 key = "brand";
@@ -58,13 +60,13 @@ var cooler_brand = [
 updateContent(category, cooler_brand, key)
 
 var cooler_subcategory = [
-    '(aio)', '(air)', '(case fan)', '(cpu)', '(gpu)', '(liquid)', '(paste)',
+    '(aio)', '[^s](air)', '(case fan)', '(gpu)', '(liquid)', '(paste)', '(cpu)', 
     '(radiator)', '(splitter)', '(tube)'
 ];
 key = "sub category";
 updateContent(category, cooler_subcategory, key)
 
-//**************MOTHERBOARD UPDATION***********//
+//**************MOTHERBOARD UPDATION***********/
 
 category = "motherboard";
 key = "brand";
@@ -75,7 +77,7 @@ motherboard_brand = [
 ];
 updateContent(category, motherboard_brand, key)
 
-//**************MEMORY UPDATION***********//
+//**************MEMORY UPDATION***********/
 
 category = "memory";
 key = "brand";
@@ -90,7 +92,7 @@ memory_type = ['(ddr[0-9])'];
 key = "type";
 updateContent(category, memory_type, key)
 
-memory_capacity = ['([0-9]*.?gb)'];
+memory_capacity = ['([0-9]+.?gb)'];
 key = "capacity";
 updateContent(category, memory_capacity, key)
 
@@ -98,16 +100,16 @@ memory_subcategory = ['(laptop)'];
 key = "sub category";
 updateContent(category, memory_subcategory, key)
 
-memory_speed = ['([0-9]*.?mhz)'];
+memory_speed = ['([0-9]+.?mhz)'];
 key = "speed";
 updateContent(category, memory_speed, key)
 
-//**************STORAGE UPDATION***********//
+//**************STORAGE UPDATION***********/
 
 category = "storage";
 key = "brand";
 storage_brand = [
-     '(aorus)', '(astra)', '(asus)', '(corsair)', '(crucial)',
+    '(aorus)', '(astra)', '(asus)', '(corsair)', '(crucial)',
     '(dell)', '(galax)', '(gigabyte)',  '(hikvision)', '(intel)',
     '(kingston)', '(lexar)', '(pincoy)', '(pioneer)', '(pny)', '(samsung)',
     '(sandisk)', '(seagate)', '(silicon power)', '(teamgroup)', '(toshiba)',
@@ -116,18 +118,18 @@ storage_brand = [
 updateContent(category, storage_brand, key)
 
 key = "type";
-storage_type= [ '(hdd)', '(m.2)','(ssd)'];
+storage_type= [ '(hdd)', '(m\.2)','(ssd)'];
 updateContent(category, storage_type, key)
 
 key = "capacity";
-storage_capacity = ['([0-9]*.?gb)|([0-9]*.?tb)'];
+storage_capacity = ['([0-9]+.?gb)|([0-9]+.?tb)'];
 updateContent(category, storage_capacity, key)
 
 key = "form factor";
-storage_formfactor = [ '(3.5)', '(2.5)'];
+storage_formfactor = [ '(3\.5)', '(2\.5)'];
 updateContent(category, storage_formfactor, key)
 
-//**************CASE UPDATION*****************//
+//**************CASE UPDATION*****************/
 
 category = "case";
 key = "brand";
@@ -142,7 +144,7 @@ case_brand = [
 ];
 updateContent(category, case_brand, key)
 
-//**************PSU UPDATION*****************//
+//**************PSU UPDATION*****************/
 
 category = "psu";
 key = "brand";
@@ -153,11 +155,12 @@ psu_brand = [
     '(fingers)', '(fractal.?design)', '(fsp)', '(gigabyte)', '(gamdias)',
     '(msi)', '(nzxt)', '(phanteks)', '(seasonic)', '(silverstone)',
     '(super.?flower)', '(seasonic)', '(silverstone)', '(thermal.?take)',
-    '(xpg/i',
+    '(xpg)',
 ];
 updateContent(category, psu_brand, key)
 
-//**************GPU UPDATION*****************//
+//**************GPU UPDATION*****************/
+
 category = "gpu";
 key = "brand";
 gpu_brand = [
@@ -171,7 +174,8 @@ key = "series";
 gpu_series = [ '(gtx)', '(rtx)', '(radeon)'];
 updateContent(category, gpu_series, key)
 
-//**************MONITOR UPDATION*****************//
+//**************MONITOR UPDATION*****************/
+
 category = "monitor";
 key = "brand";
 
