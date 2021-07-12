@@ -98,6 +98,9 @@ def saved_builds(build_url):
     config.style = pygal.style.LightGreenStyle
 
     # price history graph
+    line_chart = pygal.Line(config)
+    line_chart.title = "Build Price History"
+    line_chart.x_labels = map(str, range(1, 90))
 
     total = util.total_build_cost(build['products'])
 
@@ -106,13 +109,17 @@ def saved_builds(build_url):
 
     for prod in build['products']:
         chart.add(prod['title'], prod['price'])
+        line_chart.add(prod['title'], prod['price'])
+
     price_graph = chart.render_data_uri()
+    history_graph = line_chart.render_data_uri()
 
     return render_template(
         'saved_build.html',
         build_url=build['build_url'],
         build_name=build['build_name'],
         price_graph=price_graph,
+        history_graph=history_graph,
         build=build,
     )
 
