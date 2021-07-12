@@ -51,6 +51,12 @@
                 <input type=checkbox name="primeabgb-check"> PrimeAGBG</input><br>
                 <input type=checkbox name="itdepot-check"> The IT Depot</input><br>
                 <br><label>Feature:</label><br>
+                {% for (feat, inputs) in featdict.items() %}
+                    {{feat}}:<br>
+                    {% for input in inputs %}
+                        <input type=checkbox name="{{input}}-check">{{input}}</input><br>
+                    {% endfor %}
+                {% endfor %}
                 <button type="submit" name="submit">Submit</button>
             </form>
         </div>

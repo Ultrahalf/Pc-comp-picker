@@ -73,3 +73,11 @@ def get_build_from_build_url(build_url: str):
         # something gone wrong
         sys.exit(1)
     return build
+
+
+def get_category_key_vals(category: str, key: str):
+    return list(products.distinct(key, {"category": category}))
+
+
+if __name__ == '__main__':
+    print(products.distinct("brand", {"category": "memory"}))

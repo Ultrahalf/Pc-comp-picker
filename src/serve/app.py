@@ -119,6 +119,28 @@ def saved_builds(build_url):
 
 @app.route('/component/<name>', methods=['GET', 'POST'])
 def component(name):
+    if name == 'cpu':
+        brands = dbops.get_category_key_vals('cpu', 'brand')
+        cpu_series = dbops.get_category_key_vals('cpu', 'series')
+        featdict = {'Brand': brands, 'Series': cpu_series}
+    elif name == 'gpu':
+        brands = dbops.get_category_key_vals('gpu', 'brand')
+        gpu_series = dbops.get_category_key_vals('gpu', 'series')
+        featdict = {'Brand': brands, 'Series': gpu_series}
+    elif name == 'monitor':
+        brands = dbops.get_category_key_vals('monitor', 'brand')
+        panels = dbops.get_category_key_vals('monitor', 'panel')
+        featdict = {'Brand': brands, 'Panel': panels}
+    elif name == 'memory':
+        brands = dbops.get_category_key_vals('memory', 'brand')
+        speed = dbops.get_category_key_vals('memory', 'speed')
+        memtype = dbops.get_category_key_vals('memory', 'type')
+        capacity = dbops.get_category_key_vals('memory', 'capacity')
+        featdict = {'Brand': brands, 'Speed': speed, 'Type': memtype, 'Capacity': capacity}
+    else:
+        brands = dbops.get_category_key_vals(name, 'brand')
+        featdict = {'Brand': brands}
+
     pageno = 1
 
     if request.method == 'GET' and request.args.get('pageno') != None:
@@ -150,6 +172,7 @@ def component(name):
         components=COMPONENTS,
         numpages=numpages,
         hilodirection=hilodirection,
+        featdict=featdict,
     )
 
 
