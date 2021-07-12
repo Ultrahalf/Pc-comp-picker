@@ -19,6 +19,7 @@
 <hr/>
 
 <div class="product-filter">
+    <button id="openfilter"> Filter</button>
     <form method="post" name="hiloform">
         <select name="hiloselect">
             {% if hilodirection == 'hilo' %}
@@ -29,9 +30,8 @@
                 <option value="hilo">High to Low</option>
             {% endif %}
         </select>
-        <input type="submit" value="OK">
+        <button type="submit" value="OK">Submit</button>
     </form>
-    <button id="openfilter"> Filter</button>
 </div>
 <hr/>
 

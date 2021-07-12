@@ -67,7 +67,7 @@ ul.topnav button:hover {
         align-items: center; // vertical alignemnt
     }
 
-    ul.topnav li.search {
+    ul.topnav form.search {
         display:flex;
         flex-direction: column;
         gap: 1ch;
@@ -158,7 +158,7 @@ h1#category {
     border: none;
 }
 
-.product-filter > button {
+.product-filter > button, .product-filter > form button {
     background-color: var(--light-grey);
     border: none;
     padding: 1ch;
