@@ -45,9 +45,11 @@ var dbName = "pccomppicker";
                 if(product_items[i].querySelector(".badge--sold-out")) {
                 } else {
                     if(product_items[i].querySelectorAll(".price-dis-sec span.money").length > 1) {
-                        price  = Number(product_items[i].querySelectorAll(".price-dis-sec span.money")[1].textContent.replace(/\D/g,''));
+                        price  = product_items[i].querySelectorAll(".price-dis-sec span.money")[1].textContent.replace(/(?<=\.)\d+/g,'');
+                        price  = Number(price.replace(/\D/g,''));
                     } else {
-                        price  = Number(product_items[i].querySelector(".price-dis-sec span.money").textContent.replace(/\D/g,''));
+                        price  = product_items[i].querySelector(".price-dis-sec span.money").textContent.replace(/(?<=\.)\d+/g,'');
+                        price  = Number(price.replace(/\D/g,''));
                     }
                     products.push(
                         {
