@@ -2,9 +2,10 @@
 {% block main %}
 
         <main>
-        <div class="comparison-btn-group">
-            <button id="comparison-btn-back">Go back</button>
-        </div>
+            <div class="comparison-btn-group">
+                <button id="comparison-btn-back">Go back</button>
+            </div>
+
             <div class="table-wrapper">
 
                 <nav class="wishlist-nav">
@@ -31,10 +32,27 @@
                                         <button class="btn-vist" onclick="javascript:window.open('{{ prod['url'] }}', '_blank');">
                                             visit page
                                         </button>
+
+                                        <!-- comparison button -->
                                         <button class="btn-compare" id="compare-{{prod["_id"]}}">
                                             compare
                                         </button>
+                                        <script type=text/javascript>
+                                            $(function() {
+                                            $('button#compare-{{prod["_id"]}}').on('click', function(e) {
+                                                e.preventDefault()
+                                                $.getJSON('/_comparison/{{prod["_id"]}}',
+                                                    function(data) { 
+                                                        // no change to button
+                                                    }
+                                                );
+                                                return false;
+                                              });
+                                            });
+                                        </script>
+                                        <!-- end comparison button -->
 
+                                        <!-- wishlist button -->
                                         <div class="btn-add-rm" id="wishlist-{{prod["_id"]}}">
                                             <button class="btn-remove">
                                                  remove from wishlist
@@ -57,6 +75,7 @@
                                           });
                                         });
                                         </script>
+                                        <!-- end wishlist button -->
 
                                     </div>
                                 </div>
