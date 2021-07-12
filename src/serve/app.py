@@ -90,7 +90,6 @@ def saved_builds(build_url):
 
     build_url = f'{MAIN_URL_HEAD}/saved_build/{build_url}'
     build = dbops.get_build_from_build_url(build_url)
-    os.system(f"echo bule bule {build['build_url']}")
 
     # price graph
     config = pygal.Config()
@@ -169,7 +168,7 @@ def component(name):
                     if dbfield not in queryfeatdict:
                         queryfeatdict[dbfield] = []
                     queryfeatdict[dbfield].append(dbfieldval)
-                os.system(f"echo {arg.split('-')} queryfeatdict: {queryfeatdict}, featdict: {featdict}")
+                os.system(f"echo {arg.split('-')} queryfeatdict: {queryfeatdict} XXX featdict: {featdict} XXX vendors: {vendors}")
 
     if request.method == 'GET' and request.args.get('pageno') != None:
         pageno = int(request.args.get('pageno'))
