@@ -15,6 +15,7 @@
     --red: #ff1a1a;
     --anti-white: #f2f3f4;
     --links: #20b2aa;
+    --orange: #ff9800;
 }
 
 .no-content-warn {
@@ -302,8 +303,15 @@ h1#category {
     grid-area: add-rm;
 }
 
-.btn-add, .btn-remove {
+.btn-add {
     background-color: var(--red);
+}
+
+.btn-remove {
+    background-color: var(--orange);
+}
+
+.btn-add, .btn-remove {
     color: var(--light-color);
     width: 100%;
 }
