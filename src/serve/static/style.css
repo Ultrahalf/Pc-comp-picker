@@ -474,6 +474,10 @@ footer > ul > li > a:hover {
     grid-gap: 2ch;
 }
 
+.build-name {
+    text-align: center;
+}
+
 /* QRCODE */
 .save-build {
     display: flex;
