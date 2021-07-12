@@ -123,10 +123,9 @@ def component(name):
 
     if request.method == 'GET' and request.args.get('pageno') != None:
         pageno = int(request.args.get('pageno'))
-        products = dbops.get_products(name)
+        products = dbops.get_products(name, request.form.get('hiloselect'))
 
     if request.method == 'POST' and request.form.get('hiloselect') != None:
-        os.system(f"echo eh bure bure {request.form.get('hiloselect')}")
         if request.form.get('hiloselect') == 'hilo':
             products = dbops.get_products(name, -1)
             hilodirection = 'hilo'
